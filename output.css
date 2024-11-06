@@ -1,6 +1,14 @@
-h1 {
-  color: red;
-  background-color: blue;
+body {
+  background-color: #212529;
+  color: white;
+}
+
+#navDiv .nav {
+  height: 7dvh;
+}
+
+.intro {
+  height: 93dvh;
 }
 
 /*# sourceMappingURL=output.css.map */

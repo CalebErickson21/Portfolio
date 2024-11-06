@@ -1,5 +1,16 @@
 // sass --watch input.scss output.css
-h1 {
-    color: red;
-    background-color: blue;
+$background-dark: #212529;
+$nav-height: 7dvh;
+
+body {
+    background-color: $background-dark;
+    color: white;
+}
+
+#navDiv .nav {
+    height: $nav-height;
+}
+
+.intro {
+    height: 100dvh - $nav-height;
 }
