@@ -25,3 +25,9 @@ body {
 .contact {
     height: 100dvh - $nav-height;
 }
+
+img {
+    max-width: 100%;
+    max-height: 100dvh - $nav-height - 15dvh;
+    object-fit: cover;
+}
