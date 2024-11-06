@@ -3,11 +3,22 @@ body {
   color: white;
 }
 
-#navDiv .nav {
+.nav-link {
+  color: white;
+}
+.nav-link:hover {
+  color: grey;
+  font-weight: bold;
+}
+
+#navDiv,
+.navbar {
   height: 7dvh;
 }
 
-.intro {
+.intro,
+.project,
+.contact {
   height: 93dvh;
 }
 
