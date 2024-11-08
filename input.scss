@@ -3,9 +3,14 @@ $background-dark: #212529;
 $nav-height: 7dvh;
 $name-nav-width: 18dvw;
 
-body {
+.section-dark {
     background-color: $background-dark;
     color: white;
+}
+
+.section-light {
+    background-color: white;
+    color: black;
 }
 
 .nav-link {
@@ -16,9 +21,7 @@ body {
     }
 }
 
-.intro,
-.project,
-.contact {
+.section {
     height: 100dvh - $nav-height;
 }
 
@@ -28,6 +31,11 @@ img {
     object-fit: cover;
 }
 
+#nameNav {
+    color: white;
+}
+
 #nameNavSpacer {
-    color: $background-dark;
+    color: transparent;
+    max-height: 1px;
 }

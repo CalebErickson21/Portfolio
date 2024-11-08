@@ -1,6 +1,11 @@
-body {
+.section-dark {
   background-color: #212529;
   color: white;
+}
+
+.section-light {
+  background-color: white;
+  color: black;
 }
 
 .nav-link {
@@ -11,9 +16,7 @@ body {
   font-weight: bold;
 }
 
-.intro,
-.project,
-.contact {
+.section {
   height: 93dvh;
 }
 
@@ -23,8 +26,13 @@ img {
   object-fit: cover;
 }
 
+#nameNav {
+  color: white;
+}
+
 #nameNavSpacer {
-  color: #212529;
+  color: transparent;
+  max-height: 1px;
 }
 
 /*# sourceMappingURL=output.css.map */
