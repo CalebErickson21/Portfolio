@@ -38,7 +38,7 @@ img {
     border-radius: 25%;
 }
 
-#nameNav {
+.white-text {
     color: white;
 }
 
@@ -47,17 +47,39 @@ img {
     max-height: 1px;
 }
 
-.btn {
-    width: 50%;
-    &:hover {
-        text-shadow: 2px 2px 4px $background-blue;
-        background-color: white;
-        box-shadow: 4px 2px 12px white;
-        border: 2px, solid, $background-blue;
-        font-weight: bold;
+#contactDiv {
+    .btn {
+        width: 50%;
+        &:hover {
+            text-shadow: 2px 2px 4px $background-blue;
+            background-color: white;
+            box-shadow: 4px 2px 12px white;
+            border: 2px, solid, $background-blue;
+            font-weight: bold;
+        }
     }
 }
 
-.card img {
-    object-fit: contain;
+.card {
+
+    &:hover {
+        box-shadow: 6px 3px 18px white;
+    }
+
+    img {
+        object-fit: contain;
+    }
+
+    .btn {
+        background-color: $background-blue;
+        border: none;
+        color: white;
+        &:hover {
+            //text-shadow: 2px 2px 4px $background-dark;
+            //background-color: $background-blue;
+            box-shadow: 4px 2px 12px $background-dark;
+            //border: 2px, solid, $background-dark;
+            font-weight: bold;
+        }
+    }
 }

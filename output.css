@@ -32,7 +32,7 @@ img {
   border-radius: 25%;
 }
 
-#nameNav {
+.white-text {
   color: white;
 }
 
@@ -41,10 +41,10 @@ img {
   max-height: 1px;
 }
 
-.btn {
+#contactDiv .btn {
   width: 50%;
 }
-.btn:hover {
+#contactDiv .btn:hover {
   text-shadow: 2px 2px 4px #99CCFF;
   background-color: white;
   box-shadow: 4px 2px 12px white;
@@ -52,8 +52,20 @@ img {
   font-weight: bold;
 }
 
+.card:hover {
+  box-shadow: 6px 3px 18px white;
+}
 .card img {
   object-fit: contain;
+}
+.card .btn {
+  background-color: #99CCFF;
+  border: none;
+  color: white;
+}
+.card .btn:hover {
+  box-shadow: 4px 2px 12px #212529;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=output.css.map */
