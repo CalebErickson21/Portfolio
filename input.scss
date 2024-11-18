@@ -11,7 +11,7 @@ $name-nav-width: 18dvw;
 
 .section-light {
     background-image: linear-gradient($background-blue, $background-dark);
-    color: black;
+    color: white;
 }
 
 .navbar {
@@ -26,8 +26,9 @@ $name-nav-width: 18dvw;
     }
 }
 
-.section {
-    height: 100dvh - $nav-height;
+.row {
+    min-height: 100dvh - $nav-height;
+    background-color: transparent;
 }
 
 img {
@@ -46,7 +47,17 @@ img {
     max-height: 1px;
 }
 
-div .row {
-    height: 100%;
-    max-width: 100%;
+.btn {
+    width: 50%;
+    &:hover {
+        text-shadow: 2px 2px 4px $background-blue;
+        background-color: white;
+        box-shadow: 4px 2px 12px white;
+        border: 2px, solid, $background-blue;
+        font-weight: bold;
+    }
+}
+
+.card img {
+    object-fit: contain;
 }
