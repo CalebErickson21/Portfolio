@@ -2,3 +2,8 @@ INFORMATION TO BE PUT INTO THE WEBPAGE
 
 INTRODUCTION
 Welcome to my portfolio! I'm currently a 3rd year Computer Science student pursuing an accelerated master's degree through the STEM to MBA Program at the University of Alabama. Here, you will find highlights of my project work outside the classroom. Driven by a passion for innovation and problem-solving, I strive to constantly hone my skills and explore new technologies to tackle real-world challenges. Thank you for visiting and feel free to connect - I am always eager to make new connections and learn from new experiences!
+
+CONTACT
+Let's Connect!
+Thank you for taking the time to explore my portfolio! Whether you have questions about my projects, want to collaborate on exciting ideas, or simply want to say hello, I would love you hear from you. Feel free to reach out via any of the platforms on the left. I am always open to discussing opporutunities in all things computer science. 
+I look forward to hearing from you!
