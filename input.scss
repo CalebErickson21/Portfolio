@@ -50,7 +50,8 @@ img {
 
 #contactDiv {
     .btn {
-        width: 50%;
+        min-width: 50%;
+        max-width: 100%;
         &:hover {
             text-shadow: 2px 2px 4px $background-blue;
             background-color: white;
