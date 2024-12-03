@@ -3,6 +3,7 @@ $background-dark: #212529;
 $background-blue: #99CCFF;
 $nav-height: 7dvh;
 $name-nav-width: 18dvw;
+$paragraph-size: 1.25rem;
 
 .btn-primary {
     background-color: $background-blue;
@@ -87,6 +88,13 @@ img {
             font-weight: bold;
         }
     }
+
+    svg {
+        justify-content: center;
+        height: $paragraph-size;
+        padding-bottom: calc($paragraph-size / 5);
+        fill: $background-blue;
+    }
 }
 
 .card {
@@ -100,7 +108,7 @@ img {
 }
 
 p, label {
-    font-size: 1.25rem;
+    font-size: $paragraph-size;
     font-family: Arial, Helvetica, sans-serif;
 }
 

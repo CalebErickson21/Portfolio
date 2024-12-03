@@ -80,6 +80,12 @@ img {
   border: 2px, solid, #99CCFF;
   font-weight: bold;
 }
+#contactDiv svg {
+  justify-content: center;
+  height: 1.25rem;
+  padding-bottom: 0.25rem;
+  fill: #99CCFF;
+}
 
 .card:hover {
   box-shadow: 6px 3px 18px white;
