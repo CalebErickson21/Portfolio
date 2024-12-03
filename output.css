@@ -1,3 +1,31 @@
+.btn-primary {
+  background-color: #99CCFF;
+  border: none;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #99CCFF;
+  box-shadow: 4px 2px 12px #212529;
+  font-weight: bold;
+}
+.btn-primary:active {
+  background-color: #99CCFF;
+}
+
+.btn-secondary {
+  background-color: grey;
+  border: none;
+  color: white;
+}
+.btn-secondary:hover {
+  background-color: grey;
+  box-shadow: 4px 2px 2px #99CCFF;
+  font-weight: bold;
+}
+.btn-secondary:active {
+  background-color: grey;
+}
+
 .section-dark {
   background-image: linear-gradient(#212529, #99CCFF);
   color: white;
@@ -59,20 +87,8 @@ img {
 .card img {
   object-fit: contain;
 }
-.card .btn {
-  background-color: #99CCFF;
-  border: none;
-  color: white;
-}
-.card .btn:hover, .card .btn:focus {
-  box-shadow: 4px 2px 12px #212529;
-  font-weight: bold;
-}
-.card .btn:active {
-  background-color: #99CCFF;
-}
 
-p {
+p, label {
   font-size: 1.25rem;
   font-family: Arial, Helvetica, sans-serif;
 }

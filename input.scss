@@ -4,6 +4,34 @@ $background-blue: #99CCFF;
 $nav-height: 7dvh;
 $name-nav-width: 18dvw;
 
+.btn-primary {
+    background-color: $background-blue;
+    border: none;
+    color: white;
+    &:hover {
+        background-color: $background-blue;
+        box-shadow: 4px 2px 12px $background-dark;
+        font-weight: bold;
+    }
+    &:active {
+        background-color: $background-blue;
+    }
+}
+
+.btn-secondary {
+    background-color: grey;
+    border: none;
+    color: white;
+    &:hover {
+        background-color: grey;
+        box-shadow: 4px 2px 2px $background-blue;
+        font-weight: bold;
+    }
+    &:active {
+        background-color: grey;
+    }
+}
+
 .section-dark {
     background-image: linear-gradient($background-dark, $background-blue);
     color: white;
@@ -69,25 +97,9 @@ img {
     img {
         object-fit: contain;
     }
-
-    .btn {
-        background-color: $background-blue;
-        border: none;
-        color: white;
-        &:hover, &:focus         {
-            //text-shadow: 2px 2px 4px $background-dark;
-            //background-color: $background-blue;
-            box-shadow: 4px 2px 12px $background-dark;
-            //border: 2px, solid, $background-dark;
-            font-weight: bold;
-        }
-        &:active {
-            background-color: $background-blue;
-        }
-    }
 }
 
-p {
+p, label {
     font-size: 1.25rem;
     font-family: Arial, Helvetica, sans-serif;
 }
