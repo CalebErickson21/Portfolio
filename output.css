@@ -64,8 +64,21 @@ img {
   border: none;
   color: white;
 }
-.card .btn:hover {
+.card .btn:hover, .card .btn:focus {
   box-shadow: 4px 2px 12px #212529;
+  font-weight: bold;
+}
+.card .btn:active {
+  background-color: #99CCFF;
+}
+
+p {
+  font-size: 1.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
 }
 
