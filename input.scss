@@ -97,13 +97,22 @@ img {
     }
 }
 
+
 .card {
+    min-height: 85dvh;
+    border: none;
+    border-radius: 1rem;
+
     &:hover {
         box-shadow: 6px 3px 18px white;
     }
 
     img {
-        object-fit: contain;
+        height: 50%;
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: inherit;
     }
 }
 
