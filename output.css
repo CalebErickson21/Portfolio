@@ -36,14 +36,19 @@
   color: white;
 }
 
-.navbar {
+#navbar {
   background-color: #212529;
 }
-
-.nav-link {
+#navbar #navbar-center.navbar-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#navbar .nav-link {
   color: white;
 }
-.nav-link:hover {
+#navbar .nav-link:hover {
   color: #99CCFF;
   font-weight: bold;
 }
@@ -62,11 +67,6 @@ img {
 
 .white-text {
   color: white;
-}
-
-#nameNavSpacer {
-  color: transparent;
-  max-height: 1px;
 }
 
 #contactDiv .btn {
