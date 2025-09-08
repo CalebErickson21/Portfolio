@@ -20,6 +20,53 @@ After this, we need to remove any boilerplate code so we can start from scratch.
 - Any unwanted `.html` code in `App.tsx`
 - Any images in the `./public` directory
 
+### Tailwind Setup
+2. Install Tailwind CSS (v3)
+Navigate into the project folder and run:
+
+```sh
+npm install -D tailwindcss@3.4.1 postcss autoprefixer
+npx tailwindcss init -p
+```
+This will:
+- Install Tailwind CSS and its PostCSS dependencies
+- Generate tailwind.config.js
+- Generate postcss.config.js
+
+3. Configure Tailwind
+Edit tailwind.config.js
+Update the content array to include your source files:
+```js
+/** @type {import('tailwindcss').Config} */
+export default = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+Edit src/index.css
+Replace the contents of src/index.css with the Tailwind directives:
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Ensure postcss.config.js looks like this
+```js
+export default = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+```
+
 ## Development Environment
 To start the development environment, run:
 ```sh
