@@ -7,16 +7,19 @@ export default {
     extend: {
       colors: {
         // Light
-        'light-bg-primary': '#F8F9FA',
-        'light-bg-secondary': '#E9ECEF',
-        'light-text-primary': '#212529',
-        'light-text-secondary': '#495057',
+        'light-bg-primary': '#F9FAFB',
+        'light-bg-secondary': '#EDEEEF',
+        'light-text-primary': '#1E1F21',
+        'light-text-secondary': '#4D4F52',
 
         // Dark
-        'dark-bg-primary': '#212529',
-        'dark-bg-secondary': '#343A40',
-        'dark-text-primary': '#F8F9FA',
-        'dark-text-secondary': '#CED4DA'
+        'dark-bg-primary': '#181A1B',
+        'dark-bg-secondary': '#242628',
+        'dark-text-primary': '#F3F4F6',
+        'dark-text-secondary': '#A0A3A7',
+
+        // Constants
+        'accent': '#2563EB',
       },
       screens: {
         // Minimum width breakpoints

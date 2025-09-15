@@ -31,7 +31,7 @@ const Layout = () => {
             {/* Outlet */}
             <div
             id='outlet-container'
-            className='flex-1'>
+            className={`${light ? 'bg-light-bg-primary text-light-text-primary' : 'bg-dark-bg-primary text-dark-text-primary'} flex-1 transition duration-300 ease-in-out`}>
                 <Outlet />
             </div>
 

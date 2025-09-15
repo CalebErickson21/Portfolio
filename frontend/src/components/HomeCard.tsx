@@ -17,15 +17,15 @@ const HomeCard = ({ title, description, image: SvgIcon, route }: HomeCardProps) 
     const navigate = useNavigate();
 
     return (
-        <div className={`flex flex-row w-full h-full items-center justify-between p-2 rounded-lg ${light ? 'bg-light-bg-secondary hover:shadow-light-text-secondary' : 'bg-dark-bg-secondary hover:shadow-dark-text-secondary'} hover:-translate-y-[.01rem] hover:shadow-lg hover:brightness-95 transition duration-300 ease-in-out`}>
+        <div className={`flex flex-row w-full h-full items-center justify-between p-2 rounded-lg ${light ? 'bg-light-bg-secondary hover:shadow-light-text-secondary' : 'bg-dark-bg-secondary hover:shadow-dark-text-secondary'} hover:-translate-y-[.01rem] hover:shadow-xl hover:brightness-95 transition duration-300 ease-in-out`}>
             {/* Left Side */}
             <div className="w-1/4 h-full p-10 flex items-center justify-center">
                 <SvgIcon 
                     className="w-full h-full transition duration-300 ease-in-out [&_*]:!fill-current [&_*]:!stroke-current"
                     style={{
-                        fill: light ? '#000000' : '#FFFFFF',
-                        stroke: light ? '#000000' : '#FFFFFF',
-                        color: light ? '#000000' : '#FFFFFF',
+                        fill: light ? '#181A1B' : '#F9FAFB',
+                        stroke: light ? '#181A1B' : '#F9FAFB',
+                        color: light ? '#181A1B' : '#F9FAFB',
                     }}
                 />
             </div>
@@ -41,7 +41,7 @@ const HomeCard = ({ title, description, image: SvgIcon, route }: HomeCardProps) 
                     <button
                     className={`${light ? 'bg-dark-bg-secondary text-dark-text-secondary' : 'bg-light-bg-secondary text-light-text-secondary'} text-sm font-semibold hover:font-bold rounded-lg px-2 py-1 cursor-pointer transition duration-300 ease-in-out`}
                     onClick={() => navigate(route)}>
-                        View More
+                        Learn More
                     </button>
                 </div>
             </div>
