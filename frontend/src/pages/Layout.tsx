@@ -13,7 +13,6 @@ import Footer from "../components/Footer";
 
 // Import styles
 
-
 // Layout component
 const Layout = () => {
 

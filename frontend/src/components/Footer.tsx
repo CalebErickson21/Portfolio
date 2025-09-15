@@ -18,10 +18,10 @@ const Footer = () => {
     // Visible component
     return (
         <footer
-        className={`${light ? 'bg-light-bg-primary' : 'bg-dark-bg-primary'} w-full h-full p-4`}>
+        className={`${light ? 'bg-light-bg-secondary' : 'bg-dark-bg-secondary'} w-full h-full p-4 transition duration-300 ease-in-out`}>
             <div className='flex flex-col justify-center items-center'>
                 <h3
-                className={`${light ? 'text-light-text-primary' : 'text-dark-text-primary'}`}>
+                className={`${light ? 'text-light-text-secondary' : 'text-dark-text-secondary'}`}>
                     © 2025 Caleb Erickson • Designed & coded by me • Let’s <a onClick={() => navigate('/contact')}>connect</a>!
                 </h3>
             </div>
