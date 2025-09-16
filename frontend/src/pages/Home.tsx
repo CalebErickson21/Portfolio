@@ -7,7 +7,7 @@ import HomeCard from "../components/HomeCard";
 // Import images
 import headshot from "../assets/images/headshot.jpg";
 import skiing from "../assets/images/skiing.jpg";
-import grad from "../assets/images/grad.jpeg";
+import grad from "../assets/images/grad.jpg";
 
 // Import SVGs as React components
 import Experience from "../assets/images/experience.svg?react";
