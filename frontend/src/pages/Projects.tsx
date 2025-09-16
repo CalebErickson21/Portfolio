@@ -10,7 +10,7 @@ import MockStreet from "../assets/images/mockstreet.svg?react";
 import NeuralNetwork from "../assets/images/neuralNetwork.svg?react";
 import Portfolio from "../assets/images/portfolio.svg?react";
 import Launchpad from "../assets/images/launchpad.svg?react";
-import ScholarSync from "../assets/images/scholarsync.svg?react";
+import ScholarSync from "../assets/images/scholarSync.png";
 
 
 // About page component
