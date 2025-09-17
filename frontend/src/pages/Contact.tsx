@@ -1,12 +1,12 @@
 // Import dependencies
-import { Mail, Phone, Globe, Linkedin, Github } from "lucide-react";
+import { Mail, Phone, Globe, Linkedin, Github, FileText } from "lucide-react";
 import { useTheme } from "../contexts/Theme";
 import { useNavigate } from "react-router-dom";
 
 // Import components
 
 // Import images
-
+import ResumeFile from "../assets/downloadables/Caleb_Erickson_Resume.pdf";
 
 // About page component
 const Contact = () => {
@@ -41,6 +41,15 @@ const Contact = () => {
                 <div className={`min-lg:bg-gradient-to-tl max-lg:bg-gradient-to-br min-h-screen ${light ? "from-light-bg-primary via-light-bg-secondary to-light-accent" : "from-dark-bg-primary via-dark-bg-secondary to-dark-accent"} flex flex-col flex-1 items-center justify-center pt-2 pb-4`}>
                     <div className="flex flex-1 flex-col w-5/6 my-4 mx-2 items-center justify-center text-center">
                         <ul className="flex flex-col gap-4 text-lg">
+
+                            {/* Resume */}
+                            <li className={`flex items-center gap-3 ${light ? "bg-dark-bg-secondary" : "bg-light-bg-secondary"} px-2 py-1 rounded-md`}>
+                            <FileText className={`w-5 h-5 ${light ? "text-dark-text-primary" : "text-light-text-primary"}`} />
+                            <a href={ResumeFile} download className={`font-semibold hover:font-bold ${light ? "text-dark-text-primary hover:text-dark-accent" : "text-light-text-primary hover:text-light-accent"}`}>
+                                Resume
+                            </a>
+                            </li>
+
                             {/* Email */}
                             <li className={`flex items-center gap-3 ${light ? "bg-dark-bg-secondary" : "bg-light-bg-secondary"} px-2 py-1 rounded-md`}>
                             <Mail className={`w-5 h-5 ${light ? "text-dark-text-primary" : "text-light-text-primary"}`} />

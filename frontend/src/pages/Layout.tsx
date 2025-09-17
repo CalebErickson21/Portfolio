@@ -1,5 +1,6 @@
 // Import dependencies
 import { Outlet } from "react-router-dom";
+import { useEffect } from "react";
 
 // Import components
 import ThemeButton from "../components/ThemeButton";
@@ -11,6 +12,9 @@ import { useTheme } from "../contexts/Theme";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+// Import downloadables
+import ResumeFile from "../assets/downloadables/Caleb_Erickson_Resume.pdf";
+
 // Import styles
 
 // Layout component
@@ -18,6 +22,14 @@ const Layout = () => {
 
     // States
     const { light, setLight } = useTheme();
+
+    // On load, download resume
+    useEffect(() => {
+        const resume = document.createElement('a');
+        resume.href = ResumeFile;
+        resume.download = 'Caleb_Erickson_Resume.pdf';
+        resume.click();
+    }, []);
 
     return (
         <div id='layout-container' className='flex flex-col min-h-screen min-w-screen m-0 p-0'>
