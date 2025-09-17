@@ -55,49 +55,86 @@ const Home = () => {
 
 
     return (        
-        <div id='home-container' className={`flex min-lg:flex-row max-lg:flex-col transition duration-300 ease-in-out`}>
-            {/* Left side */}
-            <div className={`bg-gradient-to-br to-accent ${light ? "from-light-bg-primary via-light-bg-secondary" : "from-dark-bg-primary via-dark-bg-secondary"} flex flex-col flex-1 items-center justify-center pt-2 pb-4`}>
-                <div className="flex w-full px-4 items-center justify-center">
-                    <div className="flex flex-row w-full h-full items-center justify-center">
-                        {/* Left side */}
-                        <div className="w-1/2 h-full m-3 rounded-md items-center justify-center">
-                            <img src={headshot}
-                            alt="Profile"
-                            className={`w-full h-full object-cover rounded-md hover:-translate-y-[.2rem] hover:-translate-x-[.2rem] transition duration-300 ease-in-out hover:shadow-lg ${light ? "hover:shadow-light-text-secondary" : "hover:shadow-dark-text-secondary"}`} />
-                        </div>
+        <div id='home-container' className={`flex flex-col transition duration-300 ease-in-out`}>
 
-                        {/* Right side */}
-                        {screenLarge && (
-                            <div className="w-1/2 h-full flex flex-col items-center justify-center">
-                                <div className="w-full h-1/2 m-3 rounded-md items-center justify-center">
-                                    <img src={skiing}
-                                    alt="Skiing"
-                                    className={`w-full h-full object-cover rounded-md hover:-translate-y-[.2rem] hover:translate-x-[.2rem] transition duration-300 ease-in-out hover:shadow-lg ${light ? "hover:shadow-light-text-secondary" : "hover:shadow-dark-text-secondary"}`} />
-                                </div>
-                                <div className="w-full h-1/2 m-3 rounded-md items-center justify-center">
-                                    <img src={grad}
-                                    alt="Graduation"
-                                    className={`w-full h-full object-cover rounded-md hover:translate-y-[.2rem] hover:translate-x-[.2rem] transition duration-300 ease-in-out hover:shadow-lg ${light ? "hover:shadow-light-text-secondary" : "hover:shadow-dark-text-secondary"}`} />
-                                </div>
+            {/* Top */}
+            <div className={`flex min-lg:flex-row max-lg:flex-col transition duration-300 ease-in-out`}>
+                {/* Left side */}
+                <div className={`bg-gradient-to-br ${light ? "from-light-bg-primary via-light-bg-secondary to-light-accent" : "from-dark-bg-primary via-dark-bg-secondary to-dark-accent"} flex flex-col flex-1 items-center justify-center pt-2 pb-4`}>
+                    <div className="flex w-full px-4 items-center justify-center">
+                        <div className="flex flex-row w-full h-full items-center justify-center">
+                            {/* Left side */}
+                            <div className="w-1/2 h-full m-3 rounded-md items-center justify-center">
+                                <img src={headshot}
+                                alt="Profile"
+                                className={`w-full h-full object-cover rounded-md hover:-translate-y-[.2rem] hover:-translate-x-[.2rem] transition duration-300 ease-in-out hover:shadow-lg ${light ? "hover:shadow-light-text-secondary" : "hover:shadow-dark-text-secondary"}`} />
                             </div>
-                        )}
+
+                            {/* Right side */}
+                            {screenLarge && (
+                                <div className="w-1/2 h-full flex flex-col items-center justify-center">
+                                    <div className="w-full h-1/2 m-3 rounded-md items-center justify-center">
+                                        <img src={skiing}
+                                        alt="Skiing"
+                                        className={`w-full h-full object-cover rounded-md hover:-translate-y-[.2rem] hover:translate-x-[.2rem] transition duration-300 ease-in-out hover:shadow-lg ${light ? "hover:shadow-light-text-secondary" : "hover:shadow-dark-text-secondary"}`} />
+                                    </div>
+                                    <div className="w-full h-1/2 m-3 rounded-md items-center justify-center">
+                                        <img src={grad}
+                                        alt="Graduation"
+                                        className={`w-full h-full object-cover rounded-md hover:translate-y-[.2rem] hover:translate-x-[.2rem] transition duration-300 ease-in-out hover:shadow-lg ${light ? "hover:shadow-light-text-secondary" : "hover:shadow-dark-text-secondary"}`} />
+                                    </div>
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
 
-                <div className="flex flex-1 w-full p-6 text-center font-semibold">
-                Hello! I am Caleb Erickson, a senior Computer Science student at the University of Alabama on the STEM to MBA path, maintaining a 4.0 GPA while bridging technology and business strategy. As an AI Researcher at the Alabama Institute for the Advancement of Artificial Intelligence, I work across projects in knowledge graphs, storytelling platforms, and disaster preparedness, with publications underway. My experience spans building autonomous RAG pipelines, full-stack platforms, and AI-driven applications using Python, Azure, React, and AWS. Recent personal projects include a custom CNN digit recognition system with a real-time web interface and MockStreet Exchange, a full-stack stock trading platform hosted on AWS. I am passionate about creating impactful solutions that merge innovation, business needs, and advanced AI research.
+                {/* Right side */}
+                <div className={`min-lg:bg-gradient-to-bl max-lg:bg-gradient-to-tr ${light ? "from-light-bg-primary via-light-bg-secondary to-light-accent" : "from-dark-bg-primary via-dark-bg-secondary to-dark-accent"} flex flex-col flex-1 items-center justify-center pt-2 pb-4`}>
+                    <div className="flex flex-1 flex-col w-5/6 my-4 mx-2 items-center justify-center text-center">
+                    {/* Introduction */}
+                    <h2 className={`text-2xl font-bold mb-3 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`}>Welcome to my portfolio!</h2>
+
+                    {/* Body */}
+                    <h5 className={`text-md mb-3 font-semibold ${light ? "text-light-text-primary" : "text-dark-text-primary"}`}>
+                        I’m Caleb Erickson, a senior Computer Science student at the University of Alabama on the STEM to MBA path, maintaining a 4.0 GPA while bridging technology and business strategy. As an AI Researcher at the Alabama Institute for the Advancement of Artificial Intelligence, I contribute to projects in knowledge graphs, storytelling platforms, and disaster preparedness, with publications in progress. My work focuses on building autonomous Retrieval-Augmented Generation (RAG) pipelines and deploying AI solutions that connect cutting-edge research to real-world applications
+        
+                    </h5>
+
+                    <h5 className={`text-md mb-3 font-semibold ${light ? "text-light-text-primary" : "text-dark-text-primary"}`}>
+                        I also gained industry experience at QuantHub, where I developed interactive AI lesson modules within a web application platform powered by AI pipelines, while conducting market research to identify opportunities for expanding AI education across college campuses. These experiences combined technical development with educational innovation, giving me perspective on how to scale AI solutions for impact.
+                    </h5>
+
+                    <h5 className={`text-md mb-3 font-semibold ${light ? "text-light-text-primary" : "text-dark-text-primary"}`}>
+                        Beyond research and internships, I have built full-stack platforms and AI-driven applications using Python, React, Azure, and AWS. My recent projects include a custom CNN digit recognition system with a real-time web interface and MockStreet Exchange, a full-stack stock trading simulation platform hosted on AWS.
+                    </h5>
+
+                    <h5 className={`text-md mb-3 font-semibold ${light ? "text-light-text-primary" : "text-dark-text-primary"}`}>
+                    I am passionate about creating impactful solutions that merge advanced AI research, robust software engineering, and business strategy to address meaningful challenges.
+                    </h5>
+                    </div>
                 </div>
             </div>
 
+            {/* Bottom */}
+            <div className={`flex min-lg:flex-row max-lg:flex-col transition duration-300 ease-in-out`}>
+                {/* Bottom left */}
+                <div className={`bg-gradient-to-tr max-lg:bg-gradient-to-br ${light ? "from-light-bg-primary via-light-bg-secondary to-light-accent" : "from-dark-bg-primary via-dark-bg-secondary to-dark-accent"} flex flex-col flex-1 items-center justify-start min-lg:pb-8 pt-2`}>
+                    {cardData.slice(0, 2).map((card, index) => (
+                        <div className="flex flex-1 w-5/6 my-4 ml-2 mr-1">
+                            <HomeCard key={index} {...card} />
+                        </div>
+                    ))}  
+                </div>
 
-            {/* Right side */}
-            <div className={`bg-gradient-to-bl to-accent ${light ? "from-light-bg-primary via-light-bg-secondary" : "from-dark-bg-primary via-dark-bg-secondary"} flex flex-col flex-1 items-center justify-start pb-8 pt-2`}>
-                {cardData.map((card, index) => (
-                    <div className="flex flex-1 w-5/6 my-4 mx-2">
-                        <HomeCard key={index} {...card} />
-                    </div>
-                ))}  
+                {/* Bottom right */}
+                <div className={`bg-gradient-to-tl max-lg:bg-gradient-to-tr ${light ? "from-light-bg-primary via-light-bg-secondary to-light-accent" : "from-dark-bg-primary via-dark-bg-secondary to-dark-accent"} flex flex-col flex-1 items-center justify-start pb-8 pt-2`}>
+                    {cardData.slice(2, 4).map((card, index) => (
+                        <div className="flex flex-1 w-5/6 my-4 ml-1 mr-2">
+                            <HomeCard key={index} {...card} />
+                        </div>
+                    ))}  
+                </div>
             </div>
         </div>
     )
