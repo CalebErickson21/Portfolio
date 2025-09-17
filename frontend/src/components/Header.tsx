@@ -111,6 +111,11 @@ const Header = () => {
                                 onClick={() => navigate('/academics')}>
                                     Academics
                                 </li>
+
+                                <li className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                                onClick={() => navigate('/contact')}>
+                                    Contact
+                                </li>
                             </ul>
                         </div>
                     )}
