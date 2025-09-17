@@ -6,7 +6,6 @@ import { useEnvironment } from "../contexts/Environment";
 import ExperienceCard from "../components/ExperienceCard";
 
 // Import images
-import Portfolio from "../assets/images/portfolio.svg?react";
 import OKN from "../assets/images/okn.png";
 import CAST from "../assets/images/cast.png";
 import FLAI from "../assets/images/flai.png";
