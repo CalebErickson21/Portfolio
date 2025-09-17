@@ -55,7 +55,7 @@ const Experience = () => {
 
 
     return (
-        <div className={`flex flex-col w-full h-full`}>
+        <div className={`flex flex-col w-full h-full min-h-screen`}>
             {/* Header */}
             <div className={`flex flex-col justify-center items-center text-center w-full h-full px-8 py-4 ${light ? "bg-gradient-to-br from-light-bg-primary to-light-accent" : "bg-gradient-to-br from-dark-bg-primary to-dark-accent"} transition duration-300 ease-in-out`}>
                 <h1 className={`${light ? 'text-light-text-primary' : 'text-dark-text-primary'} text-2xl font-bold`}>Experience</h1>

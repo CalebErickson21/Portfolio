@@ -55,7 +55,7 @@ const Home = () => {
 
 
     return (        
-        <div id='home-container' className={`flex flex-col transition duration-300 ease-in-out`}>
+        <div id='home-container' className={`flex flex-col min-h-screen transition duration-300 ease-in-out min-h-screen`}>
 
             {/* Top */}
             <div className={`flex min-lg:flex-row max-lg:flex-col transition duration-300 ease-in-out`}>

@@ -70,7 +70,7 @@ const Projects = () => {
     ];
 
     return (
-        <div className={`flex flex-col w-full h-full ${light ? "bg-gradient-to-br from-light-bg-primary via-light-accent to-light-accent" : "bg-gradient-to-br from-dark-bg-primary via-dark-accent to-dark-accent"} transition duration-300 ease-in-out`}>
+        <div className={`flex flex-col w-full h-full min-h-screen ${light ? "bg-gradient-to-br from-light-bg-primary via-light-accent to-light-accent" : "bg-gradient-to-br from-dark-bg-primary via-dark-accent to-dark-accent"} transition duration-300 ease-in-out`}>
             {/* Header */}
             <div className="flex flex-col justify-center items-center text-center w-full h-full px-8 py-4">
                 <h1 className={`${light ? 'text-light-text-primary' : 'text-dark-text-primary'} text-2xl font-bold`}>Projects</h1>
