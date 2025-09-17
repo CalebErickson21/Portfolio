@@ -26,17 +26,18 @@ export type HomeCardProps = {
 export type ProjectCardProps = {
     title: string;
     description: string;
-    image: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    image: string;
     stack: string;
     production: string;
     github: string;
+    time: string;
 }
 
 // Experience Card Props
 export type ExperienceCardProps = {
     title: string;
     description: string;
-    image: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    image: string;
     role: string;
     stack: string;
     production: string;

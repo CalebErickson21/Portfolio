@@ -7,7 +7,7 @@ import { useTheme } from '../contexts/Theme';
 import type { ProjectCardProps } from '../utils/types';
 
 // Home card component
-const ProjectCard = ({ title, description, image: SvgIcon, stack, production, github }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, image, stack, production, github, time }: ProjectCardProps) => {
 
     // States
     const { light } = useTheme();
@@ -20,26 +20,17 @@ const ProjectCard = ({ title, description, image: SvgIcon, stack, production, gi
             {/* Header */}
             <div className="flex flex-col w-full h-full items-center justify-start p-2">
                 <h2 className={`${light ? 'text-light-text-primary' : 'text-dark-text-primary'} text-lg font-bold`}>{title}</h2>
+                <p className={`${light ? 'text-light-text-secondary' : 'text-dark-text-secondary'} text-md font-semibold`}>{time}</p>
+            </div>
+
+            {/* Image */}
+            <div className="flex flex-row w-full h-full items-center justify-center">
+                <img src={image} alt={title} className="w-full h-full object-cover rounded-lg" />
             </div>
             
             {/* Body */}
             <div className="flex flex-row w-full h-full items-center justify-center p-2">
-                {/* Left Side */}
-                <div className="w-1/2 h-full p-8 flex items-center justify-center rounded-lg">
-                <SvgIcon 
-                    className="w-full h-full transition duration-300 ease-in-out [&_*]:!fill-current [&_*]:!stroke-current"
-                    style={{
-                        fill: light ? '#181A1B' : '#F9FAFB',
-                        stroke: light ? '#181A1B' : '#F9FAFB',
-                        color: light ? '#181A1B' : '#F9FAFB',
-                    }}
-                />
-                </div>
-
-                {/* Right Side */}
-                <div className="flex flex-col w-1/2 h-full justify-center items-center">
-                    <p className={`${light ? 'text-light-text-secondary' : 'text-dark-text-secondary'} text-md font-semibold`}>{description}</p>
-                </div>
+                <p className={`${light ? 'text-light-text-secondary' : 'text-dark-text-secondary'} text-md font-semibold`}>{description}</p>
             </div>
 
             {/* Footer */}

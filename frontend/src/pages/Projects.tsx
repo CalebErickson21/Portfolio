@@ -6,11 +6,11 @@ import { useEnvironment } from "../contexts/Environment";
 import ProjectCard from "../components/ProjectCard";
 
 // Import images
-import MockStreet from "../assets/images/mockstreet.svg?react";
-import NeuralNetwork from "../assets/images/neuralNetwork.svg?react";
-import Portfolio from "../assets/images/portfolio.svg?react";
-import Launchpad from "../assets/images/launchpad.svg?react";
-import ScholarSync from "../assets/images/scholarSync.svg?react";
+import MockStreet from "../assets/images/mockstreet.png";
+import NeuralNetwork from "../assets/images/numbers.png";
+import Portfolio from "../assets/images/portfolio.jpg";
+import Launchpad from "../assets/images/launchpad.png";
+import ScholarSync from "../assets/images/scholarSync.png";
 
 
 // About page component
@@ -28,7 +28,8 @@ const Projects = () => {
             image: Launchpad,
             stack: "In Progress",
             production: "",
-            github: ""
+            github: "",
+            time: "August 2025 - Present"
         },
         {
             title: "ScholarSync",
@@ -36,7 +37,8 @@ const Projects = () => {
             image: ScholarSync,
             stack: "In Progress",
             production: "",
-            github: ""
+            github: "",
+            time: "August 2025 - Present"
         },
         {
             title: "Mock Street Trading Platform",
@@ -44,7 +46,8 @@ const Projects = () => {
             image: MockStreet,
             stack: "Git ● AWS ● PostGre SQL ● React.js ● Node.js ● SCSS",
             production: "https://mockstreetexchange.com",
-            github: "https://github.com/CalebErickson21/mockstreeet"
+            github: "https://github.com/CalebErickson21/mockstreeet",
+            time: "March 2025"
         },
         {
             title: "Number Prediction Neural Network",
@@ -52,7 +55,8 @@ const Projects = () => {
             image: NeuralNetwork,
             stack: "Git ● Python ● Numpy ● Flask ● React.js",
             production: "https://numbers-beige.vercel.app/",
-            github: "https://github.com/CalebErickson21/numbers"
+            github: "https://github.com/CalebErickson21/numbers",
+            time: "April 2025"
         },
         {
             title: "Portfolio Interactive Website",
@@ -60,12 +64,13 @@ const Projects = () => {
             image: Portfolio,
             stack: "Git ● Typescript ● React ● TailwindCSS",
             production: "https://caleberickson21.github.io/",
-            github: "https://github.com/CalebErickson21/portfolio"
+            github: "https://github.com/CalebErickson21/portfolio",
+            time: "August 2024 - Present"
         },
     ];
 
     return (
-        <div className={`flex flex-col w-full h-full ${light ? "bg-gradient-to-br from-light-bg-primary via-accent to-light-bg-primary" : "bg-gradient-to-br from-dark-bg-primary via-accent to-dark-bg-primary"} transition duration-300 ease-in-out`}>
+        <div className={`flex flex-col w-full h-full ${light ? "bg-gradient-to-br from-light-bg-primary via-light-accent to-light-accent" : "bg-gradient-to-br from-dark-bg-primary via-dark-accent to-dark-accent"} transition duration-300 ease-in-out`}>
             {/* Header */}
             <div className="flex flex-col justify-center items-center text-center w-full h-full px-8 py-4">
                 <h1 className={`${light ? 'text-light-text-primary' : 'text-dark-text-primary'} text-2xl font-bold`}>Projects</h1>
