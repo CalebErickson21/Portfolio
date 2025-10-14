@@ -29,7 +29,7 @@ const ProjectCard = ({ title, description, image, stack, production, github, tim
             </div>
             
             {/* Body */}
-            <div className="flex flex-row w-full h-full items-center justify-center p-2">
+            <div className="flex flex-row w-full h-full items-center justify-center text-center p-2">
                 <p className={`${light ? 'text-light-text-secondary' : 'text-dark-text-secondary'} text-md font-semibold`}>{description}</p>
             </div>
 
