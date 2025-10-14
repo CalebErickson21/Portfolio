@@ -24,14 +24,14 @@ const ExperienceCard = ({ title, description, image, role, stack, production }: 
             </div>
 
             {/* Image */}
-            <div className="flex flex-row w-full h-full items-center justify-start mb-2 p-0">
+            <div className="flex flex-row w-full h-full items-center justify-end items-end mb-2 p-0">
                 <img src={image} alt={title} className="w-full h-full object-cover rounded-lg m-0 p-0" />
             </div>
             
             {/* Body */}
             <div className="flex flex-col w-full h-full items-center justify-start mb-2 p-0">
                 {/* Description */}
-                <div className="flex flex-col w-full h-full justify-start items-center">
+                <div className="flex flex-col w-full h-full justify-start items-center text-center">
                     <p className={`${light ? 'text-light-text-secondary' : 'text-dark-text-secondary'} text-md font-semibold`}>{description}</p>
                 </div>
             </div>

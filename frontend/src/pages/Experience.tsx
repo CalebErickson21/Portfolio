@@ -27,7 +27,7 @@ const Experience = () => {
         projects: [
             {
                 title: "Open Knowledge Network (OKN)",
-                description: "Open Knowledge Network (OKN) is a knowledge graph that is used to store and query data about the world. It is a project that I am working on with the Alabama Institute for the Advancement of Artificial Intelligence (ALAAI). I am working on this project as a part of my internship with ALAAI.",
+                description: "The Open Knowledge Network (OKN) is an NSF-funded research project that aims to integrate federally curated datasets on mental health, substance use, and medical expenditures into a unified, queryable knowledge system that leverages knowledge graphs, vector embeddings, and large language models (LLMs) to create a contextualized Retrieval-Augmented Generation (RAG) framework. This system enables users to ask natural language questions and receive grounded, explainable responses based on real data, lowering the barrier to access complex public health information and supporting data-driven insights into the social determinants of health resilience.",
                 role: "Team Development Lead",
                 image: OKN,
                 stack: "Git ● Azure ● Python ● Numpy ● Sklearn ● Pandas ● Django ● React.js",
@@ -35,15 +35,15 @@ const Experience = () => {
             },
             {
                 title: "Computer Assisted Storytelling (CAST)",
-                description: "Computer Assisted Storytelling (CAST) is a project that I am working on with the Alabama Institute for the Advancement of Artificial Intelligence (ALAAI). I am working on this project as a part of my internship with ALAAI.",
+                description: "CAST is a data generation and storytelling platform deployed across six courses at UMBC and the University of Alabama. It leverages vector embeddings and large language models (LLMs) to help students develop data visualization and storytelling skills with AI-guided assistance. The platform also serves as a research tool to study how AI can enhance educational outcomes. My contributions to CAST include both frontend and backend development, as well as log data analysis to identify patterns in user behavior and correlate them with student performance and grade outcomes.",
                 role: "Frontend Developer + Log Analysis",
                 image: CAST,
                 stack: "Git ● Azure ● Python ● Numpy ● Pandas ● Django ● React.js",
-                production: "http://172.190.213.180:8050/login",
+                production: "https://www.cast-storystudio.com/login",
             },
             {
                 title: "Flood AI (FLAI)",
-                description: "Open Knowledge Network (OKN) is a knowledge graph that is used to store and query data about the world. It is a project that I am working on with the Alabama Institute for the Advancement of Artificial Intelligence (ALAAI). I am working on this project as a part of my internship with ALAAI.",
+                description: "In the FLAI project, I focused on the knowledge graph / ontology generation pipeline, building on a semi-automated, human-in-the-loop framework for constructing a flood risk ontology that bridges technical hydrological data and public communication. The methodology begins with expert-defined seed classes, then leverages LLMs to generate competency questions, propose new concepts and semantic relations, and enrich the schema using authoritative sources (e.g. FEMA, NWS). I worked on refining LLM outputs via embedding-based filtering, human validation, and hierarchical placement of entities, and integrated instance population from web-scraped flood event articles. The result is a rich, expressive ontology schema used to support contextualized, grounded narrative generation for flood risk messaging.",
                 role: "Automated Ontology Developer",
                 image: FLAI,
                 stack: "Git ● Azure ● Python ● Numpy ● Pandas ● Django ● React.js",
@@ -69,6 +69,7 @@ const Experience = () => {
                     <p className={`${light ? 'text-light-text-secondary' : 'text-dark-text-secondary'} text-lg font-semibold`}>{ALAAIData.description}</p>
                     <p className={`${light ? 'text-light-text-secondary' : 'text-dark-text-secondary'} text-lg font-semibold`}>{ALAAIData.time}</p>
                 </div>
+
                 <div className={`grid ${screenSmall ? 'min-sm:grid-cols-1' : ''} ${screenMedium ? 'min-md:grid-cols-2' : ''} ${screenLarge ? 'min-lg:grid-cols-3' : ''} auto-rows-min gap-4 p-4 items-center`}>
                     {ALAAIData.projects.map((card, index) => (
                         <ExperienceCard key={index} {...card} />
