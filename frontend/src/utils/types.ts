@@ -35,10 +35,13 @@ export type ProjectCardProps = {
 
 // Experience Card Props
 export type ExperienceCardProps = {
+    id: number;
     title: string;
     description: string;
     image: string;
     role: string;
     stack: string;
     production: string;
+    expandedCard: number | null;
+    setExpandedCard: React.Dispatch<React.SetStateAction<number | null>>;
 }

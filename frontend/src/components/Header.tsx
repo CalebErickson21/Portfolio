@@ -24,6 +24,12 @@ const Header = () => {
         setOpen(false);
     }, [screenLarge]);
 
+    const handleNavbarClick = (e: React.MouseEvent<HTMLLIElement>, route: string) => {
+        e.preventDefault();
+        navigate(route);
+        setOpen(false);
+    }
+
     return (
         <header
         className={`relative flex items-center p-4 ${light ? 'bg-light-bg-secondary text-light-text-primary' : 'bg-dark-bg-secondary text-dark-text-primary'} transition duration-300 ease-in-out`}>

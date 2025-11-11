@@ -10,18 +10,19 @@ export default {
         'light-bg-primary': '#F9FAFB',
         'light-bg-secondary': '#EDEEEF',
         'light-text-primary': '#1E1F21',
-        'light-text-secondary': '#4D4F52',
-        'light-accent': '#1D4ED8',
-
+        'light-text-secondary': '#26282B',
+        'light-accent': '#3B82F6',
+      
         // Dark
         'dark-bg-primary': '#181A1B',
         'dark-bg-secondary': '#242628',
         'dark-text-primary': '#F3F4F6',
-        'dark-text-secondary': '#A0A3A7',
+        'dark-text-secondary': '#D1D3D6',
         'dark-accent': '#60A5FA',
-
+      
         // Constants
       },
+      
       screens: {
         // Minimum width breakpoints
         'min-sm': {'min': '576px'},

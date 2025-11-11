@@ -22,7 +22,7 @@ const Footer = () => {
             <div className='flex flex-col justify-center items-center'>
                 <h3
                 className={`${light ? 'text-light-text-secondary' : 'text-dark-text-secondary'}`}>
-                    © 2025 Caleb Erickson • Designed & coded by me • Let’s <a onClick={() => navigate('/contact')}>connect</a>!
+                    © 2025 Caleb Erickson • Designed & coded by me • Let’s <a className="cursor-pointer underline hover:font-bold" onClick={() => navigate('/contact')}>connect</a>!
                 </h3>
             </div>
         </footer>

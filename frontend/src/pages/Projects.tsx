@@ -27,18 +27,18 @@ const Projects = () => {
             description: "Launchpad is a platform for students to manage their job applications, resume/cover letter reviews, and AI powered career advice. It consolidates all information across platforms such as LinkedIn, Indeed, and Handshake into a central hub with AI powered suggestions.",
             image: Launchpad,
             stack: "In Progress",
-            production: "",
-            github: "",
-            time: "August 2025 - Present"
+            production: "/construction",
+            github: "/construction",
+            time: "Planned December 2025"
         },
         {
             title: "ScholarSync",
             description: "ScholarSync is a platform for students for students to connect with other students and form study groups and clubs for various subjects and personal interests. It uses knowledge graphs and machine learning graph algorithms to detect communities and give personalized recommendations via link prediction algorithms.",
             image: ScholarSync,
             stack: "In Progress",
-            production: "",
-            github: "",
-            time: "August 2025 - Present"
+            production: "/construction",
+            github: "/construction",
+            time: "Planned December 2025"
         },
         {
             title: "Mock Street Trading Platform",

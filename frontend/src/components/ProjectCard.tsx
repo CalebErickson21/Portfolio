@@ -24,7 +24,7 @@ const ProjectCard = ({ title, description, image, stack, production, github, tim
             </div>
 
             {/* Image */}
-            <div className="flex flex-row w-full h-full items-center justify-center">
+            <div className="flex flex-row w-full h-[20dvh] items-center justify-center">
                 <img src={image} alt={title} className="w-full h-full object-cover rounded-lg" />
             </div>
             
