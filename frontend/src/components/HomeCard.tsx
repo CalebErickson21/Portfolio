@@ -17,7 +17,7 @@ const HomeCard = ({ title, description, image: SvgIcon, route }: HomeCardProps) 
     const navigate = useNavigate();
 
     return (
-        <div className={`flex flex-row w-full h-full items-center justify-between p-2 rounded-lg ${light ? 'bg-light-bg-secondary hover:shadow-light-text-secondary' : 'bg-dark-bg-secondary hover:shadow-dark-text-secondary'} hover:-translate-y-[.01rem] hover:shadow-xl hover:brightness-95 transition duration-300 ease-in-out`}>
+        <div className={`flex flex-row w-full h-full items-center justify-between p-2 rounded-lg ${light ? 'bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary' : 'bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary'} hover:-translate-y-[.01rem] shadow-md hover:shadow-lg hover:brightness-95 transition duration-300 ease-in-out`}>
             {/* Left Side */}
             <div className="w-1/4 h-full p-10 flex items-center justify-center">
                 <SvgIcon 

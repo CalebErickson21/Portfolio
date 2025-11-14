@@ -16,7 +16,7 @@ const ExperienceCard = ({ id, title, description, image, role, stack, production
     
 
     return (
-        <div className={`flex flex-col w-full h-full items-center justify-center p-2 rounded-lg ${light ? 'bg-light-bg-secondary hover:shadow-light-text-secondary' : 'bg-dark-bg-secondary hover:shadow-dark-text-secondary'} hover:-translate-y-[.01rem] hover:shadow-xl hover:brightness-95 transition duration-300 ease-in-out`}>
+        <div className={`flex flex-col w-full h-full items-center justify-center p-2 rounded-lg ${light ? 'bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary' : 'bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary'} hover:-translate-y-[.01rem] shadow-lg hover:shadow-xl hover:brightness-95 transition duration-300 ease-in-out`}>
             
             {/* Header */}
             <div className="flex flex-col w-full h-auto items-center justify-start text-center mb-2 p-0">
@@ -56,11 +56,13 @@ const ExperienceCard = ({ id, title, description, image, role, stack, production
                             onClick={() => setExpandedCard(null)}>
                                 Close
                             </button>
+                            {production !== "null" && (
                             <button
                             className={`${light ? 'bg-dark-bg-secondary text-dark-text-secondary' : 'bg-light-bg-secondary text-light-text-secondary'} text-sm font-semibold hover:font-bold rounded-lg px-2 py-1 m-2 cursor-pointer transition duration-300 ease-in-out`}
-                            onClick={() => window.open(production, '_blank')}>
-                                Production
-                            </button>
+                                onClick={() => window.open(production, '_blank')}>
+                                    Production
+                                </button>
+                            )}
                         </div>
                     </>
                 ) : (

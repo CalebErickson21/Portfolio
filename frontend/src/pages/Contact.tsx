@@ -43,7 +43,7 @@ const Contact = () => {
                         <ul className="flex flex-col gap-4 text-lg">
 
                             {/* Resume */}
-                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50" : "bg-dark-bg-secondary shadow-dark-accent/50"} px-2 py-1 rounded-md shadow-md`}>
+                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary" : "bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary"} px-2 py-1 rounded-md shadow-md hover:shadow-md hover:brightness-95 transition duration-300 ease-in-out`}>
                             <FileText className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
                             <a href={ResumeFile} download className={`font-semibold hover:font-bold ${light ? "text-light-text-primary hover:text-light-accent" : "text-dark-text-primary hover:text-dark-accent"}`}>
                                 Resume
@@ -51,7 +51,7 @@ const Contact = () => {
                             </li>
 
                             {/* Email */}
-                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50" : "bg-dark-bg-secondary shadow-dark-accent/50"} px-2 py-1 rounded-md shadow-md`}>
+                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary" : "bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary"} px-2 py-1 rounded-md shadow-md hover:shadow-md hover:brightness-95 transition duration-300 ease-in-out`}>
                             <Mail className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
                             <a href="mailto:crerickson@crimson.ua.edu" className={`font-semibold hover:font-bold ${light ? "text-light-text-primary hover:text-light-accent" : "text-dark-text-primary hover:text-dark-accent"}`}>
                                 crerickson@crimson.ua.edu
@@ -59,7 +59,7 @@ const Contact = () => {
                             </li>
 
                             {/* Phone */}
-                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50" : "bg-dark-bg-secondary shadow-dark-accent/50"} px-2 py-1 rounded-md shadow-md`}>
+                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary" : "bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary"} px-2 py-1 rounded-md shadow-md hover:shadow-md hover:brightness-95 transition duration-300 ease-in-out`}>
                             <Phone className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
                             <span className={`font-semibold hover:font-bold ${light ? "text-light-text-primary hover:text-light-accent" : "text-dark-text-primary hover:text-dark-accent"}`}>
                                 (615)-594-8664
@@ -67,7 +67,7 @@ const Contact = () => {
                             </li>
 
                             {/* Portfolio */}
-                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50" : "bg-dark-bg-secondary shadow-dark-accent/50"} px-2 py-1 rounded-md shadow-md`}>
+                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary" : "bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary"} px-2 py-1 rounded-md shadow-md hover:shadow-md hover:brightness-95 transition duration-300 ease-in-out`}>
                             <Globe className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
                             <button 
                                 onClick={() => navigate("/")} 
@@ -78,7 +78,7 @@ const Contact = () => {
                             </li>
 
                             {/* LinkedIn */}
-                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50" : "bg-dark-bg-secondary shadow-dark-accent/50"} px-2 py-1 rounded-md shadow-md`}>
+                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary" : "bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary"} px-2 py-1 rounded-md shadow-md hover:shadow-md hover:brightness-95 transition duration-300 ease-in-out`}>
                             <Linkedin className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
                             <a 
                                 href="https://linkedin.com/in/-caleb-erickson" 
@@ -91,7 +91,7 @@ const Contact = () => {
                             </li>
 
                             {/* Github */}
-                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50" : "bg-dark-bg-secondary shadow-dark-accent/50"} px-2 py-1 rounded-md shadow-md`}>
+                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary" : "bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary"} px-2 py-1 rounded-md shadow-md hover:shadow-md hover:brightness-95 transition duration-300 ease-in-out`}>
                             <Github className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
                             <a 
                                 href="https://github.com/caleberickson21" 

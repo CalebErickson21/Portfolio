@@ -10,6 +10,7 @@ import ExperienceCard from "../components/ExperienceCard";
 import OKN from "../assets/images/okn.png";
 import CAST from "../assets/images/cast.png";
 import FLAI from "../assets/images/flai.png";
+import QuantHub from "../assets/images/quanthub.png";
 
 
 // About page component
@@ -59,6 +60,24 @@ const Experience = () => {
         ]
     }
 
+    const QuantHubData = {
+        company: "QuantHub",
+        role: "Market Research + Software Development Industry Project",
+        description: "At QuantHub, I conducted market research to identify opportunities for expanding AI education across college campuses. I developed a webscraper that collects course registration data from the University of Alabama's course registration system. The scraper is used to collect data for an industry-sponsored project on the impact of AI on course registration.",
+        time: "August 2024 - December 2024",
+        projects: [
+            {
+                id: 1,
+                title: "Course Registration Webscraper",
+                description: "I developed a webscraper that collects course registration data from the University of Alabama's course registration system. The scraper is used to collect data for an industry-sponsored project on the impact of AI on course registration.",
+                role: "Software Developer",
+                image: QuantHub,
+                stack: "Git ● Docker ● PostgreSQL ● Python ● BeautifulSoup ● Selenium",
+                production: "null",
+            }
+        ]
+    }
+
 
     return (
         <div className={`flex flex-col w-full h-full min-h-screen`}>
@@ -97,6 +116,36 @@ const Experience = () => {
                     )}
                 </div>
             </div>
+
+            {/* QuantHub */}
+            <div className={`flex w-full h-full ${screenLarge ? 'flex-row' : 'flex-col'} items-center justify-center ${light ? "bg-gradient-to-tl from-light-accent to-light-bg-primary" : "bg-gradient-to-tl from-dark-accent to-dark-bg-primary"} transition duration-300 ease-in-out`}>
+                <div className={`flex flex-col items-center justify-center h-full ${screenLarge ? 'w-1/2' : 'w-full'} px-8 py-4 text-center`}>
+                    <h2 className={`${light ? 'text-light-text-primary' : 'text-dark-text-primary'} text-xl font-bold`}>{QuantHubData.company}</h2>
+                    <h3 className={`${light ? 'text-light-text-primary' : 'text-dark-text-primary'} text-lg font-bold`}>{QuantHubData.role}</h3>
+                    <p className={`${light ? 'text-light-text-secondary' : 'text-dark-text-secondary'} text-lg font-semibold`}>{QuantHubData.time}</p>
+                    <p className={`${light ? 'text-light-text-secondary' : 'text-dark-text-secondary'} text-lg font-semibold`}>{QuantHubData.description}</p>
+                </div>
+
+                
+                <div className={`flex h-full ${screenLarge ? 'w-1/2' : 'w-full'}`}>
+                    {expandedCard === null ? (
+                        <div className="flex h-full w-full grid grid-cols-1 auto-rows-min gap-4 m-4 px-4 items-center">
+                            {QuantHubData.projects.map((card, index) => (
+                                <ExperienceCard key={index} {...card} expandedCard={expandedCard} setExpandedCard={setExpandedCard} />
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="flex h-full w-full m-4 px-4 items-center">
+                            {QuantHubData.projects
+                                .filter(card => card.id === expandedCard)
+                                .map((card, index) => (
+                                    <ExperienceCard key={index} {...card} expandedCard={expandedCard} setExpandedCard={setExpandedCard} />
+                                ))}
+                        </div>
+                    )}
+                </div>
+            </div>
+                
         </div>
     )
 }
