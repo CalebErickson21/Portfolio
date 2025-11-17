@@ -45,3 +45,16 @@ export type ExperienceCardProps = {
     expandedCard: number | null;
     setExpandedCard: React.Dispatch<React.SetStateAction<number | null>>;
 }
+
+// Publication Dropdown Props
+export type PublicationDropdownProps = {
+    id: number;
+    title: string;
+    authors?: string;
+    description?: string;
+    venue?: string;
+    year?: string;
+    link?: string;
+    expandedPublication: number | null;
+    setExpandedPublication: React.Dispatch<React.SetStateAction<number | null>>;
+}

@@ -49,22 +49,45 @@ const Header = () => {
                         <ul className='flex flex-row space-x-8'>
                             <li
                             className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
-                            onClick={(e) => handleNavbarClick(e, '/')}>Home</li>
+                            onClick={(e) => handleNavbarClick(e, '/')}>
+                                Home
+                            </li>
+
                             <li
                             className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
-                            onClick={(e) => handleNavbarClick(e, '/about')}>About</li>
+                            onClick={(e) => handleNavbarClick(e, '/about')}>
+                                About
+                            </li>
+                            
                             <li
                             className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
-                            onClick={(e) => handleNavbarClick(e, '/experience')}>Experience</li>
+                            onClick={(e) => handleNavbarClick(e, '/experience')}>
+                                Experience
+                            </li>
+                            
                             <li
                             className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
-                            onClick={(e) => handleNavbarClick(e, '/projects')}>Projects</li>
+                            onClick={(e) => handleNavbarClick(e, '/projects')}>
+                                Projects
+                            </li>
+
                             <li
                             className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
-                            onClick={(e) => handleNavbarClick(e, '/academics')}>Academics</li>
+                            onClick={(e) => handleNavbarClick(e, '/publications')}>
+                                Publications
+                            </li>
+                            
                             <li
                             className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
-                            onClick={(e) => handleNavbarClick(e, '/contact')}>Contact</li>
+                            onClick={(e) => handleNavbarClick(e, '/academics')}>
+                                Academics
+                            </li>
+                            
+                            <li
+                            className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                            onClick={(e) => handleNavbarClick(e, '/contact')}>
+                                Contact
+                            </li>
                         </ul>
                     </div>
                 </>
@@ -80,13 +103,16 @@ const Header = () => {
                         </div>
 
                         <div className='flex flex-1 justify-end items-center'>
-                            <button
-                            className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
-                            onClick={() => setOpen(!open)}>
-                                <span className='text-2xl font-bold cursor-pointer'>
-                                Menu
-                                </span>
-                            </button>
+                        <button
+                            className={`font-semibold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent': 'text-dark-primary hover:text-dark-accent'}`}
+                            onClick={() => setOpen(!open)}
+                        >
+                            <div className="flex flex-col justify-between w-6 h-5">
+                                <span className="block h-[3px] w-full bg-current rounded"></span>
+                                <span className="block h-[3px] w-full bg-current rounded"></span>
+                                <span className="block h-[3px] w-full bg-current rounded"></span>
+                            </div>
+                        </button>
                         </div>
                     </div>
 
@@ -111,6 +137,11 @@ const Header = () => {
                                 <li className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
                                 onClick={(e) => handleNavbarClick(e, '/projects')}>
                                     Projects
+                                </li>
+
+                                <li className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                                onClick={(e) => handleNavbarClick(e, '/publications')}>
+                                    Publications
                                 </li>
                             
                                 <li className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}

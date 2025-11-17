@@ -16,7 +16,6 @@ const Academics = () => {
     return (
         <div id='academics-container' className={`flex flex-col transition duration-300 ease-in-out`}>
 
-            {/* Top */}
             <div className={`flex min-lg:flex-row max-lg:flex-col transition duration-300 ease-in-out`}>
 
                 {/* Left side */}
