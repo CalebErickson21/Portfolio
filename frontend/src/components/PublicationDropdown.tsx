@@ -33,19 +33,19 @@ const PublicationDropdown = ({
     };
 
     return (
-        <div className={`flex flex-col w-full mb-3 rounded-lg overflow-hidden transition duration-300 ease-in-out ${
+        <div className={`flex flex-col w-full mb-3 rounded-lg transition duration-300 ease-in-out ${
             light 
-                ? 'bg-light-bg-secondary shadow-light-accent/50' 
-                : 'bg-dark-bg-secondary shadow-dark-accent/50'
-        } shadow-md`}>
+            ? 'bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary'
+            : 'bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary'}
+            hover:-translate-y-[.1rem] shadow-md hover:shadow-lg transition duration-300 ease-in-out`}>
             
             {/* Header Bar - Always Visible */}
             <button
                 onClick={toggleExpansion}
                 className={`flex flex-row items-center justify-between w-full p-4 text-left hover:brightness-95 transition duration-300 ease-in-out ${
                     light 
-                        ? 'bg-light-bg-secondary hover:bg-light-accent/20' 
-                        : 'bg-dark-bg-secondary hover:bg-dark-accent/20'
+                        ? 'hover:bg-light-accent/10' 
+                        : 'hover:bg-dark-accent/10'
                 }`}
             >
                 <h3 className={`${light ? 'text-light-text-primary' : 'text-dark-text-primary'} text-lg font-bold pr-4`}>
@@ -67,10 +67,10 @@ const PublicationDropdown = ({
 
             {/* Expandable Content */}
             {isExpanded && (
-                <div className={`px-4 pb-4 pt-2 border-t ${
+                <div className={`px-4 pb-4 pt-2 border-t rounded-b-lg ${
                     light 
-                        ? 'border-light-accent/30 bg-light-bg-primary' 
-                        : 'border-dark-accent/30 bg-dark-bg-primary'
+                        ? 'border-light-accent/10 bg-light-bg-primary' 
+                        : 'border-dark-accent/10 bg-dark-bg-primary'
                 } transition-all duration-300 ease-in-out`}>
                     <div className="flex flex-col space-y-2">
                         {authors && (
@@ -103,11 +103,10 @@ const PublicationDropdown = ({
                                     href={link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={`inline-block ${
-                                        light 
-                                            ? 'bg-dark-bg-secondary text-dark-text-secondary hover:bg-dark-accent' 
-                                            : 'bg-light-bg-secondary text-light-text-secondary hover:bg-light-accent'
-                                    } text-sm font-semibold hover:font-bold rounded-lg px-4 py-2 cursor-pointer transition duration-300 ease-in-out`}
+                                    className={`${light
+                                        ? 'bg-dark-bg-secondary text-dark-text-secondary'
+                                        : 'bg-light-bg-secondary text-light-text-secondary'}
+                                        text-sm font-semibold hover:font-bold rounded-lg px-2 py-1 m-2 cursor-pointer transition duration-300 ease-in-out`}
                                 >
                                     View Publication
                                 </a>

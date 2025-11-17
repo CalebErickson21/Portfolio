@@ -15,8 +15,18 @@ const ProjectCard = ({ title, description, image, stack, production, github, tim
     // Helpers
 
     return (
-        <div className={`flex flex-col w-full h-full items-center justify-center p-2 rounded-lg ${light ? 'bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary' : 'bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary'} hover:-translate-y-[.01rem] shadow-lg hover:shadow-xl hover:brightness-95 transition duration-300 ease-in-out`}>
+        <div className={`w-full h-full p-0 m-0 rounded-lg ${ 
+            light 
+                ? 'bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary'
+                : 'bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary'}
+                hover:-translate-y-[.1rem] shadow-md hover:shadow-lg transition duration-300 ease-in-out`}>
             
+            {/* Tint Overlay*/}
+            <div className={`flex flex-col w-full h-full items-center justify-between p-2 rounded-lg ${
+                light 
+                    ? 'hover:bg-light-accent/10'
+                    : 'hover:bg-dark-accent/10'}
+                }`}>
             {/* Header */}
             <div className="flex flex-col w-full h-auto items-center justify-start p-2">
                 <h2 className={`${light ? 'text-light-text-primary' : 'text-dark-text-primary'} text-lg font-bold`}>{title}</h2>
@@ -34,7 +44,7 @@ const ProjectCard = ({ title, description, image, stack, production, github, tim
             </div>
 
             {/* Footer */}
-            <div className="flex flex-col w-full h-full items-center text-center p-2">
+            <div className="flex flex-col w-full h-auto items-center justify-end text-center p-2">
                 {/* Tech Stack */}
                 <h3 className={`${light ? 'text-light-text-secondary' : 'text-dark-text-secondary'} text-md font-bold`}>Tech Stack</h3>
                 <p className={`${light ? 'text-light-text-secondary' : 'text-dark-text-secondary'} text-md font-bold`}>{stack}</p>
@@ -53,6 +63,7 @@ const ProjectCard = ({ title, description, image, stack, production, github, tim
                     </button>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

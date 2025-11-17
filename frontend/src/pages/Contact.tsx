@@ -43,64 +43,106 @@ const Contact = () => {
                         <ul className="flex flex-col gap-4 text-lg">
 
                             {/* Resume */}
-                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary" : "bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary"} px-2 py-1 rounded-md shadow-md hover:shadow-md hover:brightness-95 transition duration-300 ease-in-out`}>
-                            <FileText className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
-                            <a href={ResumeFile} download className={`font-semibold hover:font-bold ${light ? "text-light-text-primary hover:text-light-accent" : "text-dark-text-primary hover:text-dark-accent"}`}>
-                                Resume
-                            </a>
+                            <li className={`w-full h-full p-0 m-0 rounded-lg ${ 
+                                light 
+                                    ? 'bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary'
+                                    : 'bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary'}
+                                    hover:-translate-y-[.05rem] shadow-md hover:shadow-lg transition duration-300 ease-in-out`}>
+                                {/* Tint Overlay */}
+                                <div className={`flex items-center gap-3 w-full h-full p-2 rounded-lg ${light ? "hover:bg-light-accent/10" : "hover:bg-dark-accent/10"} transition duration-300 ease-in-out`}>
+                                    <FileText className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
+                                    <a href={ResumeFile} download className={`font-semibold hover:font-bold ${light ? "text-light-text-primary" : "text-dark-text-primary"}`}>
+                                        Resume
+                                        </a>
+                                </div>
                             </li>
 
                             {/* Email */}
-                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary" : "bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary"} px-2 py-1 rounded-md shadow-md hover:shadow-md hover:brightness-95 transition duration-300 ease-in-out`}>
-                            <Mail className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
-                            <a href="mailto:crerickson@crimson.ua.edu" className={`font-semibold hover:font-bold ${light ? "text-light-text-primary hover:text-light-accent" : "text-dark-text-primary hover:text-dark-accent"}`}>
-                                crerickson@crimson.ua.edu
-                            </a>
+                            <li className={`w-full h-full p-0 m-0 rounded-lg ${ 
+                                light 
+                                    ? 'bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary'
+                                    : 'bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary'}
+                                    hover:-translate-y-[.05rem] shadow-md hover:shadow-lg transition duration-300 ease-in-out`}>
+                                {/* Tint Overlay */}
+                                <div className={`flex items-center gap-3 w-full h-full p-2 rounded-lg ${light ? "hover:bg-light-accent/10" : "hover:bg-dark-accent/10"} transition duration-300 ease-in-out`}>
+                                    <Mail className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
+                                    <a href="mailto:crerickson@crimson.ua.edu" className={`font-semibold hover:font-bold ${light ? "text-light-text-primary" : "text-dark-text-primary"}`}>
+                                        crerickson@crimson.ua.edu
+                                    </a>
+                                </div>
                             </li>
 
                             {/* Phone */}
-                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary" : "bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary"} px-2 py-1 rounded-md shadow-md hover:shadow-md hover:brightness-95 transition duration-300 ease-in-out`}>
-                            <Phone className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
-                            <span className={`font-semibold hover:font-bold ${light ? "text-light-text-primary hover:text-light-accent" : "text-dark-text-primary hover:text-dark-accent"}`}>
-                                (615)-594-8664
-                            </span>
+                            <li className={`w-full h-full p-0 m-0 rounded-lg ${ 
+                                light 
+                                    ? 'bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary'
+                                    : 'bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary'}
+                                    hover:-translate-y-[.05rem] shadow-md hover:shadow-lg transition duration-300 ease-in-out`}>
+                                {/* Tint Overlay */}
+                                <div className={`flex items-center gap-3 w-full h-full p-2 rounded-lg ${light ? "hover:bg-light-accent/10" : "hover:bg-dark-accent/10"} transition duration-300 ease-in-out`}>
+                                    <Phone className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
+                                    <span className={`font-semibold hover:font-bold ${light ? "text-light-text-primary" : "text-dark-text-primary"}`}>
+                                        (615)-594-8664
+                                    </span>
+                                </div>
                             </li>
 
                             {/* Portfolio */}
-                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary" : "bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary"} px-2 py-1 rounded-md shadow-md hover:shadow-md hover:brightness-95 transition duration-300 ease-in-out`}>
-                            <Globe className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
-                            <button 
-                                onClick={() => navigate("/")} 
-                                className={`font-semibold hover:font-bold ${light ? "text-light-text-primary hover:text-light-accent" : "text-dark-text-primary hover:text-dark-accent"}`}
-                            >
-                                caleberickson21.github.io
-                            </button>
+                            <li className={`w-full h-full p-0 m-0 rounded-lg ${ 
+                                light 
+                                    ? 'bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary'
+                                    : 'bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary'}
+                                    hover:-translate-y-[.05rem] shadow-md hover:shadow-lg transition duration-300 ease-in-out`}>
+                                {/* Tint Overlay */}
+                                <div className={`flex items-center gap-3 w-full h-full p-2 rounded-lg ${light ? "hover:bg-light-accent/10" : "hover:bg-dark-accent/10"} transition duration-300 ease-in-out`}>
+                                    <Globe className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
+                                    <button 
+                                        onClick={() => navigate("/")} 
+                                        className={`font-semibold hover:font-bold ${light ? "text-light-text-primary" : "text-dark-text-primary"}`}
+                                    >
+                                        caleberickson21.github.io
+                                    </button>
+                                </div>
                             </li>
 
                             {/* LinkedIn */}
-                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary" : "bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary"} px-2 py-1 rounded-md shadow-md hover:shadow-md hover:brightness-95 transition duration-300 ease-in-out`}>
-                            <Linkedin className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
-                            <a 
-                                href="https://linkedin.com/in/-caleb-erickson" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className={`font-semibold hover:font-bold ${light ? "text-light-text-primary hover:text-light-accent" : "text-dark-text-primary hover:text-dark-accent"}`}
-                            >
-                                linkedin.com/in/-caleb-erickson
-                            </a>
+                            <li className={`w-full h-full p-0 m-0 rounded-lg ${ 
+                                light 
+                                    ? 'bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary'
+                                    : 'bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary'}
+                                    hover:-translate-y-[.05rem] shadow-md hover:shadow-lg transition duration-300 ease-in-out`}>
+                                {/* Tint Overlay */}
+                                <div className={`flex items-center gap-3 w-full h-full p-2 rounded-lg ${light ? "hover:bg-light-accent/10" : "hover:bg-dark-accent/10"} transition duration-300 ease-in-out`}>
+                                    <Linkedin className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
+                                    <a 
+                                        href="https://linkedin.com/in/-caleb-erickson" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className={`font-semibold hover:font-bold ${light ? "text-light-text-primary" : "text-dark-text-primary"}`}
+                                    >
+                                        linkedin.com/in/-caleb-erickson
+                                    </a>
+                                </div>
                             </li>
 
                             {/* Github */}
-                            <li className={`flex items-center gap-3 ${light ? "bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary" : "bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary"} px-2 py-1 rounded-md shadow-md hover:shadow-md hover:brightness-95 transition duration-300 ease-in-out`}>
-                            <Github className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
-                            <a 
-                                href="https://github.com/caleberickson21" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className={`font-semibold hover:font-bold ${light ? "text-light-text-primary hover:text-light-accent" : "text-dark-text-primary hover:text-dark-accent"}`}
-                            >
-                                github.com/caleberickson21
-                            </a>
+                            <li className={`w-full h-full p-0 m-0 rounded-lg ${ 
+                                light 
+                                    ? 'bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary'
+                                    : 'bg-dark-bg-secondary shadow-dark-accent/50 hover:shadow-dark-text-secondary'}
+                                    hover:-translate-y-[.05rem] shadow-md hover:shadow-lg transition duration-300 ease-in-out`}>
+                                {/* Tint Overlay */}
+                                <div className={`flex items-center gap-3 w-full h-full p-2 rounded-lg ${light ? "hover:bg-light-accent/10" : "hover:bg-dark-accent/10"} transition duration-300 ease-in-out`}>
+                                    <Github className={`w-5 h-5 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`} />
+                                    <a 
+                                        href="https://github.com/caleberickson21" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className={`font-semibold hover:font-bold ${light ? "text-light-text-primary" : "text-dark-text-primary"}`}
+                                    >
+                                        github.com/caleberickson21
+                                    </a>
+                                </div>
                             </li>
 
                         </ul>

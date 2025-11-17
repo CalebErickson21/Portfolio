@@ -40,7 +40,7 @@ const About = () => {
                         </h5>
 
                         <h5 className={`text-md mb-3 font-semibold ${light ? "text-light-text-primary" : "text-dark-text-primary"}`}>
-                        I also enjoy exploring new experiences and places. Traveling has become a way to satisfy my curiosity, and I’m always eager to try something different—this winter, I hope to learn snowboarding as my next adventure. At the same time, I balance my active lifestyle with quieter moments, whether it’s playing acoustic guitar or winding down with a movie. These hobbies reflect my drive to stay curious, creative, and connected, both inside and outside the classroom.
+                        I also enjoy exploring new experiences and places. Traveling has become a way to satisfy my curiosity, and I’m always eager to try something different. This winter, I hope to learn snowboarding as my next adventure. At the same time, I balance my active lifestyle with quieter moments, whether it’s playing acoustic guitar or winding down with a movie. These hobbies reflect my drive to stay curious, creative, and connected, both inside and outside the classroom.
                         </h5>
                     </div>
                 </div>
