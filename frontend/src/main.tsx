@@ -17,8 +17,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <AppProviders>
       <RouterProvider router={router} />
-
-      {/* Theme button stays constant across all */}
     </AppProviders>
   </React.StrictMode>
 );
