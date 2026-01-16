@@ -37,7 +37,7 @@ const Experience = () => {
                 role: "Team Development Lead",
                 image: OKN,
                 stack: "Git ● Azure ● Python ● Numpy ● Sklearn ● Pandas ● Django ● React.js",
-                production: "/construction",
+                production: "http://20.55.70.167/",
             },
             {
                 id: 2,
