@@ -1,20 +1,20 @@
 // Import dependencies
-import { useEnvironment } from "../contexts/environment";
+import { useEnvironment } from "@/contexts/environment";
 
 // Import components
-import HomeCard from "../components/homeCard";
+import HomeCard from "@/components/homeCard";
 
 // Import images
-import headshot from "../assets/images/headshot.jpg";
-import skiing from "../assets/images/skiing.jpg";
-import grad from "../assets/images/grad.jpg";
+import headshot from "@/assets/images/headshot.jpg";
+import skiing from "@/assets/images/skiing.jpg";
+import grad from "@/assets/images/grad.jpg";
 
 // Import SVGs as React components
-import Experience from "../assets/images/experience.svg?react";
-import Projects from "../assets/images/projects.svg?react";
-import Academics from "../assets/images/academics.svg?react";
-import Contact from "../assets/images/contact.svg?react";
-import { useTheme } from "../contexts/theme";
+import Experience from "@/assets/images/experience.svg?react";
+import Projects from "@/assets/images/projects.svg?react";
+import Academics from "@/assets/images/academics.svg?react";
+import Contact from "@/assets/images/contact.svg?react";
+import { useTheme } from "@/contexts/theme";
 
 // Import styles
 

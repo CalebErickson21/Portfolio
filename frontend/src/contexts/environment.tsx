@@ -1,6 +1,6 @@
 // Import dependencies
 import { createContext, useContext, useState, useEffect } from "react";
-import type { EnvironmentContextType } from "../utils/types";
+import type { EnvironmentContextType } from "@/utils/types";
 
 // Create context instance
 const EnvironmentContext = createContext<EnvironmentContextType | null>(null);

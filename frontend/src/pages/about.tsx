@@ -1,13 +1,13 @@
 // Import dependencies
-import { useEnvironment } from "../contexts/environment";
-import { useTheme } from "../contexts/theme";
+import { useEnvironment } from "@/contexts/environment";
+import { useTheme } from "@/contexts/theme";
 
 // Import components
 
 // Import images
-import headshot from "../assets/images/headshot.jpg";
-import skiing from "../assets/images/skiing.jpg";
-import grad from "../assets/images/grad.jpg";
+import headshot from "@/assets/images/headshot.jpg";
+import skiing from "@/assets/images/skiing.jpg";
+import grad from "@/assets/images/grad.jpg";
 
 
 // About page component

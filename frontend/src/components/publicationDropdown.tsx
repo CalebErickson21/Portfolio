@@ -1,8 +1,8 @@
 // Import dependencies
-import { useTheme } from '../contexts/theme';
+import { useTheme } from '@/contexts/theme';
 
 // Import types
-import type { PublicationDropdownProps } from '../utils/types';
+import type { PublicationDropdownProps } from '@/utils/types';
 
 // Publication Dropdown component
 const PublicationDropdown = ({ 

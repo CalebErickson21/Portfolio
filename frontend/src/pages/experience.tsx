@@ -1,16 +1,16 @@
 // Import dependencies
-import { useTheme } from "../contexts/theme";
-import { useEnvironment } from "../contexts/environment";
+import { useTheme } from "@/contexts/theme";
+import { useEnvironment } from "@/contexts/environment";
 import { useState } from "react";
 
 // Import components
-import ExperienceCard from "../components/experienceCard";
+import ExperienceCard from "@/components/experienceCard";
 
 // Import images
-import OKN from "../assets/images/okn.png";
-import CAST from "../assets/images/cast.png";
-import FLAI from "../assets/images/flai.png";
-import QuantHub from "../assets/images/quanthub.png";
+import OKN from "@/assets/images/okn.png";
+import CAST from "@/assets/images/cast.png";
+import FLAI from "@/assets/images/flai.png";
+import QuantHub from "@/assets/images/quanthub.png";
 
 
 // About page component

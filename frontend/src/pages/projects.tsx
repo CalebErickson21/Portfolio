@@ -1,16 +1,16 @@
 // Import dependencies
-import { useTheme } from "../contexts/theme";
-import { useEnvironment } from "../contexts/environment";
+import { useTheme } from "@/contexts/theme";
+import { useEnvironment } from "@/contexts/environment";
 
 // Import components
-import ProjectCard from "../components/projectCard";
+import ProjectCard from "@/components/projectCard";
 
 // Import images
-import MockStreet from "../assets/images/mockstreet.png";
-import NeuralNetwork from "../assets/images/numbers.png";
-import Portfolio from "../assets/images/portfolio.jpg";
-import Launchpad from "../assets/images/launchpad.png";
-import ScholarSync from "../assets/images/scholarSync.png";
+import MockStreet from "@/assets/images/mockstreet.png";
+import NeuralNetwork from "@/assets/images/numbers.png";
+import Portfolio from "@/assets/images/portfolio.jpg";
+import Launchpad from "@/assets/images/launchpad.png";
+import ScholarSync from "@/assets/images/scholarSync.png";
 
 
 // About page component

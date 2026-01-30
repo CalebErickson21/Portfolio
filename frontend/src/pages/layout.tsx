@@ -3,17 +3,17 @@ import { Outlet } from "react-router-dom";
 import { useEffect } from "react";
 
 // Import components
-import ThemeButton from "../components/themeButton";
+import ThemeButton from "@/components/themeButton";
 
 // Import contexts
-import { useTheme } from "../contexts/theme";
+import { useTheme } from "@/contexts/theme";
 
 // Import components
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 // Import downloadables
-import ResumeFile from "../assets/downloadables/Caleb_Erickson_Resume.pdf";
+import ResumeFile from "@/assets/downloadables/Caleb_Erickson_Resume.pdf";
 
 // Import styles
 
