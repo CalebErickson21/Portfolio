@@ -1,33 +1,26 @@
 // Import dependencies
 import { createContext, useContext, useState, useEffect } from "react";
-import type { EnvironmentContextType } from "@/utils/types";
+import type { EnvironmentContextInterface, ScreenSizeType } from "../utils/types";
 
 // Create context instance
-const EnvironmentContext = createContext<EnvironmentContextType | null>(null);
+const EnvironmentContext = createContext<EnvironmentContextInterface | null>(null);
 
 // Environment provider
 export const EnvironmentProvider = ({ children }: { children: React.ReactNode }) => {
 
     // States
-    const [screenLarge, setScreenLarge ] = useState(false);
-    const [screenMedium, setScreenMedium ] = useState(false);
-    const [screenSmall, setScreenSmall ] = useState(false);
+    const [screenSize, setScreenSize] = useState<ScreenSizeType>('small');
 
     // Global screen size check on load
     useEffect(() => {
         // Check screen size on load
-        const screenLarge = window.matchMedia('(min-width: 992px)').matches; // Match tailwind config file
-        const screenMedium = window.matchMedia('(min-width: 768px)').matches; // Match tailwind config file
-        const screenSmall = window.matchMedia('(min-width: 576px)').matches; // Match tailwind config file
-        setScreenLarge(screenLarge);
-        setScreenMedium(screenMedium);
-        setScreenSmall(screenSmall);
+        const screenSize = window.matchMedia('(min-width: 992px)').matches ? 'large' : window.matchMedia('(min-width: 768px)').matches ? 'medium' : 'small'; // Match tailwind config file
+        setScreenSize(screenSize);
 
         // Add event listener for screen size changes
         const handler = () => {
-            setScreenLarge(window.innerWidth >= 992);
-            setScreenMedium(window.innerWidth >= 768);
-            setScreenSmall(window.innerWidth >= 576);
+            const screenSize: ScreenSizeType = window.innerWidth >= 992 ? 'large' : window.innerWidth >= 768 ? 'medium' : 'small'; // Match tailwind config file
+            setScreenSize(screenSize);
         }
         window.addEventListener('resize', handler);
 
@@ -38,7 +31,7 @@ export const EnvironmentProvider = ({ children }: { children: React.ReactNode })
 
     // Return context provider
     return (
-        <EnvironmentContext.Provider value={{ screenLarge, setScreenLarge, screenMedium, setScreenMedium, screenSmall, setScreenSmall }}>
+        <EnvironmentContext.Provider value={{ screenSize, setScreenSize }}>
             { children }
         </EnvironmentContext.Provider>
     )
@@ -46,5 +39,5 @@ export const EnvironmentProvider = ({ children }: { children: React.ReactNode })
 
 // Export context hook
 export const useEnvironment = () => {
-    return useContext(EnvironmentContext) as EnvironmentContextType;
+    return useContext(EnvironmentContext) as EnvironmentContextInterface;
 }

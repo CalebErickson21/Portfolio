@@ -3,39 +3,43 @@ export default {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        // Light
-        'light-bg-primary': '#F9FAFB',
-        'light-bg-secondary': '#EDEEEF',
-        'light-text-primary': '#1E1F21',
-        'light-text-secondary': '#26282B',
-        'light-accent': '#3B82F6',
+        accent: "#3B82F6",           // Primary blue
+        neutral: "#828A8F",
       
-        // Dark
-        'dark-bg-primary': '#181A1B',
-        'dark-bg-secondary': '#242628',
-        'dark-text-primary': '#F3F4F6',
-        'dark-text-secondary': '#D1D3D6',
-        'dark-accent': '#60A5FA',
+        light: {
+          background: "#FFFFFF",
+          surface: "#F5F7FA",
+          text: {
+            primary: "#1F2937",
+            secondary: "#4B5563",
+          },
+          accentSurface: "#EAF2FF",  // Soft blue-tinted surface
+          accentText: "#1D4ED8",     // Deep blue text
+        },
       
-        // Constants
+        dark: {
+          background: "#0F172A",
+          surface: "#111827",
+          text: {
+            primary: "#F3F4F6",
+            secondary: "#C7CBD1",
+          },
+          accentSurface: "#172554",  // Muted deep blue surface
+          accentText: "#93C5FD",     // Soft readable blue
+        },
       },
       
-      screens: {
-        // Minimum width breakpoints
-        'min-sm': {'min': '576px'},
-        'min-md': {'min': '768px'},
-        'min-lg': {'min': '992px'},
-        'min-xl': {'min': '1200px'},
-
-        // Maximum width breakpoints
-        'max-sm': {'max': '575px'},
-        'max-md': {'max': '767px'},
-        'max-lg': {'max': '991px'},
-        'max-xl': {'max': '1199px'},
-      },
+      
+			screens: {
+				// Minimum width breakpoints
+				'sm': {'min': '576px'},
+				'md': {'min': '768px'},
+				'lg': {'min': '992px'},
+			},
     },
   },
   plugins: [],
