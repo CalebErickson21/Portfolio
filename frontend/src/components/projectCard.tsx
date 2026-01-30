@@ -1,10 +1,10 @@
 // Import dependencies
-import { useTheme } from '../contexts/theme';
+import { useTheme } from '@/contexts/theme';
 
 // Import styles
 
 // Import types
-import type { ProjectCardProps } from '../utils/types';
+import type { ProjectCardProps } from '@/utils/types';
 
 // Home card component
 const ProjectCard = ({ title, description, image, stack, production, github, time }: ProjectCardProps) => {

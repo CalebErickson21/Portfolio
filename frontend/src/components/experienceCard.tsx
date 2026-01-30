@@ -1,10 +1,10 @@
 // Import dependencies
-import { useTheme } from '../contexts/theme';
+import { useTheme } from '@/contexts/theme';
 
 // Import styles
 
 // Import types
-import type { ExperienceCardProps } from '../utils/types';
+import type { ExperienceCardProps } from '@/utils/types';
 
 // Home card component
 const ExperienceCard = ({ id, title, description, image, role, stack, production, expandedCard, setExpandedCard }: ExperienceCardProps) => {

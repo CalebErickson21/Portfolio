@@ -1,6 +1,6 @@
 // Import dependencies
 import { createContext, useContext, useState, useEffect } from "react";
-import type { ThemeContextType } from "../utils/types";
+import type { ThemeContextType } from "@/utils/types";
 
 // Create context instance
 const ThemeContext = createContext<ThemeContextType | null>(null);

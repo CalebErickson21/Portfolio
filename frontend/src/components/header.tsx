@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 // Import styles
 
 // Import contexts
-import { useTheme } from "../contexts/theme";
+import { useTheme } from "@/contexts/theme";
 import { useEnvironment } from "../contexts/environment";
 
 // Header component

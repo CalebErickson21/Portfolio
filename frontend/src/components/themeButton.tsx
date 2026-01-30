@@ -1,9 +1,9 @@
 // Import dependencies
-import type { ThemeContextType } from "../utils/types";
+import type { ThemeContextType } from "@/utils/types";
 
 // Import svgs
-import Sun from '../assets/images/sun.svg?react';
-import Moon from '../assets/images/moon.svg?react';
+import Sun from '@/assets/images/sun.svg?react';
+import Moon from '@/assets/images/moon.svg?react';
 
 // Theme button component
 const ThemeButton = ({ light, setLight }: ThemeContextType) => {

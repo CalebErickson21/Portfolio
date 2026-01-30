@@ -1,11 +1,11 @@
 // Import dependencies
-import { useTheme } from '../contexts/theme';
+import { useTheme } from '@/contexts/theme';
 import { useNavigate } from 'react-router-dom';
 
 // Import styles
 
 // Import types
-import type { HomeCardProps } from '../utils/types';
+import type { HomeCardProps } from '@/utils/types';
 
 // Home card component
 const HomeCard = ({ title, description, image: SvgIcon, route }: HomeCardProps) => {

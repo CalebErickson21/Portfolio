@@ -1,12 +1,12 @@
 // Import dependencies
 import { Mail, Phone, Globe, Linkedin, Github, FileText } from "lucide-react";
-import { useTheme } from "../contexts/theme";
+import { useTheme } from "@/contexts/theme";
 import { useNavigate } from "react-router-dom";
 
 // Import components
 
 // Import images
-import ResumeFile from "../assets/downloadables/Caleb_Erickson_Resume.pdf";
+import ResumeFile from "@/assets/downloadables/Caleb_Erickson_Resume.pdf";
 
 // About page component
 const Contact = () => {
