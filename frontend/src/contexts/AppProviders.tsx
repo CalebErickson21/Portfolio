@@ -1,6 +1,6 @@
 // Import providers
-import { ThemeProvider } from './Theme'
-import { EnvironmentProvider } from './Environment'
+import { ThemeProvider } from './theme'
+import { EnvironmentProvider } from './environment'
 
 // App providers component
 export const AppProviders = ({ children }: { children: React.ReactNode }) => {

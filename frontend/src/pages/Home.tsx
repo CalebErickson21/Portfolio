@@ -1,8 +1,8 @@
 // Import dependencies
-import { useEnvironment } from "../contexts/Environment";
+import { useEnvironment } from "../contexts/environment";
 
 // Import components
-import HomeCard from "../components/HomeCard";
+import HomeCard from "../components/homeCard";
 
 // Import images
 import headshot from "../assets/images/headshot.jpg";
@@ -14,7 +14,7 @@ import Experience from "../assets/images/experience.svg?react";
 import Projects from "../assets/images/projects.svg?react";
 import Academics from "../assets/images/academics.svg?react";
 import Contact from "../assets/images/contact.svg?react";
-import { useTheme } from "../contexts/Theme";
+import { useTheme } from "../contexts/theme";
 
 // Import styles
 

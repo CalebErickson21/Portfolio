@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom";
 
 // Import contexts
-import { useTheme } from "../contexts/Theme";
+import { useTheme } from "../contexts/theme";
 
 // Footer component
 const Footer = () => {
