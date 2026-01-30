@@ -10,7 +10,7 @@ import router from "./utils/routes";
 import "./index.css";
 
 // Import providers
-import { AppProviders } from "./contexts/AppProviders";
+import { AppProviders } from "./contexts/appProviders";
 
 // Render the app
 ReactDOM.createRoot(document.getElementById("root")!).render(

@@ -1,5 +1,5 @@
 // Import dependencies
-import { useTheme } from '../contexts/Theme';
+import { useTheme } from '../contexts/theme';
 import { useNavigate } from 'react-router-dom';
 
 // Import styles

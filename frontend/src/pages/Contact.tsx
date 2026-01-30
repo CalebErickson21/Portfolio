@@ -1,6 +1,6 @@
 // Import dependencies
 import { Mail, Phone, Globe, Linkedin, Github, FileText } from "lucide-react";
-import { useTheme } from "../contexts/Theme";
+import { useTheme } from "../contexts/theme";
 import { useNavigate } from "react-router-dom";
 
 // Import components

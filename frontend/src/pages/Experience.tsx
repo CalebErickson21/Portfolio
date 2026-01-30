@@ -1,10 +1,10 @@
 // Import dependencies
-import { useTheme } from "../contexts/Theme";
-import { useEnvironment } from "../contexts/Environment";
+import { useTheme } from "../contexts/theme";
+import { useEnvironment } from "../contexts/environment";
 import { useState } from "react";
 
 // Import components
-import ExperienceCard from "../components/ExperienceCard";
+import ExperienceCard from "../components/experienceCard";
 
 // Import images
 import OKN from "../assets/images/okn.png";

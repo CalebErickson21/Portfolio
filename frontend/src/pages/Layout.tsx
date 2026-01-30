@@ -3,14 +3,14 @@ import { Outlet } from "react-router-dom";
 import { useEffect } from "react";
 
 // Import components
-import ThemeButton from "../components/ThemeButton";
+import ThemeButton from "../components/themeButton";
 
 // Import contexts
-import { useTheme } from "../contexts/Theme";
+import { useTheme } from "../contexts/theme";
 
 // Import components
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 // Import downloadables
 import ResumeFile from "../assets/downloadables/Caleb_Erickson_Resume.pdf";

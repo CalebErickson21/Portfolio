@@ -1,6 +1,6 @@
 // Import dependencies
-import { useEnvironment } from "../contexts/Environment";
-import { useTheme } from "../contexts/Theme";
+import { useEnvironment } from "../contexts/environment";
+import { useTheme } from "../contexts/theme";
 
 // Import components
 

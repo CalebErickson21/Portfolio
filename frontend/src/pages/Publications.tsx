@@ -1,9 +1,9 @@
 // Import dependencies
-import { useTheme } from "../contexts/Theme";
+import { useTheme } from "../contexts/theme";
 import { useState } from "react";
 
 // Import components
-import PublicationDropdown from "../components/PublicationDropdown";
+import PublicationDropdown from "../components/publicationDropdown";
 
 // Publications page component
 const Publications = () => {

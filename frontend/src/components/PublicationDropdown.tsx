@@ -1,5 +1,5 @@
 // Import dependencies
-import { useTheme } from '../contexts/Theme';
+import { useTheme } from '../contexts/theme';
 
 // Import types
 import type { PublicationDropdownProps } from '../utils/types';

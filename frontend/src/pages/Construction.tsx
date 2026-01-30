@@ -1,5 +1,5 @@
 // Import dependencies
-import { useTheme } from "../contexts/Theme";
+import { useTheme } from "../contexts/theme";
 
 // Under Construction page component
 const Construction = () => {

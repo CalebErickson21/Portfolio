@@ -1,9 +1,9 @@
 // Import dependencies
-import { useTheme } from "../contexts/Theme";
-import { useEnvironment } from "../contexts/Environment";
+import { useTheme } from "../contexts/theme";
+import { useEnvironment } from "../contexts/environment";
 
 // Import components
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/projectCard";
 
 // Import images
 import MockStreet from "../assets/images/mockstreet.png";
