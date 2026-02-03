@@ -54,6 +54,9 @@ const Experience = () => {
         ]
     }
 
+    // Offset
+    // const offset = Object.keys(ALAAIData).length;
+    const offset = 0;
     const QuantHubData = {
         company: "QuantHub",
         role: "Market Research + Software Development Industry Project",
@@ -61,7 +64,7 @@ const Experience = () => {
         time: "August 2024 - December 2024",
         projects: [
             {
-                id: 1,
+                id: offset + 1,
                 title: "Course Registration Webscraper",
                 description: "I developed a webscraper that collects course registration data from the University of Alabama's course registration system. The scraper is used to collect data for an industry-sponsored project on the impact of AI on course registration.",
                 role: "Software Developer",
@@ -124,8 +127,8 @@ const Experience = () => {
                 <div className="flex h-full lg:w-1/2 w-full">
                     {expandedCard === null ? (
                         <div className="flex h-full w-full grid grid-cols-1 auto-rows-min gap-4 m-4 px-4 items-center">
-                            {QuantHubData.projects.map((card, index) => (
-                                <ExperienceCard key={index} {...card} expandedCard={expandedCard} setExpandedCard={setExpandedCard} />
+                            {QuantHubData.projects.map((card) => (
+                                <ExperienceCard key={card.id} {...card} expandedCard={expandedCard} setExpandedCard={setExpandedCard} />
                             ))}
                         </div>
                     ) : (

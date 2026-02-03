@@ -14,7 +14,7 @@ const Footer = () => {
             <div className='flex flex-col justify-center items-center'>
                 <h3
                 className="text-light-text-secondary dark:text-dark-text-secondary">
-                    © 2025 Caleb Erickson • Designed & coded by me • Let’s
+                    © 2026 Caleb Erickson • Designed & coded by me • Let’s
                     {" "}
                     <a
                     className="cursor-pointer underline hover:font-bold"

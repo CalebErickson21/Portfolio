@@ -1,5 +1,4 @@
 // Import dependencies
-import { useEnvironment } from "@/contexts/environment";
 
 // Import components
 import ProjectCard from "@/components/projectCard";
@@ -14,9 +13,6 @@ import ScholarSync from "@/assets/images/scholarSync.png";
 
 // Projects page component
 const Projects = () => {
-
-    // States
-    const { screenSize } = useEnvironment();
 
     // Card Constants
     const cardData = [

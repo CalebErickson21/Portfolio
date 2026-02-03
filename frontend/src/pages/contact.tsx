@@ -41,9 +41,9 @@ const Contact = () => {
                         <ul className="flex flex-col gap-4 text-lg">
 
                             {/* Resume */}
-                            <li className="w-full h-full p-0 m-0 rounded-lg bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary dark:bg-dark-bg-secondary dark:shadow-dark-accent/50 dark:hover:shadow-dark-text-secondary hover:-translate-y-[.05rem] shadow-md hover:shadow-lg transition duration-300 ease-in-out">
+                            <li className="w-full h-full p-0 m-0 rounded-lg shadow-sm hover:shadow-md shadow-accent hover:shadow-accent bg-light-surface dark:bg-dark-surface hover:-translate-y-[.05rem] transition duration-300 ease-in-out">
                                 {/* Tint Overlay */}
-                                <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-light-accent/10 dark:hover:bg-dark-accent/10 transition duration-300 ease-in-out">
+                                <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-accent/5 transition duration-300 ease-in-out">
                                     <FileText className="w-5 h-5 text-light-text-primary dark:text-dark-text-primary" />
                                     <a href={ResumeFile} download className="font-semibold hover:font-bold text-light-text-primary dark:text-dark-text-primary">
                                         Resume
@@ -52,9 +52,9 @@ const Contact = () => {
                             </li>
 
                             {/* Email */}
-                            <li className="w-full h-full p-0 m-0 rounded-lg bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary dark:bg-dark-bg-secondary dark:shadow-dark-accent/50 dark:hover:shadow-dark-text-secondary hover:-translate-y-[.05rem] shadow-md hover:shadow-lg transition duration-300 ease-in-out">
+                            <li className="w-full h-full p-0 m-0 rounded-lg shadow-sm hover:shadow-md shadow-accent hover:shadow-accent bg-light-surface dark:bg-dark-surface hover:-translate-y-[.05rem] transition duration-300 ease-in-out">
                                 {/* Tint Overlay */}
-                                <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-light-accent/10 dark:hover:bg-dark-accent/10 transition duration-300 ease-in-out">
+                                <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-accent/5 transition duration-300 ease-in-out">
                                     <Mail className="w-5 h-5 text-light-text-primary dark:text-dark-text-primary" />
                                     <a href="mailto:crerickson@crimson.ua.edu" className="font-semibold hover:font-bold text-light-text-primary dark:text-dark-text-primary">
                                         crerickson@crimson.ua.edu
@@ -63,9 +63,9 @@ const Contact = () => {
                             </li>
 
                             {/* Phone */}
-                            <li className="w-full h-full p-0 m-0 rounded-lg bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary dark:bg-dark-bg-secondary dark:shadow-dark-accent/50 dark:hover:shadow-dark-text-secondary hover:-translate-y-[.05rem] shadow-md hover:shadow-lg transition duration-300 ease-in-out">
+                            <li className="w-full h-full p-0 m-0 rounded-lg shadow-sm hover:shadow-md shadow-accent hover:shadow-accent bg-light-surface dark:bg-dark-surface hover:-translate-y-[.05rem] transition duration-300 ease-in-out">
                                 {/* Tint Overlay */}
-                                <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-light-accent/10 dark:hover:bg-dark-accent/10 transition duration-300 ease-in-out">
+                                <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-accent/5 transition duration-300 ease-in-out">
                                     <Phone className="w-5 h-5 text-light-text-primary dark:text-dark-text-primary" />
                                     <span className="font-semibold hover:font-bold text-light-text-primary dark:text-dark-text-primary">
                                         (615)-594-8664
@@ -74,13 +74,13 @@ const Contact = () => {
                             </li>
 
                             {/* Portfolio */}
-                            <li className="w-full h-full p-0 m-0 rounded-lg bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary dark:bg-dark-bg-secondary dark:shadow-dark-accent/50 dark:hover:shadow-dark-text-secondary hover:-translate-y-[.05rem] shadow-md hover:shadow-lg transition duration-300 ease-in-out">
+                            <li className="w-full h-full p-0 m-0 rounded-lg shadow-sm hover:shadow-md shadow-accent hover:shadow-accent bg-light-surface dark:bg-dark-surface hover:-translate-y-[.05rem] transition duration-300 ease-in-out">
                                 {/* Tint Overlay */}
-                                <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-light-accent/10 dark:hover:bg-dark-accent/10 transition duration-300 ease-in-out">
+                                <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-accent/5 transition duration-300 ease-in-out">
                                     <Globe className="w-5 h-5 text-light-text-primary dark:text-dark-text-primary" />
                                     <button 
                                         onClick={() => navigate("/")} 
-                                        className="font-semibold hover:font-bold text-light-text-primary dark:text-dark-text-primary"
+                                        className="font-semibold hover:font-bold text-light-text-primary dark:text-dark-text-primary cursor-pointer transition duration-300 ease-in-out"
                                     >
                                         caleberickson21.github.io
                                     </button>
@@ -88,9 +88,9 @@ const Contact = () => {
                             </li>
 
                             {/* LinkedIn */}
-                            <li className="w-full h-full p-0 m-0 rounded-lg bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary dark:bg-dark-bg-secondary dark:shadow-dark-accent/50 dark:hover:shadow-dark-text-secondary hover:-translate-y-[.05rem] shadow-md hover:shadow-lg transition duration-300 ease-in-out">
+                            <li className="w-full h-full p-0 m-0 rounded-lg shadow-sm hover:shadow-md shadow-accent hover:shadow-accent bg-light-surface dark:bg-dark-surface hover:-translate-y-[.05rem] transition duration-300 ease-in-out">
                                 {/* Tint Overlay */}
-                                <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-light-accent/10 dark:hover:bg-dark-accent/10 transition duration-300 ease-in-out">
+                                <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-accent/5 transition duration-300 ease-in-out">
                                     <Linkedin className="w-5 h-5 text-light-text-primary dark:text-dark-text-primary" />
                                     <a 
                                         href="https://linkedin.com/in/-caleb-erickson" 
@@ -104,9 +104,9 @@ const Contact = () => {
                             </li>
 
                             {/* Github */}
-                            <li className="w-full h-full p-0 m-0 rounded-lg bg-light-bg-secondary shadow-light-accent/50 hover:shadow-light-text-secondary dark:bg-dark-bg-secondary dark:shadow-dark-accent/50 dark:hover:shadow-dark-text-secondary hover:-translate-y-[.05rem] shadow-md hover:shadow-lg transition duration-300 ease-in-out">
+                            <li className="w-full h-full p-0 m-0 rounded-lg shadow-sm hover:shadow-md shadow-accent hover:shadow-accent bg-light-surface dark:bg-dark-surface hover:-translate-y-[.05rem] transition duration-300 ease-in-out">
                                 {/* Tint Overlay */}
-                                <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-light-accent/10 dark:hover:bg-dark-accent/10 transition duration-300 ease-in-out">
+                                <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-accent/5 transition duration-300 ease-in-out">
                                     <Github className="w-5 h-5 text-light-text-primary dark:text-dark-text-primary" />
                                     <a 
                                         href="https://github.com/caleberickson21" 

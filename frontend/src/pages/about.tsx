@@ -16,10 +16,10 @@ const About = () => {
     const { screenSize } = useEnvironment();
 
     return (
-        <div id='about-container' className={`flex flex-col transition duration-300 ease-in-out`}>
+        <div id='about-container' className="flex flex-col transition duration-300 ease-in-out">
 
             {/* Top */}
-            <div className={`flex min-lg:flex-row max-lg:flex-col transition duration-300 ease-in-out`}>
+            <div className="flex min-lg:flex-row max-lg:flex-col transition duration-300 ease-in-out">
 
                 {/* Left side */}
                 <div className="min-h-screen flex flex-col flex-1 items-center justify-center pt-2 pb-4">
@@ -47,10 +47,13 @@ const About = () => {
                     <div className="flex w-full px-4 items-center justify-center">
                         <div className="flex flex-row w-full h-full items-center justify-center">
                             {/* Left side */}
-                            <div className="w-1/2 h-full m-3 rounded-md items-center justify-center">
+                            <div className="w-3/5 h-full m-3 rounded-md items-center justify-center">
                                 <img src={headshot}
                                 alt="Profile"
-                                className="w-full h-full object-cover rounded-md hover:-translate-y-[.2rem] hover:-translate-x-[.2rem] transition duration-300 ease-in-out hover:shadow-lg hover:shadow-light-text-secondary dark:hover:shadow-dark-text-secondary" />
+                                className="w-full h-full object-cover rounded-md
+                                hover:-translate-y-[.1rem] hover:-translate-x-[.1rem]
+                                hover:shadow-md hover:shadow-accent
+                                transition duration-300 ease-in-out" />
                             </div>
 
                             {/* Right side */}

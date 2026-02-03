@@ -14,7 +14,7 @@ export const EnvironmentProvider = ({ children }: { children: React.ReactNode })
     // Global screen size check on load
     useEffect(() => {
         // Check screen size on load
-        const screenSize = window.matchMedia('(min-width: 992px)').matches ? 'large' : window.matchMedia('(min-width: 768px)').matches ? 'medium' : 'small'; // Match tailwind config file
+        const screenSize = window.matchMedia('(min-width: 1200px)').matches ? 'extra-large' : window.matchMedia('(min-width: 992px)').matches ? 'large' : window.matchMedia('(min-width: 768px)').matches ? 'medium' : 'small'; // Match tailwind config file
         setScreenSize(screenSize);
 
         // Add event listener for screen size changes

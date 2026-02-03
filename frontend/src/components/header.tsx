@@ -35,7 +35,7 @@ const Header = () => {
         dark:bg-dark-background dark:text-dark-text-primary
         transition duration-300 ease-in-out">
 
-            {screenSize === 'large' ? (
+            {screenSize === 'extra-large' ? (
                 <>
                     {/* Name and Logo */}
                     <div className='align-start flex-shrink-0'

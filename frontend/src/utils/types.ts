@@ -49,4 +49,4 @@ export interface EnvironmentContextInterface {
 };
 
 // Screen size type
-export type ScreenSizeType = 'small' | 'medium' | 'large';
+export type ScreenSizeType = 'small' | 'medium' | 'large' | 'extra-large';

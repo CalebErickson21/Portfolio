@@ -56,30 +56,39 @@ const Home = () => {
         <div id='home-container' className={`flex flex-col min-h-screen transition duration-300 ease-in-out min-h-screen`}>
 
             {/* Top */}
-            <div className={`flex min-lg:flex-row max-lg:flex-col transition duration-300 ease-in-out`}>
+            <div className={`flex flex-col lg:flex-row transition duration-300 ease-in-out`}>
                 {/* Left side */}
                 <div className="flex flex-col flex-1 items-center justify-center pt-2 pb-4">
                     <div className="flex w-full px-4 items-center justify-center">
                         <div className="flex flex-row w-full h-full items-center justify-center">
                             {/* Left side */}
-                            <div className="w-1/2 h-full m-3 rounded-md items-center justify-center">
+                            <div className="w-3/5 h-full m-3 rounded-md items-center justify-center">
                                 <img src={headshot}
                                 alt="Profile"
-                                className="w-full h-full object-cover rounded-md hover:-translate-y-[.2rem] hover:-translate-x-[.2rem] transition duration-300 ease-in-out hover:shadow-lg hover:shadow-light-text-secondary dark:hover:shadow-dark-text-secondary" />
+                                className="w-full h-full object-cover rounded-md
+                                hover:-translate-y-[.1rem] hover:-translate-x-[.1rem]
+                                hover:shadow-md hover:shadow-accent
+                                transition duration-300 ease-in-out" />
                             </div>
 
                             {/* Right side */}
-                            {screenSize == "large" && (
+                            {screenSize === 'large' || screenSize === 'extra-large' && (
                                 <div className="w-1/2 h-full flex flex-col items-center justify-center">
                                     <div className="w-full h-1/2 m-3 rounded-md items-center justify-center">
                                         <img src={skiing}
                                         alt="Skiing"
-                                        className="w-full h-full object-cover rounded-md hover:-translate-y-[.2rem] hover:translate-x-[.2rem] transition duration-300 ease-in-out hover:shadow-lg hover:shadow-light-text-secondary dark:hover:shadow-dark-text-secondary" />
+                                        className="w-full h-full object-cover rounded-md
+                                        hover:-translate-y-[.1rem] hover:-translate-x-[.1rem]
+                                        hover:shadow-md hover:shadow-accent
+                                        transition duration-300 ease-in-out" />
                                     </div>
                                     <div className="w-full h-1/2 m-3 rounded-md items-center justify-center">
                                         <img src={grad}
                                         alt="Graduation"
-                                        className="w-full h-full object-cover rounded-md hover:translate-y-[.2rem] hover:translate-x-[.2rem] transition duration-300 ease-in-out hover:shadow-lg hover:shadow-light-text-secondary dark:hover:shadow-dark-text-secondary" />
+                                        className="w-full h-full object-cover rounded-md
+                                        hover:-translate-y-[.1rem] hover:-translate-x-[.1rem]
+                                        hover:shadow-md hover:shadow-accent
+                                        transition duration-300 ease-in-out" />
                                     </div>
                                 </div>
                             )}
@@ -115,24 +124,10 @@ const Home = () => {
             </div>
 
             {/* Bottom */}
-            <div className={`flex min-lg:flex-row max-lg:flex-col transition duration-300 ease-in-out`}>
-                {/* Bottom left */}
-                <div className="flex flex-col flex-1 items-center justify-start min-lg:pb-8 pt-2">
-                    {cardData.slice(0, 2).map((card, index) => (
-                        <div className="flex flex-1 w-5/6 my-4 ml-2 mr-1">
-                            <HomeCard key={index} {...card} />
-                        </div>
-                    ))}  
-                </div>
-
-                {/* Bottom right */}
-                <div className="flex flex-col flex-1 items-center justify-start pb-8 pt-2">
-                    {cardData.slice(2, 4).map((card, index) => (
-                        <div className="flex flex-1 w-5/6 my-4 ml-1 mr-2">
-                            <HomeCard key={index} {...card} />
-                        </div>
-                    ))}  
-                </div>
+            <div className={`flex grid grid-cols-1 lg:grid-cols-2 auto-rows-min gap-4 m-4 px-4 items-centertransition duration-300 ease-in-out`}>
+                {cardData.map((card, index) => (
+                    <HomeCard key={index} {...card} />
+                ))}
             </div>
         </div>
     )

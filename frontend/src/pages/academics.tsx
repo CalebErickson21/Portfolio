@@ -36,12 +36,15 @@ const Academics = () => {
                 {/* Right side */}
                 <div className="min-h-screen flex flex-col flex-1 items-center justify-center pt-2 pb-4">
                     <div className="flex flex-col w-full px-4 items-center justify-center">
-
                         <h2 className="text-2xl font-bold mb-3 text-light-text-primary dark:text-dark-text-primary">Key Coursework</h2>
                         <ul className="flex flex-col gap-2 list-disc pl-4 font-semibold text-light-text-primary dark:text-dark-text-primary">
+                            <li>CS 495 - Capstone Computing</li>
+                            <li>CS 484 - Reinforcement Learning</li>
                             <li>CS 483 - Foundations of Machine Learning</li>
                             <li>CS 451 - Advanced Data Analytics</li>
                             <li>CS 470 - Algorithm Design and Analysis</li>
+                            <li>CS 461 - Brain Computer Interface</li>
+                            <li>CS 403 - Formal Programming Languages</li>
                             <li>ST 560 - Advanced Statistical Design</li>
                             <li>MATH 237 - Linear Algebra</li>
                             <li>MATH 301 - Discrete Mathematics</li>
