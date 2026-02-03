@@ -1,19 +1,3 @@
-// Theme button interface
-export type ThemeContextType = {
-    light: boolean;
-    setLight: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-// Environment context interface
-export type EnvironmentContextType = {
-    screenLarge: boolean;
-    setScreenLarge: React.Dispatch<React.SetStateAction<boolean>>;
-    screenMedium: boolean;
-    setScreenMedium: React.Dispatch<React.SetStateAction<boolean>>;
-    screenSmall: boolean;
-    setScreenSmall: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
 // Home card props
 export type HomeCardProps = {
     title: string;
@@ -58,3 +42,11 @@ export type PublicationDropdownProps = {
     expandedPublication: number | null;
     setExpandedPublication: React.Dispatch<React.SetStateAction<number | null>>;
 }
+
+export interface EnvironmentContextInterface {
+    screenSize: ScreenSizeType;
+    setScreenSize: React.Dispatch<React.SetStateAction<ScreenSizeType>>;
+};
+
+// Screen size type
+export type ScreenSizeType = 'small' | 'medium' | 'large' | 'extra-large';

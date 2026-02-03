@@ -1,6 +1,4 @@
 // Import dependencies
-import { useTheme } from "@/contexts/theme";
-import { useEnvironment } from "@/contexts/environment";
 
 // Import components
 import ProjectCard from "@/components/projectCard";
@@ -13,12 +11,8 @@ import Launchpad from "@/assets/images/launchpad.png";
 import ScholarSync from "@/assets/images/scholarSync.png";
 
 
-// About page component
+// Projects page component
 const Projects = () => {
-
-    // States
-    const { light } = useTheme();
-    const {screenSmall, screenMedium, screenLarge} = useEnvironment();
 
     // Card Constants
     const cardData = [
@@ -70,15 +64,15 @@ const Projects = () => {
     ];
 
     return (
-        <div className={`flex flex-col w-full h-full min-h-screen ${light ? "bg-gradient-to-br from-light-bg-primary via-light-accent to-light-accent" : "bg-gradient-to-br from-dark-bg-primary via-dark-accent to-dark-accent"} transition duration-300 ease-in-out`}>
+        <div className="flex flex-col w-full h-full min-h-screen transition duration-300 ease-in-out">
             {/* Header */}
             <div className="flex flex-col justify-center items-center text-center w-full h-full px-8 py-4">
-                <h1 className={`${light ? 'text-light-text-primary' : 'text-dark-text-primary'} text-2xl font-bold`}>Projects</h1>
-                <h3 className={`${light ? 'text-light-text-secondary' : 'text-dark-text-secondary'} text-lg font-semibold`}>From creative experiments to fully developed applications, my projects highlight both technical ability and problem-solving. Each one represents an idea I brought to life and a skill I strengthened.</h3>
+                <h1 className="text-light-text-primary dark:text-dark-text-primary text-2xl font-bold">Projects</h1>
+                <h3 className="text-light-text-secondary dark:text-dark-text-secondary text-lg font-semibold">From creative experiments to fully developed applications, my projects highlight both technical ability and problem-solving. Each one represents an idea I brought to life and a skill I strengthened.</h3>
             </div>
 
             {/* Projects */}
-            <div className={`grid ${screenSmall ? 'min-sm:grid-cols-1' : ''} ${screenMedium ? 'min-md:grid-cols-2' : ''} ${screenLarge ? 'min-lg:grid-cols-3' : ''} auto-rows-min gap-4 m-2 p-4 items-center`}>
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-min gap-4 m-2 p-4 items-center">
                 {cardData.map((card, index) => (
                     <ProjectCard key={index} {...card} />
                 ))}

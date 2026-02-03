@@ -1,64 +1,80 @@
 // Import dependencies
 import { Outlet } from "react-router-dom";
-import { useEffect } from "react";
 
 // Import components
 import ThemeButton from "@/components/themeButton";
 
-// Import contexts
-import { useTheme } from "@/contexts/theme";
-
 // Import components
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-
-// Import downloadables
-import ResumeFile from "@/assets/downloadables/Caleb_Erickson_Resume.pdf";
 
 // Import styles
 
 // Layout component
 const Layout = () => {
 
-    // States
-    const { light, setLight } = useTheme();
-
-    // On load, download resume
-    useEffect(() => {
-        const resume = document.createElement('a');
-        resume.href = ResumeFile;
-        resume.download = 'Caleb_Erickson_Resume.pdf';
-        resume.click();
-    }, []);
-
     return (
-        <div id='layout-container' className='flex flex-col min-h-screen min-w-screen m-0 p-0'>
+        <div id='layout-container' className='relative flex flex-col min-h-screen w-full m-0 p-0'>
+            
             {/* Header */}
             <div
             id='header-container'
-            className={'sticky w-full top-0 z-50'}>
+            className="sticky w-full top-0 z-50">
                 <Header />
             </div>
 
-            {/* Outlet */}
+            {/* Background */}
             <div
-            id='outlet-container'
-            className={`${light ? 'bg-light-bg-primary text-light-text-primary' : 'bg-dark-bg-primary text-dark-text-primary'} flex-1 transition duration-300 ease-in-out`}>
-                <Outlet />
+            id='background-container'
+            className="
+            flex flex-1 flex-row min-h-screen w-full
+            absolute inset-0 z-0">
+                
+                {/* Left gradient */}
+                <div
+                className="
+                w-1/2 h-full
+                bg-gradient-to-br
+                from-light-background via-light-background to-accent
+                dark:from-dark-background dark:via-dark-background dark:to-accent
+                transition duration-300 ease-in-out
+                ">
+                </div>
+
+                {/* Right gradient */}
+                <div
+                className="
+                w-1/2 h-full
+                bg-gradient-to-bl
+                from-light-background via-light-background to-accent
+                dark:from-dark-background dark:via-dark-background dark:to-accent
+                transition duration-300 ease-in-out
+                ">
+                </div>
             </div>
+
+            {/* Outlet */}
+            <main
+            id='outlet-container'
+            className="flex flex-1 min-h-0
+            bg-transparent
+            transition duration-300 ease-in-out
+            z-10">
+                <Outlet />
+            </main>
 
             {/* Footer */}
             <div
             id='footer-container'
-            className='w-full'>
+            className="w-full z-[45]">
                 <Footer />
             </div>
 
-            {/* Theme button - Constant across all pages */}
+            {/* Theme button */}
             <div
             id='theme-button-container'
-            className='fixed bottom-4 left-4'>
-                <ThemeButton light={light} setLight={setLight} />
+            className="fixed bottom-4 left-4 z-50">
+                <ThemeButton />
             </div>
             
         </div>

@@ -5,15 +5,13 @@ import { useState, useEffect } from "react";
 // Import styles
 
 // Import contexts
-import { useTheme } from "@/contexts/theme";
 import { useEnvironment } from "../contexts/environment";
 
 // Header component
 const Header = () => {
 
     // States
-    const { light } = useTheme();
-    const { screenLarge } = useEnvironment();
+    const { screenSize } = useEnvironment();
     const [open, setOpen] = useState(false);
 
     // Helpers
@@ -22,7 +20,7 @@ const Header = () => {
     // Navbar updates on screen size change
     useEffect(() => {
         setOpen(false);
-    }, [screenLarge]);
+    }, [screenSize]);
 
     const handleNavbarClick = (e: React.MouseEvent<HTMLLIElement>, route: string) => {
         e.preventDefault();
@@ -32,9 +30,12 @@ const Header = () => {
 
     return (
         <header
-        className={`relative flex items-center p-4 ${light ? 'bg-light-bg-secondary text-light-text-primary' : 'bg-dark-bg-secondary text-dark-text-primary'} transition duration-300 ease-in-out`}>
+        className="relative flex items-center p-4
+        bg-light-background text-light-text-primary
+        dark:bg-dark-background dark:text-dark-text-primary
+        transition duration-300 ease-in-out">
 
-            {screenLarge ? (
+            {screenSize === 'extra-large' ? (
                 <>
                     {/* Name and Logo */}
                     <div className='align-start flex-shrink-0'
@@ -48,43 +49,64 @@ const Header = () => {
                     <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2'>
                         <ul className='flex flex-row space-x-8'>
                             <li
-                            className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                            className="
+                            font-semibold hover:font-bold cursor-pointer
+                            text-light-primary hover:text-light-accent 
+                            dark:text-dark-primary dark:hover:text-dark-accent"
                             onClick={(e) => handleNavbarClick(e, '/')}>
                                 Home
                             </li>
 
                             <li
-                            className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                            className="
+                            font-semibold hover:font-bold cursor-pointer
+                            text-light-primary hover:text-light-accent 
+                            dark:text-dark-primary dark:hover:text-dark-accent"
                             onClick={(e) => handleNavbarClick(e, '/about')}>
                                 About
                             </li>
                             
                             <li
-                            className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                            className="
+                            font-semibold hover:font-bold cursor-pointer
+                            text-light-primary hover:text-light-accent 
+                            dark:text-dark-primary dark:hover:text-dark-accent"
                             onClick={(e) => handleNavbarClick(e, '/experience')}>
                                 Experience
                             </li>
                             
                             <li
-                            className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                            className="
+                            font-semibold hover:font-bold cursor-pointer
+                            text-light-primary hover:text-light-accent 
+                            dark:text-dark-primary dark:hover:text-dark-accent"
                             onClick={(e) => handleNavbarClick(e, '/projects')}>
                                 Projects
                             </li>
 
                             <li
-                            className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                            className="
+                            font-semibold hover:font-bold cursor-pointer
+                            text-light-primary hover:text-light-accent 
+                            dark:text-dark-primary dark:hover:text-dark-accent"
                             onClick={(e) => handleNavbarClick(e, '/publications')}>
                                 Publications
                             </li>
                             
                             <li
-                            className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                            className="
+                            font-semibold hover:font-bold cursor-pointer
+                            text-light-primary hover:text-light-accent 
+                            dark:text-dark-primary dark:hover:text-dark-accent"
                             onClick={(e) => handleNavbarClick(e, '/academics')}>
                                 Academics
                             </li>
                             
                             <li
-                            className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                            className="
+                            font-semibold hover:font-bold cursor-pointer
+                            text-light-primary hover:text-light-accent 
+                            dark:text-dark-primary dark:hover:text-dark-accent"
                             onClick={(e) => handleNavbarClick(e, '/contact')}>
                                 Contact
                             </li>
@@ -104,7 +126,7 @@ const Header = () => {
 
                         <div className='flex flex-1 justify-end items-center'>
                         <button
-                            className={`font-semibold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent': 'text-dark-primary hover:text-dark-accent'}`}
+                            className="font-semibold cursor-pointer text-light-primary hover:text-light-accent dark:text-dark-primary dark:hover:text-dark-accent"
                             onClick={() => setOpen(!open)}
                         >
                             <div className="flex flex-col justify-between w-6 h-5">
@@ -119,37 +141,58 @@ const Header = () => {
                     {open && (
                         <div className='flex flex-col w-full'>
                             <ul className='flex flex-col space-y-2 w-full pt-2'>
-                                <li className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                                <li className="
+                                font-semibold hover:font-bold cursor-pointer
+                                text-light-primary hover:text-light-accent
+                                dark:text-dark-primary dark:hover:text-dark-accent"
                                 onClick={(e) => handleNavbarClick(e, '/')}>
                                     Home
                                 </li>
         
-                                <li className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                                <li className="
+                                font-semibold hover:font-bold cursor-pointer
+                                text-light-primary hover:text-light-accent
+                                dark:text-dark-primary dark:hover:text-dark-accent"
                                 onClick={(e) => handleNavbarClick(e, '/about')}>
                                     About
                                 </li>
                             
-                                <li className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                                <li className="
+                                font-semibold hover:font-bold cursor-pointer
+                                text-light-primary hover:text-light-accent
+                                dark:text-dark-primary dark:hover:text-dark-accent"
                                 onClick={(e) => handleNavbarClick(e, '/experience')}>
                                     Experience
                                 </li>
                             
-                                <li className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                                <li className="
+                                font-semibold hover:font-bold cursor-pointer
+                                text-light-primary hover:text-light-accent
+                                dark:text-dark-primary dark:hover:text-dark-accent"
                                 onClick={(e) => handleNavbarClick(e, '/projects')}>
                                     Projects
                                 </li>
 
-                                <li className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                                <li className="
+                                font-semibold hover:font-bold cursor-pointer
+                                text-light-primary hover:text-light-accent
+                                dark:text-dark-primary dark:hover:text-dark-accent"
                                 onClick={(e) => handleNavbarClick(e, '/publications')}>
                                     Publications
                                 </li>
                             
-                                <li className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                                <li className="
+                                font-semibold hover:font-bold cursor-pointer
+                                text-light-primary hover:text-light-accent
+                                dark:text-dark-primary dark:hover:text-dark-accent"
                                 onClick={(e) => handleNavbarClick(e, '/academics')}>
                                     Academics
                                 </li>
 
-                                <li className={`font-semibold hover:font-bold cursor-pointer ${light ? 'text-light-primary hover:text-light-accent' : 'text-dark-primary hover:text-dark-accent'}`}
+                                <li className="
+                                font-semibold hover:font-bold cursor-pointer
+                                text-light-primary hover:text-light-accent
+                                dark:text-dark-primary dark:hover:text-dark-accent"
                                 onClick={(e) => handleNavbarClick(e, '/contact')}>
                                     Contact
                                 </li>

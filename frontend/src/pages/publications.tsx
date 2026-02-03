@@ -1,5 +1,4 @@
 // Import dependencies
-import { useTheme } from "@/contexts/theme";
 import { useState } from "react";
 
 // Import components
@@ -8,7 +7,6 @@ import PublicationDropdown from "@/components/publicationDropdown";
 // Publications page component
 const Publications = () => {
     // States
-    const { light } = useTheme();
     const [expandedPublication, setExpandedPublication] = useState<number | null>(null);
 
     // Publications data
@@ -40,20 +38,20 @@ const Publications = () => {
         <div className={`flex min-lg:flex-row max-lg:flex-col transition duration-300 ease-in-out`}>
 
             {/* Left side */}
-            <div className={`min-lg:bg-gradient-to-tr min-h-screen max-lg:bg-gradient-to-tl ${light ? "from-light-bg-primary via-light-bg-secondary to-light-accent" : "from-dark-bg-primary via-dark-bg-secondary to-dark-accent"} flex flex-col flex-1 items-center justify-center pt-2 pb-4`}>
+            <div className="min-h-screen flex flex-col flex-1 items-center justify-center pt-2 pb-4">
                 <div className="flex flex-1 flex-col w-5/6 my-4 mx-2 items-center justify-center text-center">
                     {/* Introduction */}
-                    <h2 className={`text-2xl font-bold mb-3 ${light ? "text-light-text-primary" : "text-dark-text-primary"}`}>Research & Publications</h2>
+                    <h2 className="text-2xl font-bold mb-3 text-light-text-primary dark:text-dark-text-primary">Research & Publications</h2>
 
                     {/* Body */}
-                    <h5 className={`text-md mb-3 font-semibold ${light ? "text-light-text-primary" : "text-dark-text-primary"}`}>
+                    <h5 className="text-md mb-3 font-semibold text-light-text-primary dark:text-dark-text-primary">
                     I am actively engaged in research within the fields of artificial intelligence and machine learning, with a focus on developing innovative approaches to complex real-world problems. My current and forthcoming publications are associated with the Alabama Institute for the Advancement of Artificial Intelligence, reflecting collaborative work at the intersection of AI, knowledge systems, and applied data science.
                     </h5>
                 </div>
             </div>
 
             {/* Right side */}
-            <div className={`min-lg:bg-gradient-to-tl max-lg:bg-gradient-to-bl min-h-screen ${light ? "from-light-bg-primary via-light-bg-secondary to-light-accent" : "from-dark-bg-primary via-dark-bg-secondary to-dark-accent"} flex flex-col flex-1 items-center justify-center pt-2 pb-4`}>
+            <div className="min-h-screen flex flex-col flex-1 items-center justify-center pt-2 pb-4">
                 <div className="flex flex-col w-5/6 my-4 mx-2 items-center justify-start">
                     {/* Publications List */}
                     <div className="flex flex-col w-full">
