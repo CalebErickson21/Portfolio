@@ -1,5 +1,6 @@
 // Import dependencies
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 // Import components
 import ExperienceCard from "@/components/experienceCard";
@@ -82,7 +83,7 @@ const Experience = () => {
             <div className="flex flex-col justify-center items-center text-center w-full h-full px-8 py-4 transition duration-300 ease-in-out">
                 <h1 className="text-light-text-primary dark:text-dark-text-primary text-2xl font-bold">Experience</h1>
                 <h3 className="text-light-text-secondary dark:text-dark-text-secondary text-lg font-semibold">A showcase of my professional journey - roles, responsibilities, and the skills I've sharpened along the way. Each experience reflects growth, collaboration, and the ability to adapt to new challenges.</h3>
-                <h3 className="text-light-text-secondary dark:text-dark-text-secondary text-lg font-semibold">Because the source code for these projects is proprietary, I cannot provide a direct link to the Github repositories. However, you can view the production versions of the projects by clicking the "Production" button on each project card. If you have any questions or would like to learn more about a project, please feel free to <a href="/contact" className="text-light-text-secondary dark:text-dark-text-secondary text-lg font-semibold underline hover:font-bold">contact me</a>.</h3>
+                <h3 className="text-light-text-secondary dark:text-dark-text-secondary text-lg font-semibold">Because the source code for these projects is proprietary, I cannot provide a direct link to the Github repositories. However, you can view the production versions of the projects by clicking the "Production" button on each project card. If you have any questions or would like to learn more about a project, please feel free to <Link to="/contact" className="text-light-text-secondary dark:text-dark-text-secondary text-lg font-semibold underline hover:font-bold">contact me</Link>.</h3>
             </div>
 
             {/* Alabama Institute for the Advancement of Artificial Intelligence (ALAAI) */}

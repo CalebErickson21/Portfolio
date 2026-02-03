@@ -1,11 +1,8 @@
 // Import dependencies
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Footer component
 const Footer = () => {
-
-    // Helpers
-    const navigate = useNavigate();
 
     // Visible component
     return (
@@ -16,11 +13,11 @@ const Footer = () => {
                 className="text-light-text-secondary dark:text-dark-text-secondary">
                     © 2026 Caleb Erickson • Designed & coded by me • Let’s
                     {" "}
-                    <a
-                    className="cursor-pointer underline hover:font-bold"
-                    onClick={() => navigate('/contact')}>
+                    <Link
+                    to="/contact"
+                    className="cursor-pointer underline hover:font-bold">
                         connect!
-                    </a>
+                    </Link>
                 </h3>
             </div>
         </footer>
