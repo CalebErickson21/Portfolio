@@ -2,41 +2,75 @@
 
 // Academics page component
 const Academics = () => {
-
     return (
-        <div id='academics-container' className={`flex flex-col transition duration-300 ease-in-out`}>
-
-            <div className={`flex min-lg:flex-row max-lg:flex-col transition duration-300 ease-in-out`}>
-
+        <div
+            id="academics-container"
+            className={`flex flex-col transition duration-300 ease-in-out`}
+        >
+            <div
+                className={`flex min-lg:flex-row max-lg:flex-col transition duration-300 ease-in-out`}
+            >
                 {/* Left side */}
                 <div className="min-h-screen flex flex-col flex-1 items-center justify-center pt-2 pb-4">
                     <div className="flex flex-1 flex-col w-5/6 my-4 mx-2 items-center justify-center text-center">
-                    {/* Introduction */}
-                    <h2 className="text-2xl font-bold mb-3 text-light-text-primary dark:text-dark-text-primary">Academic Excellence</h2>
+                        {/* Introduction */}
+                        <h2 className="text-2xl font-bold mb-3 text-light-text-primary dark:text-dark-text-primary">
+                            Academic Excellence
+                        </h2>
 
-                    {/* Body */}
-                    <h5 className="text-md mb-3 font-semibold text-light-text-primary dark:text-dark-text-primary">
-                    I am pursuing a B.S. in Computer Science and an MBA with a concentration in Business Analytics at The University of Alabama, where I have maintained a perfect 4.0 GPA. My dedication to learning has been recognized with honors such as being named Most Outstanding Junior, consistent placement on the President’s List, and active participation in the Honors College. These achievements highlight my commitment to both technical and business education through the University’s STEM to MBA program.
-                    </h5>
+                        {/* Body */}
+                        <h5 className="text-md mb-3 font-semibold text-light-text-primary dark:text-dark-text-primary">
+                            I am pursuing a B.S. in Computer Science and an MBA
+                            with a concentration in Business Analytics at The
+                            University of Alabama, where I have maintained a
+                            perfect 4.0 GPA. My dedication to learning has been
+                            recognized with honors such as being named Most
+                            Outstanding Junior, consistent placement on the
+                            President’s List, and active participation in the
+                            Honors College. These achievements highlight my
+                            commitment to both technical and business education
+                            through the University’s STEM to MBA program.
+                        </h5>
 
-                    <h2 className="text-2xl font-bold mb-3 text-light-text-primary dark:text-dark-text-primary">Leadership in Student Organizations</h2>
+                        <h2 className="text-2xl font-bold mb-3 text-light-text-primary dark:text-dark-text-primary">
+                            Leadership in Student Organizations
+                        </h2>
 
-                    <h5 className="text-md mb-3 font-semibold text-light-text-primary dark:text-dark-text-primary">
-                    I serve as a Developer and Executive Officer for the Alabama AI Club, where I help lead events, mentor members on applied AI concepts, and foster collaboration between students interested in artificial intelligence. In this role, I bridge technical expertise with organizational leadership, helping to create a community where students can learn from one another and explore real-world applications of AI.
-                    </h5>
+                        <h5 className="text-md mb-3 font-semibold text-light-text-primary dark:text-dark-text-primary">
+                            I serve as a Developer and Executive Officer for the
+                            Alabama AI Club, where I help lead events, mentor
+                            members on applied AI concepts, and foster
+                            collaboration between students interested in
+                            artificial intelligence. In this role, I bridge
+                            technical expertise with organizational leadership,
+                            helping to create a community where students can
+                            learn from one another and explore real-world
+                            applications of AI.
+                        </h5>
 
-                    <h2 className="text-2xl font-bold mb-3 text-light-text-primary dark:text-dark-text-primary">Engagement in CS Community</h2>
+                        <h2 className="text-2xl font-bold mb-3 text-light-text-primary dark:text-dark-text-primary">
+                            Engagement in CS Community
+                        </h2>
 
-                    <h5 className="text-md mb-3 font-semibold text-light-text-primary dark:text-dark-text-primary">
-                    Beyond leadership, I am also an active member of the Alabama Software Development Club, where I collaborate with peers on coding projects and contribute to workshops that strengthen the technical community at UA. These experiences have given me the opportunity to grow alongside other motivated students while expanding my skills in teamwork, communication, and project development.
-                    </h5>
+                        <h5 className="text-md mb-3 font-semibold text-light-text-primary dark:text-dark-text-primary">
+                            Beyond leadership, I am also an active member of the
+                            Alabama Software Development Club, where I
+                            collaborate with peers on coding projects and
+                            contribute to workshops that strengthen the
+                            technical community at UA. These experiences have
+                            given me the opportunity to grow alongside other
+                            motivated students while expanding my skills in
+                            teamwork, communication, and project development.
+                        </h5>
                     </div>
                 </div>
 
                 {/* Right side */}
                 <div className="min-h-screen flex flex-col flex-1 items-center justify-center pt-2 pb-4">
                     <div className="flex flex-col w-full px-4 items-center justify-center">
-                        <h2 className="text-2xl font-bold mb-3 text-light-text-primary dark:text-dark-text-primary">Key Coursework</h2>
+                        <h2 className="text-2xl font-bold mb-3 text-light-text-primary dark:text-dark-text-primary">
+                            Key Coursework
+                        </h2>
                         <ul className="flex flex-col gap-2 list-disc pl-4 font-semibold text-light-text-primary dark:text-dark-text-primary">
                             <li>CS 495 - Capstone Computing</li>
                             <li>CS 484 - Reinforcement Learning</li>
@@ -52,7 +86,10 @@ const Academics = () => {
                             <li>CS 201 - Data Structures and Algorithms</li>
                             <li>ECE 383 - Microcomputers</li>
                             <li>ECE 380 - Digital Logic</li>
-                            <li>OM 500 - Advanced Analytical Spreadsheet Modeling</li>
+                            <li>
+                                OM 500 - Advanced Analytical Spreadsheet
+                                Modeling
+                            </li>
                             <li>GBA 571 - STEM Business Honors</li>
                             <li>MGT 517 - Leadership and Ethics</li>
                         </ul>
@@ -60,8 +97,8 @@ const Academics = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 // Export component
 export default Academics;

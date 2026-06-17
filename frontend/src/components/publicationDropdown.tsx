@@ -1,21 +1,20 @@
 // Import dependencies
 
 // Import types
-import type { PublicationDropdownProps } from '@/utils/types';
+import type { PublicationDropdownProps } from "@/utils/types";
 
 // Publication Dropdown component
-const PublicationDropdown = ({ 
-    id, 
-    title, 
-    authors, 
-    description, 
-    venue, 
-    year, 
+const PublicationDropdown = ({
+    id,
+    title,
+    authors,
+    description,
+    venue,
+    year,
     link,
-    expandedPublication, 
-    setExpandedPublication 
+    expandedPublication,
+    setExpandedPublication,
 }: PublicationDropdownProps) => {
-
     // Check if this publication is expanded
     const isExpanded = expandedPublication === id;
 
@@ -29,12 +28,13 @@ const PublicationDropdown = ({
     };
 
     return (
-        <div className="flex flex-col w-full mb-3 rounded-lg
+        <div
+            className="flex flex-col w-full mb-3 rounded-lg
             shadow-sm hover:shadow-md shadow-accent hover:shadow-accent
             bg-light-surface dark:bg-dark-surface
             hover:-translate-y-[.1rem]
-            transition duration-300 ease-in-out">
-
+            transition duration-300 ease-in-out"
+        >
             {/* Tint Overlay */}
             <div className="flex flex-col w-full p-2 rounded-lg hover:bg-accent/5">
                 {/* Header Bar - Always Visible */}
@@ -47,14 +47,21 @@ const PublicationDropdown = ({
                     </h3>
 
                     {/* Expand/Collapse Icon */}
-                    <div className={`flex-shrink-0 transition-transform duration-300 ease-in-out ${isExpanded ? 'rotate-180' : ''}`}>
+                    <div
+                        className={`flex-shrink-0 transition-transform duration-300 ease-in-out ${isExpanded ? "rotate-180" : ""}`}
+                    >
                         <svg
                             className="w-6 h-6 text-light-text-primary dark:text-dark-text-primary"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
                         >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                            />
                         </svg>
                     </div>
                 </button>
@@ -65,19 +72,22 @@ const PublicationDropdown = ({
                         <div className="flex flex-col space-y-2">
                             {authors && (
                                 <p className="text-light-text-secondary dark:text-dark-text-secondary text-md font-semibold">
-                                    <span className="font-bold">Authors:</span> {authors}
+                                    <span className="font-bold">Authors:</span>{" "}
+                                    {authors}
                                 </p>
                             )}
 
                             {venue && (
                                 <p className="text-light-text-secondary dark:text-dark-text-secondary text-md font-semibold">
-                                    <span className="font-bold">Venue:</span> {venue}
+                                    <span className="font-bold">Venue:</span>{" "}
+                                    {venue}
                                 </p>
                             )}
 
                             {year && (
                                 <p className="text-light-text-secondary dark:text-dark-text-secondary text-md font-semibold">
-                                    <span className="font-bold">Year:</span> {year}
+                                    <span className="font-bold">Year:</span>{" "}
+                                    {year}
                                 </p>
                             )}
 

@@ -8,58 +8,61 @@ import MockStreet from "@/assets/images/mockstreet.png";
 import NeuralNetwork from "@/assets/images/numbers.png";
 import Portfolio from "@/assets/images/portfolio.jpg";
 import Launchpad from "@/assets/images/launchpad.png";
-import ScholarSync from "@/assets/images/scholarSync.png";
-
+// import ScholarSync from "@/assets/images/scholarSync.png";
 
 // Projects page component
 const Projects = () => {
-
     // Card Constants
     const cardData = [
         {
             title: "Launchpad",
-            description: "Launchpad is a platform for students to manage their job applications, resume/cover letter reviews, and AI powered career advice. It consolidates all information across platforms such as LinkedIn, Indeed, and Handshake into a central hub with AI powered suggestions.",
+            description:
+                "Launchpad is a platform for students to manage their job applications, resume/cover letter reviews, and AI powered career advice. It consolidates all information across platforms such as LinkedIn, Indeed, and Handshake into a central hub with AI powered suggestions.",
             image: Launchpad,
             stack: "In Progress",
             production: "/construction",
             github: "/construction",
-            time: "Planned December 2025"
+            time: "Planned December 2025",
         },
-        {
-            title: "ScholarSync",
-            description: "ScholarSync is a platform for students for students to connect with other students and form study groups and clubs for various subjects and personal interests. It uses knowledge graphs and machine learning graph algorithms to detect communities and give personalized recommendations via link prediction algorithms.",
-            image: ScholarSync,
-            stack: "In Progress",
-            production: "/construction",
-            github: "/construction",
-            time: "Planned December 2025"
-        },
+        // {
+        //     title: "ScholarSync",
+        //     description:
+        //         "ScholarSync is a platform for students for students to connect with other students and form study groups and clubs for various subjects and personal interests. It uses knowledge graphs and machine learning graph algorithms to detect communities and give personalized recommendations via link prediction algorithms.",
+        //     image: ScholarSync,
+        //     stack: "In Progress",
+        //     production: "/construction",
+        //     github: "/construction",
+        //     time: "Planned December 2025",
+        // },
         {
             title: "Mock Street Trading Platform",
-            description: "Practice trading platform that uses virtual money where users practice managing a stock portfolio. Built using ReactJS and SCSS for the frontend with NodeJS and PostGre SQL for the backend.",
+            description:
+                "Practice trading platform that uses virtual money where users practice managing a stock portfolio. Built using ReactJS and SCSS for the frontend with NodeJS and PostGre SQL for the backend.",
             image: MockStreet,
             stack: "Git ● AWS ● PostGre SQL ● React.js ● Node.js ● SCSS",
             production: "https://mockstreetexchange.com",
             github: "https://github.com/CalebErickson21/mockstreeet",
-            time: "March 2025"
+            time: "March 2025",
         },
         {
             title: "Number Prediction Neural Network",
-            description: "Recognizes handwritten digits using a neural network. Users draw on a 28x28 grid in the React frontend. The Python + Flask backend then runs a trained model on the grayscale data to predict the digit in real-time, combining an intuitive UI with responsive machine learning.",
+            description:
+                "Recognizes handwritten digits using a neural network. Users draw on a 28x28 grid in the React frontend. The Python + Flask backend then runs a trained model on the grayscale data to predict the digit in real-time, combining an intuitive UI with responsive machine learning.",
             image: NeuralNetwork,
             stack: "Git ● Python ● Numpy ● Flask ● React.js",
             production: "https://numbers-beige.vercel.app/",
             github: "https://github.com/CalebErickson21/numbers",
-            time: "April 2025"
+            time: "April 2025",
         },
         {
             title: "Portfolio Interactive Website",
-            description: "Interactive webpage built using Bootstrap libraries + custom Sass and JavaScript to display personal projects outside class. As a matter of fact, you are currently viewing the frontend of this project!",
+            description:
+                "Interactive webpage built using Bootstrap libraries + custom Sass and JavaScript to display personal projects outside class. As a matter of fact, you are currently viewing the frontend of this project!",
             image: Portfolio,
             stack: "Git ● Typescript ● React ● TailwindCSS",
             production: "https://caleberickson21.github.io/",
             github: "https://github.com/CalebErickson21/portfolio",
-            time: "August 2024 - Present"
+            time: "August 2024 - Present",
         },
     ];
 
@@ -67,8 +70,15 @@ const Projects = () => {
         <div className="flex flex-col w-full h-full min-h-screen transition duration-300 ease-in-out">
             {/* Header */}
             <div className="flex flex-col justify-center items-center text-center w-full h-full px-8 py-4">
-                <h1 className="text-light-text-primary dark:text-dark-text-primary text-2xl font-bold">Projects</h1>
-                <h3 className="text-light-text-secondary dark:text-dark-text-secondary text-lg font-semibold">From creative experiments to fully developed applications, my projects highlight both technical ability and problem-solving. Each one represents an idea I brought to life and a skill I strengthened.</h3>
+                <h1 className="text-light-text-primary dark:text-dark-text-primary text-2xl font-bold">
+                    Projects
+                </h1>
+                <h3 className="text-light-text-secondary dark:text-dark-text-secondary text-lg font-semibold">
+                    From creative experiments to fully developed applications,
+                    my projects highlight both technical ability and
+                    problem-solving. Each one represents an idea I brought to
+                    life and a skill I strengthened.
+                </h3>
             </div>
 
             {/* Projects */}
@@ -78,8 +88,8 @@ const Projects = () => {
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};
 
 // Export component
 export default Projects;

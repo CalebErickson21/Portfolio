@@ -9,28 +9,32 @@ import ResumeFile from "@/assets/downloadables/Caleb_Erickson_Resume.pdf";
 
 // Contact page component
 const Contact = () => {
-
     // States
     const navigate = useNavigate();
 
-
     return (
-        <div id='contact-container' className={`flex flex-col transition duration-300 ease-in-out`}>
-
+        <div
+            id="contact-container"
+            className={`flex flex-col transition duration-300 ease-in-out`}
+        >
             {/* Top */}
-            <div className={`flex min-lg:flex-row max-lg:flex-col transition duration-300 ease-in-out`}>
-
+            <div
+                className={`flex min-lg:flex-row max-lg:flex-col transition duration-300 ease-in-out`}
+            >
                 {/* Left side */}
                 <div className="min-h-screen flex flex-col flex-1 items-center justify-center pt-2 pb-4 px-6">
                     <div className="flex flex-1 flex-col w-5/6 my-4 mx-2 items-center justify-center text-center">
                         {/* Introduction */}
-                        <h2 className="text-2xl font-bold mb-3 text-light-text-primary dark:text-dark-text-primary">Contact Me</h2>
-                        
+                        <h2 className="text-2xl font-bold mb-3 text-light-text-primary dark:text-dark-text-primary">
+                            Contact Me
+                        </h2>
+
                         {/* Body */}
                         <h5 className="text-md mb-3 font-semibold text-light-text-primary dark:text-dark-text-primary">
-                        I’m always open to connecting, whether it’s about opportunities, 
-                        collaborations, or just to chat. The best way to reach me is by email, 
-                        but feel free to explore my portfolio and professional profiles.
+                            I’m always open to connecting, whether it’s about
+                            opportunities, collaborations, or just to chat. The
+                            best way to reach me is by email, but feel free to
+                            explore my portfolio and professional profiles.
                         </h5>
                     </div>
                 </div>
@@ -39,15 +43,18 @@ const Contact = () => {
                 <div className="min-h-screen flex flex-col flex-1 items-center justify-center pt-2 pb-4">
                     <div className="flex flex-1 flex-col w-5/6 my-4 mx-2 items-center justify-center text-center">
                         <ul className="flex flex-col gap-4 text-lg">
-
                             {/* Resume */}
                             <li className="w-full h-full p-0 m-0 rounded-lg shadow-sm hover:shadow-md shadow-accent hover:shadow-accent bg-light-surface dark:bg-dark-surface hover:-translate-y-[.05rem] transition duration-300 ease-in-out">
                                 {/* Tint Overlay */}
                                 <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-accent/5 transition duration-300 ease-in-out">
                                     <FileText className="w-5 h-5 text-light-text-primary dark:text-dark-text-primary" />
-                                    <a href={ResumeFile} download className="font-semibold hover:font-bold text-light-text-primary dark:text-dark-text-primary">
+                                    <a
+                                        href={ResumeFile}
+                                        download
+                                        className="font-semibold hover:font-bold text-light-text-primary dark:text-dark-text-primary"
+                                    >
                                         Resume
-                                        </a>
+                                    </a>
                                 </div>
                             </li>
 
@@ -56,7 +63,10 @@ const Contact = () => {
                                 {/* Tint Overlay */}
                                 <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-accent/5 transition duration-300 ease-in-out">
                                     <Mail className="w-5 h-5 text-light-text-primary dark:text-dark-text-primary" />
-                                    <a href="mailto:crerickson@crimson.ua.edu" className="font-semibold hover:font-bold text-light-text-primary dark:text-dark-text-primary">
+                                    <a
+                                        href="mailto:crerickson@crimson.ua.edu"
+                                        className="font-semibold hover:font-bold text-light-text-primary dark:text-dark-text-primary"
+                                    >
                                         crerickson@crimson.ua.edu
                                     </a>
                                 </div>
@@ -78,8 +88,8 @@ const Contact = () => {
                                 {/* Tint Overlay */}
                                 <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-accent/5 transition duration-300 ease-in-out">
                                     <Globe className="w-5 h-5 text-light-text-primary dark:text-dark-text-primary" />
-                                    <button 
-                                        onClick={() => navigate("/")} 
+                                    <button
+                                        onClick={() => navigate("/")}
                                         className="font-semibold hover:font-bold text-light-text-primary dark:text-dark-text-primary cursor-pointer transition duration-300 ease-in-out"
                                     >
                                         caleberickson21.github.io
@@ -92,9 +102,9 @@ const Contact = () => {
                                 {/* Tint Overlay */}
                                 <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-accent/5 transition duration-300 ease-in-out">
                                     <Linkedin className="w-5 h-5 text-light-text-primary dark:text-dark-text-primary" />
-                                    <a 
-                                        href="https://linkedin.com/in/-caleb-erickson" 
-                                        target="_blank" 
+                                    <a
+                                        href="https://linkedin.com/in/-caleb-erickson"
+                                        target="_blank"
                                         rel="noopener noreferrer"
                                         className="font-semibold hover:font-bold text-light-text-primary dark:text-dark-text-primary"
                                     >
@@ -108,9 +118,9 @@ const Contact = () => {
                                 {/* Tint Overlay */}
                                 <div className="flex items-center gap-3 w-full h-full p-2 rounded-lg hover:bg-accent/5 transition duration-300 ease-in-out">
                                     <Github className="w-5 h-5 text-light-text-primary dark:text-dark-text-primary" />
-                                    <a 
-                                        href="https://github.com/caleberickson21" 
-                                        target="_blank" 
+                                    <a
+                                        href="https://github.com/caleberickson21"
+                                        target="_blank"
                                         rel="noopener noreferrer"
                                         className="font-semibold hover:font-bold text-light-text-primary dark:text-dark-text-primary"
                                     >
@@ -118,14 +128,13 @@ const Contact = () => {
                                     </a>
                                 </div>
                             </li>
-
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 // Export component
 export default Contact;

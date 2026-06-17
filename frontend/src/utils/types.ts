@@ -4,7 +4,7 @@ export type HomeCardProps = {
     description: string;
     image: React.ComponentType<React.SVGProps<SVGSVGElement>>;
     route: string;
-}
+};
 
 // Project Card Props
 export type ProjectCardProps = {
@@ -15,7 +15,7 @@ export type ProjectCardProps = {
     production: string;
     github: string;
     time: string;
-}
+};
 
 // Experience Card Props
 export type ExperienceCardProps = {
@@ -28,7 +28,7 @@ export type ExperienceCardProps = {
     production: string;
     expandedCard: number | null;
     setExpandedCard: React.Dispatch<React.SetStateAction<number | null>>;
-}
+};
 
 // Publication Dropdown Props
 export type PublicationDropdownProps = {
@@ -41,12 +41,12 @@ export type PublicationDropdownProps = {
     link?: string;
     expandedPublication: number | null;
     setExpandedPublication: React.Dispatch<React.SetStateAction<number | null>>;
-}
+};
 
 export interface EnvironmentContextInterface {
     screenSize: ScreenSizeType;
     setScreenSize: React.Dispatch<React.SetStateAction<ScreenSizeType>>;
-};
+}
 
 // Screen size type
-export type ScreenSizeType = 'small' | 'medium' | 'large' | 'extra-large';
+export type ScreenSizeType = "small" | "medium" | "large" | "extra-large";
