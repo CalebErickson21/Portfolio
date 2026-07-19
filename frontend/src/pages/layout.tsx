@@ -1,5 +1,7 @@
 import { Outlet } from "react-router-dom";
 
+import { LightRays } from "@/components/ui/light-rays";
+
 // Layout component
 export const Layout = () => {
     return (
@@ -18,7 +20,9 @@ export const Layout = () => {
                 className="
             flex flex-1 flex-row min-h-screen min-w-screen
             absolute inset-0 z-0"
-            ></div>
+            >
+                <LightRays color="var(--color-red-500)" />
+            </div>
 
             {/* Outlet */}
             <main
