@@ -1,83 +1,49 @@
-// Import dependencies
 import { Outlet } from "react-router-dom";
 
-// Import components
-import ThemeButton from "@/components/themeButton";
-
-// Import components
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-
-// Import styles
+import { LightRays } from "@/components/ui/light-rays";
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 
 // Layout component
-const Layout = () => {
-    return (
-        <div
-            id="layout-container"
-            className="relative flex flex-col min-h-screen w-full m-0 p-0"
-        >
-            {/* Header */}
-            <div id="header-container" className="sticky w-full top-0 z-50">
-                <Header />
-            </div>
+export const Layout = () => {
+	return (
+		<div id="layout-container" className="relative flex flex-col min-h-screen w-full m-0 p-0">
+			{/* Header */}
+			<div id="header-container" className="sticky w-full top-0 z-50">
+				Header
+			</div>
 
-            {/* Background */}
-            <div
-                id="background-container"
-                className="
-            flex flex-1 flex-row min-h-screen w-full
-            absolute inset-0 z-0"
-            >
-                {/* Left gradient */}
-                <div
-                    className="
-                w-1/2 h-full
-                bg-gradient-to-br
-                from-light-background via-light-background to-accent
-                dark:from-dark-background dark:via-dark-background dark:to-accent
-                transition duration-300 ease-in-out
-                "
-                ></div>
+			{/* Background */}
+			<div
+				id="background-container"
+				className="
+                flex flex-1 flex-row min-h-screen min-w-screen
+                absolute inset-0 z-0
+                bg-background"
+			>
+				<LightRays color="var(--brand-accent)" length="100dvh" />
+			</div>
 
-                {/* Right gradient */}
-                <div
-                    className="
-                w-1/2 h-full
-                bg-gradient-to-bl
-                from-light-background via-light-background to-accent
-                dark:from-dark-background dark:via-dark-background dark:to-accent
-                transition duration-300 ease-in-out
-                "
-                ></div>
-            </div>
-
-            {/* Outlet */}
-            <main
-                id="outlet-container"
-                className="flex flex-1 min-h-0
+			{/* Outlet */}
+			<main
+				id="outlet-container"
+				className="flex flex-1 min-h-0
             bg-transparent
             transition duration-300 ease-in-out
             z-10"
-            >
-                <Outlet />
-            </main>
+			>
+				<Outlet />
+			</main>
 
-            {/* Footer */}
-            <div id="footer-container" className="w-full z-[45]">
-                <Footer />
-            </div>
+			{/* Footer */}
+			<div id="footer-container" className="w-full">
+				Footer
+			</div>
 
-            {/* Theme button */}
-            <div
-                id="theme-button-container"
-                className="fixed bottom-4 left-4 z-50"
-            >
-                <ThemeButton />
-            </div>
-        </div>
-    );
+			{/* Theme button */}
+			<AnimatedThemeToggler
+				variant="hexagon"
+				className="fixed bottom-4 left-4 z-50 text-brand-accent bg-white rounded-full px-2 py-1 shadow-sm shadow-brand-accent"
+			/>
+		</div>
+	);
 };
-
-// Export component
-export default Layout;
