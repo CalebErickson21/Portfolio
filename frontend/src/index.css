@@ -53,6 +53,16 @@
 	--radius-md: calc(var(--radius) - 2px);
 	--radius-lg: var(--radius);
 	--radius-xl: calc(var(--radius) + 4px);
+	--animate-rippling: rippling var(--duration) ease-out;
+  @keyframes rippling {
+  0% {
+    opacity: 1;
+		}
+  100% {
+    transform: scale(2);
+    opacity: 0;
+		}
+	}
 }
 
 @layer base {
@@ -66,6 +76,11 @@
 
 	body {
 		@apply bg-background text-foreground;
+	}
+
+	button:not(:disabled),
+	[role="button"]:not(:disabled) {
+		cursor: pointer;
 	}
 }
 ::view-transition-old(root),
