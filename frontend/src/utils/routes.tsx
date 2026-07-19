@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Layout } from "@/pages/Layout";
-import { Home } from "@/pages/Home";
+import { Layout } from "@/pages/layout";
+import { Home } from "@/pages/home";
 
-const router = createBrowserRouter([
+export const Router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Layout />,
@@ -14,6 +14,3 @@ const router = createBrowserRouter([
 		],
 	},
 ]);
-
-// Export router
-export default router;
