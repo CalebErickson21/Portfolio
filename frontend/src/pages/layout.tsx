@@ -1,17 +1,7 @@
-// Import dependencies
 import { Outlet } from "react-router-dom";
 
-// Import components
-import ThemeButton from "@/components/themeButton";
-
-// Import components
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-
-// Import styles
-
 // Layout component
-const Layout = () => {
+export const Layout = () => {
     return (
         <div
             id="layout-container"
@@ -19,38 +9,16 @@ const Layout = () => {
         >
             {/* Header */}
             <div id="header-container" className="sticky w-full top-0 z-50">
-                <Header />
+                Header
             </div>
 
             {/* Background */}
             <div
                 id="background-container"
                 className="
-            flex flex-1 flex-row min-h-screen w-full
+            flex flex-1 flex-row min-h-screen min-w-screen
             absolute inset-0 z-0"
-            >
-                {/* Left gradient */}
-                <div
-                    className="
-                w-1/2 h-full
-                bg-gradient-to-br
-                from-light-background via-light-background to-accent
-                dark:from-dark-background dark:via-dark-background dark:to-accent
-                transition duration-300 ease-in-out
-                "
-                ></div>
-
-                {/* Right gradient */}
-                <div
-                    className="
-                w-1/2 h-full
-                bg-gradient-to-bl
-                from-light-background via-light-background to-accent
-                dark:from-dark-background dark:via-dark-background dark:to-accent
-                transition duration-300 ease-in-out
-                "
-                ></div>
-            </div>
+            ></div>
 
             {/* Outlet */}
             <main
@@ -64,8 +32,8 @@ const Layout = () => {
             </main>
 
             {/* Footer */}
-            <div id="footer-container" className="w-full z-[45]">
-                <Footer />
+            <div id="footer-container" className="w-full">
+                Footer
             </div>
 
             {/* Theme button */}
@@ -73,11 +41,8 @@ const Layout = () => {
                 id="theme-button-container"
                 className="fixed bottom-4 left-4 z-50"
             >
-                <ThemeButton />
+                Theme Btn
             </div>
         </div>
     );
 };
-
-// Export component
-export default Layout;
