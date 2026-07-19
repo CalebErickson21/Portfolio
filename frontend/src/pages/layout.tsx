@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 
 import { LightRays } from "@/components/ui/light-rays";
-import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
+import { Navbar } from "@/components/Navbar";
 
 // Layout component
 export const Layout = () => {
@@ -9,7 +9,7 @@ export const Layout = () => {
 		<div id="layout-container" className="relative flex flex-col min-h-screen w-full m-0 p-0">
 			{/* Header */}
 			<div id="header-container" className="sticky w-full top-0 z-50">
-				Header
+				<Navbar />
 			</div>
 
 			{/* Background */}
@@ -20,7 +20,7 @@ export const Layout = () => {
                 absolute inset-0 z-0
                 bg-background"
 			>
-				<LightRays color="var(--brand-accent)" length="100dvh" />
+				<LightRays color="var(--brand-accent)" length="100dvh" blur={75} />
 			</div>
 
 			{/* Outlet */}
@@ -38,12 +38,6 @@ export const Layout = () => {
 			<div id="footer-container" className="w-full">
 				Footer
 			</div>
-
-			{/* Theme button */}
-			<AnimatedThemeToggler
-				variant="hexagon"
-				className="fixed bottom-4 left-4 z-50 text-brand-accent bg-white rounded-full px-2 py-1 shadow-sm shadow-brand-accent"
-			/>
 		</div>
 	);
 };
