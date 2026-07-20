@@ -2,8 +2,8 @@ import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 
-import { AppProviders } from "./contexts/appProviders";
-import { Router } from "./utils/routes";
+import { AppProviders } from "./contexts/AppProviders";
+import { Router } from "./utils/Router";
 import "./index.css";
 
 // Render the app

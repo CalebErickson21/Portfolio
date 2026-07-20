@@ -24,11 +24,11 @@ const navigation = [
 
 export function Navbar() {
 	return (
-		<header className="sticky top-0 z-50 w-full bg-transparent">
+		<header className="sticky top-0 z-50 w-full bg-transparent p-2">
 			<div className="flex items-center justify-between px-4 py-2">
 				<Link
 					to="/"
-					className="font-semibold text-text-primary transition-opacity hover:opacity-75 cursor-pointer"
+					className="font-semibold hover:font-bold text-lg text-text-primary transition-all cursor-pointer"
 				>
 					Caleb Erickson
 				</Link>
@@ -38,7 +38,7 @@ export function Navbar() {
 					<nav className="hidden items-center gap-1 sm:flex">
 						<AnimatedThemeToggler
 							variant="hexagon"
-							className="mx-2 [&_svg]:size-4 text-text-secondary transition-colors hover:text-text-primary cursor-pointer"
+							className="mx-2 [&_svg]:size-5 text-text-secondary transition-colors hover:text-text-primary cursor-pointer"
 						/>
 						{navigation.map((item) => (
 							<Link
@@ -49,7 +49,7 @@ export function Navbar() {
 										variant: "ghost",
 										size: "sm",
 									}),
-									"transition-colors text-text-secondary hover:text-text-primary",
+									"text-md transition-all text-text-secondary hover:text-text-primary hover:font-semibold",
 								)}
 							>
 								{item.label}
@@ -102,7 +102,7 @@ export function Navbar() {
 														variant: "ghost",
 														size: "sm",
 													}),
-													"transition-colors text-text-secondary hover:text-text-primary cursor-pointer",
+													"text-md transition-all text-text-secondary hover:text-text-primary hover:font-semibold",
 												)}
 											/>
 										}
