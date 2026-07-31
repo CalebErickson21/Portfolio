@@ -22,7 +22,7 @@ export const Home = () => {
 	return (
 		<div className="flex min-h-full flex-col">
 			{/* Landing hero */}
-			<section className="flex min-h-[calc(100dvh-7rem)] flex-1 flex-col-reverse md:flex-row">
+			<section className="flex min-h-[calc(100dvh-4.5rem)] flex-1 flex-col-reverse md:flex-row">
 				{/* Left side */}
 				<div className="flex flex-1 flex-col items-center justify-center px-6 py-10 text-center sm:px-10 md:items-start md:text-left lg:px-16 xl:px-24">
 					<p className="text-xl font-medium tracking-wide text-brand-accent">
