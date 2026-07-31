@@ -1,4 +1,4 @@
-import { ResumeDownloader } from "@/contexts/ResumeDownloader";
+// import { ResumeDownloader } from "@/contexts/ResumeDownloader";
 
 // App providers component
 export const AppProviders = ({ children }: { children: React.ReactNode }) => {

@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router";
 
 import { LightRays } from "@/components/ui/light-rays";
 import { Navbar } from "@/components/Navbar";
@@ -20,7 +20,7 @@ export const Layout = () => {
 				id="background-container"
 				className="absolute inset-0 z-0 min-h-dvh min-w-full bg-background"
 			>
-				<LightRays color="var(--brand-accent)" length="100%" blur={75} />
+				<LightRays color="var(--brand-accent)" length="100%" blur={100} />
 			</div>
 
 			{/* Outlet */}
