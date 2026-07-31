@@ -48,7 +48,7 @@ const detailsLinkClass = cn(
 
 function ProjectCard({ project }: { project: FeaturedProject }) {
 	return (
-		<Card className="bg-surface/80 text-text-primary ring-text-secondary/15 backdrop-blur-sm dark:ring-text-secondary/25">
+		<Card className="bg-surface/80 text-text-primary shadow-lg shadow-brand-accent/25 ring-text-secondary/15 backdrop-blur-sm dark:shadow-brand-accent/20 dark:ring-text-secondary/25">
 			<img
 				src={project.image}
 				alt={project.title}
@@ -109,7 +109,7 @@ export function FeaturedProjects() {
 				</p>
 			</div>
 
-			<div className="mt-10 grid gap-6 sm:grid-cols-2">
+			<div className="mt-10 grid gap-6 md:grid-cols-2">
 				{featuredProjects.map((project) => (
 					<ProjectCard key={project.id} project={project} />
 				))}

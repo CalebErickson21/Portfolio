@@ -52,6 +52,8 @@ interface TypingAnimationProps extends Omit<MotionProps, "children"> {
 	showCursor?: boolean;
 	blinkCursor?: boolean;
 	cursorStyle?: "line" | "block" | "underscore";
+	currentWordIndex?: number;
+	onWordIndexChange?: (index: number) => void;
 }
 
 export function TypingAnimation({
@@ -69,12 +71,14 @@ export function TypingAnimation({
 	showCursor = true,
 	blinkCursor = true,
 	cursorStyle = "line",
+	currentWordIndex: controlledWordIndex,
+	onWordIndexChange,
 	...props
 }: TypingAnimationProps) {
 	const MotionComponent = motionElements[Component] as TypingAnimationMotionComponent;
 
 	const [displayedText, setDisplayedText] = useState<string>("");
-	const [currentWordIndex, setCurrentWordIndex] = useState(0);
+	const [internalWordIndex, setInternalWordIndex] = useState(0);
 	const [currentCharIndex, setCurrentCharIndex] = useState(0);
 	const [phase, setPhase] = useState<"typing" | "pause" | "deleting">("typing");
 	const elementRef = useRef<HTMLElement | null>(null);
@@ -82,6 +86,18 @@ export function TypingAnimation({
 		amount: 0.3,
 		once: true,
 	});
+
+	const isWordIndexControlled = controlledWordIndex !== undefined;
+	const currentWordIndex = isWordIndexControlled ? controlledWordIndex : internalWordIndex;
+	const onWordIndexChangeRef = useRef(onWordIndexChange);
+	onWordIndexChangeRef.current = onWordIndexChange;
+
+	const setCurrentWordIndex = (index: number) => {
+		if (!isWordIndexControlled) {
+			setInternalWordIndex(index);
+		}
+		onWordIndexChangeRef.current?.(index);
+	};
 
 	const wordsToAnimate = useMemo(() => words ?? (children ? [children] : []), [words, children]);
 	const hasMultipleWords = wordsToAnimate.length > 1;
@@ -97,10 +113,13 @@ export function TypingAnimation({
 
 	useEffect(() => {
 		setDisplayedText("");
-		setCurrentWordIndex(0);
 		setCurrentCharIndex(0);
 		setPhase("typing");
-	}, [animationSourceKey]);
+		if (!isWordIndexControlled) {
+			setInternalWordIndex(0);
+		}
+		onWordIndexChangeRef.current?.(0);
+	}, [animationSourceKey, isWordIndexControlled]);
 
 	useEffect(() => {
 		let timeout: ReturnType<typeof setTimeout> | null = null;
