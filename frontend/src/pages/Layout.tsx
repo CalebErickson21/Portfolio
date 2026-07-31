@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 
+import { Footer } from "@/components/Footer";
 import { LightRays } from "@/components/ui/light-rays";
 import { Navbar } from "@/components/Navbar";
 
@@ -29,12 +30,8 @@ export const Layout = () => {
 				className="relative z-10 min-h-0 flex-1 scroll-fade overflow-y-auto bg-transparent transition-all"
 			>
 				<Outlet />
+				<Footer />
 			</main>
-
-			{/* Footer */}
-			<div id="footer-container" className="relative z-10 w-full shrink-0">
-				Footer
-			</div>
 		</div>
 	);
 };
