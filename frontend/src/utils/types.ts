@@ -14,3 +14,17 @@ export interface LucideProps {
     absoluteStrokeWidth?: boolean;
     [key: string]: any; // Any other SVG attributes
 }
+
+export interface FeaturedProjectLinks {
+    production: string;
+    github: string;
+    details: string;
+}
+
+export interface FeaturedProject {
+    id: string;
+    title: string;
+    description: string;
+    image: string;
+    links: FeaturedProjectLinks;
+}

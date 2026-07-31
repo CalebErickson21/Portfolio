@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router";
 
 import { LightRays } from "@/components/ui/light-rays";
 import { Navbar } from "@/components/Navbar";
