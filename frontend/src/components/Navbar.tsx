@@ -26,17 +26,17 @@ const navigation = [
 const socialLinks = [
 	{
 		label: "GitHub",
-		href: "https://github.com/caleberickson",
+		href: "https://github.com/caleberickson21",
 		icon: FaGithub,
 	},
 	{
 		label: "LinkedIn",
-		href: "https://www.linkedin.com/in/caleberickson",
+		href: "https://www.linkedin.com/in/-caleb-erickson",
 		icon: FaLinkedin,
 	},
 	{
 		label: "Email",
-		href: "mailto:caleb@example.com",
+		href: "mailto:caleberickson01@gmail.com",
 		icon: Mail,
 	},
 ] as const;

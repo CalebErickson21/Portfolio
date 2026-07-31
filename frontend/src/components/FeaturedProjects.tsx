@@ -6,29 +6,31 @@ import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/comp
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import type { FeaturedProject } from "@/utils/Types";
+import mockstreetImage from "@/assets/mockstreet.png";
+import neuralNetworkImage from "@/assets/neural-network.png";
 
 const featuredProjects: FeaturedProject[] = [
 	{
-		id: "Mockstreet Exchange",
-		title: "Atlas Dashboard",
+		id: "mockstreet-exchange",
+		title: "Mockstreet Exchange",
 		description:
-			"A real-time analytics dashboard for tracking product metrics, with live charts and role-based access.",
-		image: "https://picsum.photos/seed/atlas-dashboard/800/450",
+			"A simulated trading platform that helps everyday users gain hands-on experience building and managing a stock portfolio without risking real money.",
+		image: mockstreetImage,
 		links: {
-			production: "https://example.com/atlas",
-			github: "https://github.com/example/atlas-dashboard",
+			production: "https://www.mockstreetexchange.com/",
+			github: "https://github.com/CalebErickson21/Mockstreeet",
 			details: "/projects",
 		},
 	},
 	{
-		id: "lumen-chat",
-		title: "Lumen Chat",
+		id: "neural-network",
+		title: "Number Prediction Neural Network",
 		description:
-			"An AI-assisted support chat that routes questions, drafts replies, and keeps conversations on-brand.",
-		image: "https://picsum.photos/seed/lumen-chat/800/450",
+			"A convolutional neural network built from scratch to recognize MNIST handwritten digits, using only NumPy and no plug-and-play machine-learning libraries to better understand backpropagation, gradient descent, and neural network mathematics.",
+		image: neuralNetworkImage,
 		links: {
-			production: "https://example.com/lumen",
-			github: "https://github.com/example/lumen-chat",
+			production: "https://numbers-beige.vercel.app/",
+			github: "https://github.com/CalebErickson21/Numbers-CNN",
 			details: "/projects",
 		},
 	},
