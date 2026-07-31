@@ -47,10 +47,10 @@ const iconButtonClass =
 function navLinkClass({ isActive }: { isActive: boolean }) {
 	return cn(
 		buttonVariants({ variant: "ghost", size: "sm" }),
-		"relative text-md transition-all hover:text-text-primary hover:font-semibold",
+		"relative text-md transition-all",
 		isActive
-			? "font-semibold text-brand-accent after:absolute after:inset-x-2 after:bottom-0.5 after:h-0.5 after:rounded-full after:bg-brand-accent"
-			: "text-text-secondary",
+			? "font-semibold text-brand-accent hover:text-brand-accent after:absolute after:inset-x-2 after:bottom-0.5 after:h-0.5 after:rounded-full after:bg-brand-accent"
+			: "text-text-secondary hover:text-text-primary hover:font-semibold",
 	);
 }
 
