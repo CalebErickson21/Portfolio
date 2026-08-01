@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
 
 import { ExperienceCard } from "@/components/ExperienceCard";
+import { SectionLabel } from "@/components/SectionLabel";
 import { detailsLinkClass } from "@/utils/classes";
 import type { FeaturedExperience } from "@/utils/Types";
 import cgiLogo from "@/assets/CgiLogo.jpg";
@@ -43,9 +44,7 @@ export function FeaturedExperience() {
 			aria-labelledby="featured-experience-heading"
 		>
 			<div className="text-center">
-				<p className="text-xl font-medium tracking-wide text-brand-accent">
-					Featured Experience
-				</p>
+				<SectionLabel>Featured Experience</SectionLabel>
 				<h2
 					id="featured-experience-heading"
 					className="mt-2 text-3xl font-semibold text-text-primary sm:text-4xl"

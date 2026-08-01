@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { ArrowRight } from "lucide-react";
 
 import { ProjectCard } from "@/components/ProjectCard";
+import { SectionLabel } from "@/components/SectionLabel";
 import { detailsLinkClass } from "@/utils/classes";
 import type { FeaturedProject } from "@/utils/Types";
 import mockstreetImage from "@/assets/mockstreet.png";
@@ -42,7 +43,7 @@ export function FeaturedProjects() {
 			aria-labelledby="featured-projects-heading"
 		>
 			<div className="text-center">
-				<p className="text-xl font-medium tracking-wide text-brand-accent">Featured Work</p>
+				<SectionLabel>Featured Work</SectionLabel>
 				<h2
 					id="featured-projects-heading"
 					className="mt-2 text-3xl font-semibold text-text-primary sm:text-4xl"
