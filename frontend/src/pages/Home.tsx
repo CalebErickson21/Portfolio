@@ -2,10 +2,10 @@ import { useState } from "react";
 import { Link } from "react-router";
 
 import { BackgroundGradient } from "@/components/ui/background-gradient";
-import { buttonVariants } from "@/components/ui/button";
 import { TypingAnimation } from "@/components/ui/typing-animation";
+import { FeaturedExperience } from "@/components/FeaturedExperience";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
-import { cn } from "@/lib/utils";
+import { accentButtonClass, outlineButtonClass } from "@/utils/classes";
 
 import headshot from "@/assets/headshot.jpg";
 
@@ -47,22 +47,10 @@ export const Home = () => {
 						intelligent systems, with a focus on clarity, craft, and real-world impact.
 					</p>
 					<div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
-						<Link
-							to="/experience"
-							className={cn(
-								buttonVariants({ variant: "default", size: "default" }),
-								"bg-brand-accent text-white hover:bg-brand-accent/80 dark:text-background dark:hover:bg-brand-accent/70",
-							)}
-						>
+						<Link to="/experience" className={accentButtonClass}>
 							View my work
 						</Link>
-						<Link
-							to="/contact"
-							className={cn(
-								buttonVariants({ variant: "outline", size: "default" }),
-								"border-text-secondary/30 bg-transparent text-text-primary hover:bg-surface hover:text-text-primary dark:border-text-secondary/40 dark:bg-transparent dark:hover:bg-surface/70",
-							)}
-						>
+						<Link to="/contact" className={outlineButtonClass}>
 							Contact me
 						</Link>
 					</div>
@@ -85,7 +73,9 @@ export const Home = () => {
 				</div>
 			</section>
 
+			{/* Page highlights */}
 			<FeaturedProjects />
+			<FeaturedExperience />
 		</div>
 	);
 };

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import ResumeFile from "@/assets/downloadables/Caleb_Erickson_Resume.pdf";
+import ResumeFile from "@/assets/downloadables/CalebEricksonResume.pdf";
 
 export const ResumeDownloader = ({
     children,

@@ -27,9 +27,12 @@ export const Layout = () => {
 			{/* Outlet */}
 			<main
 				id="outlet-container"
-				className="relative z-10 min-h-0 flex-1 scroll-fade overflow-y-auto bg-transparent transition-all"
+				className="relative z-10 flex flex-1 flex-col overflow-y-auto bg-transparent transition-all"
 			>
-				<Outlet />
+				<div className="flex-1">
+					<Outlet />
+				</div>
+
 				<Footer />
 			</main>
 		</div>

@@ -13,10 +13,8 @@ import {
 	SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import { iconButtonClass } from "@/utils/classes";
 import { navigation, socialLinks } from "@/utils/links";
-
-const iconButtonClass =
-	"text-text-secondary transition-colors hover:text-text-primary cursor-pointer";
 
 function navLinkClass({ isActive }: { isActive: boolean }) {
 	return cn(
