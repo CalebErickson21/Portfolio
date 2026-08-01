@@ -17,7 +17,7 @@ const featuredExperiences: FeaturedExperience[] = [
 		highlights: [
 			"Collaborated with a 10-person intern team to develop a new version of an internal promotion-tracking application used by approximately 2,000 CGI partners across the Southern United States.",
 			"Contributed as a developer during 2 of 3 two-week Agile sprints, supporting requirements gathering, implementation, QA testing, client feedback, and iteration.",
-			"Served as Scrum Master for 1 sprint, increasing backlog completion from approximately 56% to 90% while the sprint backlog grew by approximately 80%.",
+			"Served as Scrum Master for 1 sprint, increasing backlog completion from approximately 56% to 90% while the sprint backlog grew by approximately 80%, compared to the previous sprint.",
 		],
 	},
 	{
