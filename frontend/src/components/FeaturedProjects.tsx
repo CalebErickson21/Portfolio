@@ -1,13 +1,11 @@
 import { Link } from "react-router";
-import { ExternalLink, ArrowRight } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
+import { ArrowRight } from "lucide-react";
 
-import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { ProjectCard } from "@/components/ProjectCard";
+import { detailsLinkClass } from "@/utils/classes";
 import type { FeaturedProject } from "@/utils/Types";
 import mockstreetImage from "@/assets/mockstreet.png";
-import neuralNetworkImage from "@/assets/neural-network.png";
+import neuralNetworkImage from "@/assets/NeuralNetwork.png";
 
 const featuredProjects: FeaturedProject[] = [
 	{
@@ -36,67 +34,15 @@ const featuredProjects: FeaturedProject[] = [
 	},
 ];
 
-const outlineLinkClass = cn(
-	buttonVariants({ variant: "outline", size: "sm" }),
-	"border-text-secondary/30 bg-transparent text-text-primary hover:bg-surface hover:text-text-primary dark:border-text-secondary/40 dark:bg-transparent dark:hover:bg-surface/70",
-);
-
-const detailsLinkClass = cn(
-	buttonVariants({ variant: "default", size: "sm" }),
-	"bg-brand-accent text-white hover:bg-brand-accent/80 dark:text-background dark:hover:bg-brand-accent/70",
-);
-
-function ProjectCard({ project }: { project: FeaturedProject }) {
-	return (
-		<Card className="bg-surface/80 text-text-primary shadow-lg shadow-brand-accent/25 ring-text-secondary/15 backdrop-blur-sm dark:shadow-brand-accent/20 dark:ring-text-secondary/25">
-			<img
-				src={project.image}
-				alt={project.title}
-				className="aspect-video w-full object-cover"
-			/>
-			<CardHeader>
-				<CardTitle className="text-lg text-text-primary">{project.title}</CardTitle>
-				<CardDescription className="text-text-secondary">
-					{project.description}
-				</CardDescription>
-			</CardHeader>
-			<CardFooter className="mt-auto flex flex-wrap gap-2">
-				<a
-					href={project.links.production}
-					target="_blank"
-					rel="noopener noreferrer"
-					className={outlineLinkClass}
-				>
-					<ExternalLink data-icon="inline-start" />
-					Live
-				</a>
-				<a
-					href={project.links.github}
-					target="_blank"
-					rel="noopener noreferrer"
-					className={outlineLinkClass}
-				>
-					<FaGithub data-icon="inline-start" />
-					GitHub
-				</a>
-				<Link to={project.links.details} className={detailsLinkClass}>
-					Details
-					<ArrowRight data-icon="inline-end" />
-				</Link>
-			</CardFooter>
-		</Card>
-	);
-}
-
 export function FeaturedProjects() {
 	return (
 		<section
 			id="featured-projects"
-			className="w-full px-6 py-16 sm:px-10 lg:px-16 xl:px-24"
+			className="w-full px-6 py-8 sm:px-10 lg:px-16 xl:px-24"
 			aria-labelledby="featured-projects-heading"
 		>
 			<div className="text-center">
-				<p className="text-xl font-medium tracking-wide text-brand-accent">Featured work</p>
+				<p className="text-xl font-medium tracking-wide text-brand-accent">Featured Work</p>
 				<h2
 					id="featured-projects-heading"
 					className="mt-2 text-3xl font-semibold text-text-primary sm:text-4xl"
@@ -109,10 +55,17 @@ export function FeaturedProjects() {
 				</p>
 			</div>
 
-			<div className="mt-10 grid gap-6 md:grid-cols-2">
+			<div className="mt-10 grid gap-16 md:grid-cols-2">
 				{featuredProjects.map((project) => (
 					<ProjectCard key={project.id} project={project} />
 				))}
+			</div>
+
+			<div className="mt-10 flex justify-center">
+				<Link to="/projects" className={detailsLinkClass}>
+					View all projects
+					<ArrowRight data-icon="inline-end" />
+				</Link>
 			</div>
 		</section>
 	);
