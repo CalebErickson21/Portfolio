@@ -9,17 +9,17 @@ export const Layout = () => {
 	return (
 		<div
 			id="layout-container"
-			className="relative m-0 flex h-dvh w-full flex-col overflow-hidden p-0"
+			className="relative m-0 flex min-h-dvh w-full flex-col p-0"
 		>
 			{/* Header */}
-			<div id="header-container" className="relative z-50 w-full shrink-0">
+			<div id="header-container" className="sticky top-0 z-50 w-full">
 				<Navbar />
 			</div>
 
 			{/* Background */}
 			<div
 				id="background-container"
-				className="absolute inset-0 z-0 min-h-dvh min-w-full bg-background"
+				className="fixed inset-0 z-0 min-h-dvh min-w-full bg-background"
 			>
 				<LightRays color="var(--brand-accent)" length="100%" blur={100} />
 			</div>
@@ -27,7 +27,7 @@ export const Layout = () => {
 			{/* Outlet */}
 			<main
 				id="outlet-container"
-				className="relative z-10 flex flex-1 flex-col overflow-y-auto bg-transparent transition-all"
+				className="relative z-10 flex flex-1 flex-col bg-transparent transition-all"
 			>
 				<div className="flex-1">
 					<Outlet />

@@ -97,12 +97,12 @@
 	}
 
 	html {
-		@apply h-dvh font-sans;
+		@apply font-sans;
 	}
 
 	body,
 	#root {
-		@apply h-dvh overflow-hidden;
+		@apply min-h-dvh;
 	}
 
 	body {

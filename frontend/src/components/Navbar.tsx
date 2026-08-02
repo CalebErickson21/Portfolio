@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router";
 import { MenuIcon } from "lucide-react";
+import { useMotionValueEvent, useScroll } from "motion/react";
 
 import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
+import { ScrollProgress } from "./ui/scroll-progress";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
 	Sheet,
@@ -49,8 +52,20 @@ function SocialLinks({ className }: { className?: string }) {
 }
 
 export function Navbar() {
+	const [scrolled, setScrolled] = useState(false);
+	const { scrollY } = useScroll();
+
+	useMotionValueEvent(scrollY, "change", (latest) => {
+		setScrolled(latest > 0);
+	});
+
 	return (
-		<header className="sticky top-0 z-50 w-full bg-transparent p-2">
+		<header
+			className={cn(
+				"relative z-50 w-full p-2 transition-[background-color,backdrop-filter] duration-750 ease-out",
+				scrolled ? "bg-background/90 backdrop-blur-sm" : "bg-transparent",
+			)}
+		>
 			<div className="flex items-center justify-between px-4 py-2">
 				<Link
 					to="/"
@@ -145,6 +160,7 @@ export function Navbar() {
 					</Sheet>
 				</div>
 			</div>
+			<ScrollProgress className="absolute top-auto bottom-0" />
 		</header>
 	);
 }

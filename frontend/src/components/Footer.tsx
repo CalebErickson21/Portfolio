@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { navigation, socialLinks } from "@/utils/links";
 
 function scrollToTop() {
-	document.getElementById("outlet-container")?.scrollTo({ top: 0, behavior: "smooth" });
+	window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 export function Footer() {
