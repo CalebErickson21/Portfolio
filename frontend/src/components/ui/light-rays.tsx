@@ -74,7 +74,7 @@ const Ray = ({ left, rotate, width, swing, delay, duration, intensity }: LightRa
 	);
 };
 
-export function LightRays({
+export const LightRays = ({
 	className,
 	style,
 	count = 7,
@@ -84,7 +84,7 @@ export function LightRays({
 	length = "70vh",
 	ref,
 	...props
-}: LightRaysProps) {
+}: LightRaysProps) => {
 	const [rays, setRays] = useState<LightRay[]>([]);
 	const cycleDuration = Math.max(speed, 0.1);
 
@@ -136,4 +136,4 @@ export function LightRays({
 			</div>
 		</div>
 	);
-}
+};

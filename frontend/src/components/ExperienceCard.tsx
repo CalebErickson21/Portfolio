@@ -5,7 +5,7 @@ import { surfacePanelClass } from "@/utils/classes";
 import { cn } from "@/lib/utils";
 import type { FeaturedExperience } from "@/utils/Types";
 
-export function ExperienceCard({ experience }: { experience: FeaturedExperience }) {
+export const ExperienceCard = ({ experience }: { experience: FeaturedExperience }) => {
 	return (
 		<Card
 			className={cn(
@@ -48,4 +48,4 @@ export function ExperienceCard({ experience }: { experience: FeaturedExperience 
 			</CardContent>
 		</Card>
 	);
-}
+};

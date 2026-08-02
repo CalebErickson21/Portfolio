@@ -56,7 +56,7 @@ interface TypingAnimationProps extends Omit<MotionProps, "children"> {
 	onWordIndexChange?: (index: number) => void;
 }
 
-export function TypingAnimation({
+export const TypingAnimation = ({
 	children,
 	words,
 	className,
@@ -74,7 +74,7 @@ export function TypingAnimation({
 	currentWordIndex: controlledWordIndex,
 	onWordIndexChange,
 	...props
-}: TypingAnimationProps) {
+}: TypingAnimationProps) => {
 	const MotionComponent = motionElements[Component] as TypingAnimationMotionComponent;
 
 	const [displayedText, setDisplayedText] = useState<string>("");
@@ -233,4 +233,4 @@ export function TypingAnimation({
 			)}
 		</MotionComponent>
 	);
-}
+};

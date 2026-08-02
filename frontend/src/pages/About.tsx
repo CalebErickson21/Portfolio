@@ -96,7 +96,7 @@ const hobbies: Hobby[] = [
 	},
 ];
 
-export function About() {
+export const About = () => {
 	return (
 		<div className="flex min-h-full flex-col">
 			{/* Hero */}
@@ -316,4 +316,4 @@ export function About() {
 			</BlurFade>
 		</div>
 	);
-}
+};

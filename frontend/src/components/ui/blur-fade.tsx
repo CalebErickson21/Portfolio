@@ -28,7 +28,7 @@ interface BlurFadeProps extends MotionProps {
 
 const getFilter = (v: Variants[string]) => (typeof v === "function" ? undefined : v.filter);
 
-export function BlurFade({
+export const BlurFade = ({
 	children,
 	className,
 	variant,
@@ -40,7 +40,7 @@ export function BlurFade({
 	inViewMargin = "-50px",
 	blur = "6px",
 	...props
-}: BlurFadeProps) {
+}: BlurFadeProps) => {
 	const ref = useRef(null);
 	const inViewResult = useInView(ref, { once: true, margin: inViewMargin });
 	const isInView = !inView || inViewResult;
@@ -86,4 +86,4 @@ export function BlurFade({
 			</motion.div>
 		</AnimatePresence>
 	);
-}
+};

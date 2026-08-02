@@ -33,7 +33,7 @@ const featuredExperiences: FeaturedExperience[] = [
 	},
 ];
 
-export function FeaturedExperience() {
+export const FeaturedExperience = () => {
 	return (
 		<section
 			id="featured-experience"
@@ -66,4 +66,4 @@ export function FeaturedExperience() {
 			</div>
 		</section>
 	);
-}
+};

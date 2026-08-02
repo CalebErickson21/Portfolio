@@ -4,7 +4,7 @@ type SectionLabelProps = {
 	children: ReactNode;
 };
 
-export function SectionLabel({ children }: SectionLabelProps) {
+export const SectionLabel = ({ children }: SectionLabelProps) => {
 	return (
 		<div className="flex items-center justify-center gap-3 sm:gap-4">
 			<span
@@ -20,4 +20,4 @@ export function SectionLabel({ children }: SectionLabelProps) {
 			/>
 		</div>
 	);
-}
+};

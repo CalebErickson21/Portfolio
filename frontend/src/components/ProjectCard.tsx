@@ -7,7 +7,7 @@ import { detailsLinkClass, outlineLinkClass, surfacePanelClass } from "@/utils/c
 import type { FeaturedProject } from "@/utils/Types";
 import { cn } from "@/lib/utils";
 
-export function ProjectCard({ project }: { project: FeaturedProject }) {
+export const ProjectCard = ({ project }: { project: FeaturedProject }) => {
 	return (
 		<Card
 			className={cn(
@@ -52,4 +52,4 @@ export function ProjectCard({ project }: { project: FeaturedProject }) {
 			</CardFooter>
 		</Card>
 	);
-}
+};

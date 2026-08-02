@@ -10,9 +10,9 @@ import headshot from "@/assets/headshot.jpg";
 
 const roles = ["Software Engineer", "AI Researcher", "Full-Stack Developer", "Problem Solver"];
 
-function startsWithVowel(word: string) {
+const startsWithVowel = (word: string) => {
 	return /^[aeiou]/i.test(word);
-}
+};
 
 export const Home = () => {
 	const [currentWordIndex, setCurrentWordIndex] = useState(0);

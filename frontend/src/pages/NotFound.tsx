@@ -1,6 +1,6 @@
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
-export function NotFound() {
+export const NotFound = () => {
 	return (
 		<section className="flex w-full flex-1 flex-col items-center justify-center px-6 py-24 text-center">
 			<p className="text-2xl font-medium tracking-wide text-brand-accent">404</p>
@@ -15,4 +15,4 @@ export function NotFound() {
 			</InteractiveHoverButton>
 		</section>
 	);
-}
+};

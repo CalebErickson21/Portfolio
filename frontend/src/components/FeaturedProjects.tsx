@@ -32,7 +32,7 @@ const featuredProjects: FeaturedProject[] = [
 	},
 ];
 
-export function FeaturedProjects() {
+export const FeaturedProjects = () => {
 	return (
 		<section
 			id="featured-projects"
@@ -64,4 +64,4 @@ export function FeaturedProjects() {
 			</div>
 		</section>
 	);
-}
+};

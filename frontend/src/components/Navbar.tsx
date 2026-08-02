@@ -19,7 +19,7 @@ import { cn } from "@/lib/utils";
 import { iconButtonClass } from "@/utils/classes";
 import { navigation, socialLinks } from "@/utils/links";
 
-function navLinkClass({ isActive }: { isActive: boolean }) {
+const navLinkClass = ({ isActive }: { isActive: boolean }) => {
 	return cn(
 		buttonVariants({ variant: "ghost", size: "sm" }),
 		"relative text-md transition-all",
@@ -27,9 +27,9 @@ function navLinkClass({ isActive }: { isActive: boolean }) {
 			? "font-semibold text-brand-accent hover:text-brand-accent after:absolute after:inset-x-2 after:bottom-0.5 after:h-0.5 after:rounded-full after:bg-brand-accent"
 			: "text-text-secondary hover:text-text-primary hover:font-semibold",
 	);
-}
+};
 
-function SocialLinks({ className }: { className?: string }) {
+const SocialLinks = ({ className }: { className?: string }) => {
 	return (
 		<div className={cn("flex items-center gap-1", className)}>
 			{socialLinks.map(({ label, href, icon: Icon }) => (
@@ -49,9 +49,9 @@ function SocialLinks({ className }: { className?: string }) {
 			))}
 		</div>
 	);
-}
+};
 
-export function Navbar() {
+export const Navbar = () => {
 	const [scrolled, setScrolled] = useState(false);
 	const { scrollY } = useScroll();
 
@@ -163,4 +163,4 @@ export function Navbar() {
 			<ScrollProgress className="absolute top-auto bottom-0" />
 		</header>
 	);
-}
+};

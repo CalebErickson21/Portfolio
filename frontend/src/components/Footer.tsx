@@ -6,11 +6,11 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { navigation, socialLinks } from "@/utils/links";
 
-function scrollToTop() {
+const scrollToTop = () => {
 	window.scrollTo({ top: 0, behavior: "smooth" });
-}
+};
 
-export function Footer() {
+export const Footer = () => {
 	const year = new Date().getFullYear();
 
 	return (
@@ -85,4 +85,4 @@ export function Footer() {
 			</div>
 		</footer>
 	);
-}
+};

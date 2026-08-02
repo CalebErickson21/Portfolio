@@ -6,7 +6,7 @@ interface ScrollProgressProps extends Omit<React.HTMLAttributes<HTMLElement>, ke
 	ref?: React.Ref<HTMLDivElement>;
 }
 
-export function ScrollProgress({ className, ref, ...props }: ScrollProgressProps) {
+export const ScrollProgress = ({ className, ref, ...props }: ScrollProgressProps) => {
 	const { scrollYProgress } = useScroll();
 
 	return (
@@ -22,4 +22,4 @@ export function ScrollProgress({ className, ref, ...props }: ScrollProgressProps
 			{...props}
 		/>
 	);
-}
+};

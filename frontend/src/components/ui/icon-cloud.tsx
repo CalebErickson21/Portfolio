@@ -25,18 +25,18 @@ interface IconCloudProps {
 	className?: string;
 }
 
-function easeOutCubic(t: number): number {
+const easeOutCubic = (t: number) : number => {
 	return 1 - Math.pow(1 - t, 3);
-}
+};
 
-export function IconCloud({
+export const IconCloud = ({
 	icons,
 	images,
 	showControl = true,
 	size = 400,
 	iconSize = 40,
 	className,
-}: IconCloudProps) {
+}: IconCloudProps) => {
 	const canvasRef = useRef<HTMLCanvasElement>(null);
 	const [iconPositions, setIconPositions] = useState<Icon[]>([]);
 	const [isDragging, setIsDragging] = useState(false);
@@ -376,4 +376,4 @@ export function IconCloud({
 			)}
 		</div>
 	);
-}
+};

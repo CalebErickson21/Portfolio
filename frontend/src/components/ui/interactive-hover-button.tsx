@@ -22,11 +22,11 @@ export type InteractiveHoverButtonProps =
 	| InteractiveHoverButtonAsButton
 	| InteractiveHoverButtonAsLink;
 
-export function InteractiveHoverButton({
+export const InteractiveHoverButton = ({
 	children,
 	className,
 	...props
-}: InteractiveHoverButtonProps) {
+}: InteractiveHoverButtonProps) => {
 	const classes = cn(
 		"group relative inline-flex w-auto cursor-pointer overflow-hidden rounded-full border border-text-secondary/30 bg-background p-2 px-6 text-center text-sm font-semibold text-text-primary",
 		className,
@@ -62,4 +62,4 @@ export function InteractiveHoverButton({
 			{content}
 		</button>
 	);
-}
+};

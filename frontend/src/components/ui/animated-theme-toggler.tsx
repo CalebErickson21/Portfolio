@@ -27,19 +27,19 @@ interface AnimatedThemeTogglerProps extends React.ComponentPropsWithoutRef<"butt
 	onThemeChange?: (theme: "light" | "dark") => void;
 }
 
-function polygonCollapsed(cx: number, cy: number, vertexCount: number): string {
+const polygonCollapsed = (cx: number, cy: number, vertexCount: number) : string => {
 	const pairs = Array.from({ length: vertexCount }, () => `${cx}px ${cy}px`).join(", ");
 	return `polygon(${pairs})`;
-}
+};
 
-function getThemeTransitionClipPaths(
+const getThemeTransitionClipPaths = (
 	variant: TransitionVariant,
 	cx: number,
 	cy: number,
 	maxRadius: number,
 	viewportWidth: number,
 	viewportHeight: number,
-): [string, string] {
+) : [string, string] => {
 	switch (variant) {
 		case "circle":
 			return [`circle(0px at ${cx}px ${cy}px)`, `circle(${maxRadius}px at ${cx}px ${cy}px)`];
@@ -120,7 +120,7 @@ function getThemeTransitionClipPaths(
 		default:
 			return [`circle(0px at ${cx}px ${cy}px)`, `circle(${maxRadius}px at ${cx}px ${cy}px)`];
 	}
-}
+};
 
 export const AnimatedThemeToggler = ({
 	className,

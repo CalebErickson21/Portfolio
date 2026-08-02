@@ -87,7 +87,7 @@ const skillImages = [
 	),
 ];
 
-export function SkillsCloud() {
+export const SkillsCloud = () => {
 	return (
 		<section
 			id="skills"
@@ -173,4 +173,4 @@ export function SkillsCloud() {
 			</div>
 		</section>
 	);
-}
+};
