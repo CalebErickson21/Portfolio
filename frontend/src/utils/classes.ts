@@ -23,3 +23,6 @@ export const outlineButtonClass = cn(
 
 export const iconButtonClass =
 	"text-text-secondary transition-colors hover:text-text-primary cursor-pointer";
+
+export const infoCardClass =
+	"rounded-2xl bg-surface/80 p-6 ring-1 ring-text-secondary/15 backdrop-blur-sm dark:ring-text-secondary/25 sm:p-7";

@@ -1,3 +1,5 @@
+import type { LucideIcon } from "lucide-react";
+
 export interface EnvironmentContextInterface {
 	screenSize: ScreenSizeType;
 	setScreenSize: React.Dispatch<React.SetStateAction<ScreenSizeType>>;
@@ -36,5 +38,34 @@ export interface FeaturedExperience {
 	date: string;
 	highlights: string[];
 	note?: string;
+	icon?: string;
+}
+
+export interface Education {
+	degree: string;
+	school: string;
+	dates: string;
+	concentration?: string;
+	gpa?: string;
+}
+
+export interface Pillar {
+	icon: LucideIcon;
+	title: string;
+	description: string;
+}
+
+export interface Hobby {
+	icon: LucideIcon;
+	title: string;
+	description: string;
+}
+
+export type SkillCategory = "languages" | "frameworks" | "databases" | "platforms";
+
+export interface Skill {
+	id: string;
+	label: string;
+	category: SkillCategory;
 	icon?: string;
 }
