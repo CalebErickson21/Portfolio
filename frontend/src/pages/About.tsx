@@ -35,9 +35,9 @@ const pillars: Pillar[] = [
 	},
 	{
 		icon: ChartNoAxesCombined,
-		title: "Technology Strategist",
+		title: "BI Strategist",
 		description:
-			"Through my Computer Science and MBA studies, I combine technical execution with business strategy to build solutions designed for adoption, scale, and real-world impact.",
+			"With a CS & MBA dual degree, I combine technical execution with business strategy to build solutions designed for real-world impact.",
 	},
 ];
 
@@ -126,10 +126,10 @@ export function About() {
 							{pillars.map(({ icon: Icon, title, description }) => (
 								<div key={title} className="flex flex-col gap-2.5">
 									<div className="flex items-center gap-2.5">
+										<h2 className="font-semibold text-text-primary">{title}</h2>
 										<div className="flex size-9 shrink-0 items-center justify-center text-brand-accent">
 											<Icon className="size-4" aria-hidden />
 										</div>
-										<h2 className="font-semibold text-text-primary">{title}</h2>
 									</div>
 									<p className="text-sm leading-relaxed text-text-secondary">
 										{description}

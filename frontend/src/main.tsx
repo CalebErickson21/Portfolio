@@ -6,7 +6,11 @@ import { AppProviders } from "./contexts/AppProviders";
 import { Router } from "./utils/Router";
 import "./index.css";
 
-// Render the app
+const storedTheme = localStorage.getItem("theme");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+const isDark = storedTheme === "dark" || (storedTheme !== "light" && prefersDark);
+document.documentElement.classList.toggle("dark", isDark);
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
 	<StrictMode>
 		<AppProviders>
