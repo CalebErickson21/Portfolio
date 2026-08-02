@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router";
 
 import { BlurFade } from "@/components/ui/blur-fade";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { TypingAnimation } from "@/components/ui/typing-animation";
 import { FeaturedExperience } from "@/components/FeaturedExperience";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
-import { accentButtonClass, outlineButtonClass } from "@/utils/classes";
 
 import headshot from "@/assets/headshot.jpg";
 
@@ -49,12 +48,12 @@ export const Home = () => {
 							impact.
 						</p>
 						<div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
-							<Link to="/experience" className={accentButtonClass}>
+							<InteractiveHoverButton to="/experience">
 								View my work
-							</Link>
-							<Link to="/contact" className={outlineButtonClass}>
+							</InteractiveHoverButton>
+							<InteractiveHoverButton to="/contact">
 								Contact me
-							</Link>
+							</InteractiveHoverButton>
 						</div>
 					</BlurFade>
 				</div>

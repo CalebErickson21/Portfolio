@@ -1,9 +1,6 @@
-import { Link } from "react-router";
-import { ArrowRight } from "lucide-react";
-
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { SectionLabel } from "@/components/SectionLabel";
-import { detailsLinkClass } from "@/utils/classes";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import type { FeaturedExperience } from "@/utils/Types";
 import cgiLogo from "@/assets/CgiLogo.jpg";
 import alabamaLogo from "@/assets/AlabamaLogo.png";
@@ -63,10 +60,9 @@ export function FeaturedExperience() {
 			</div>
 
 			<div className="mt-10 flex justify-center">
-				<Link to="/experience" className={detailsLinkClass}>
+				<InteractiveHoverButton to="/experience">
 					View full experience
-					<ArrowRight data-icon="inline-end" />
-				</Link>
+				</InteractiveHoverButton>
 			</div>
 		</section>
 	);

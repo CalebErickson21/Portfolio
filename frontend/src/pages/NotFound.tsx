@@ -1,8 +1,4 @@
-import { Link } from "react-router";
-import { Home } from "lucide-react";
-
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
 export function NotFound() {
 	return (
@@ -14,16 +10,9 @@ export function NotFound() {
 			<p className="mt-3 max-w-md text-text-secondary">
 				That page doesn&apos;t exist or may have moved. Head back home to keep exploring.
 			</p>
-			<Link
-				to="/"
-				className={cn(
-					buttonVariants({ variant: "default", size: "default" }),
-					"mt-8 bg-brand-accent text-white hover:bg-brand-accent/75",
-				)}
-			>
-				<Home data-icon="inline-start" />
+			<InteractiveHoverButton to="/" className="mt-8">
 				Back to home
-			</Link>
+			</InteractiveHoverButton>
 		</section>
 	);
 }

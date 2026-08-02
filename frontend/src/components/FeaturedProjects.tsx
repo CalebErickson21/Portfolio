@@ -1,9 +1,6 @@
-import { Link } from "react-router";
-import { ArrowRight } from "lucide-react";
-
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionLabel } from "@/components/SectionLabel";
-import { detailsLinkClass } from "@/utils/classes";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import type { FeaturedProject } from "@/utils/Types";
 import mockstreetImage from "@/assets/mockstreet.png";
 import neuralNetworkImage from "@/assets/NeuralNetwork.png";
@@ -63,10 +60,7 @@ export function FeaturedProjects() {
 			</div>
 
 			<div className="mt-10 flex justify-center">
-				<Link to="/projects" className={detailsLinkClass}>
-					View all projects
-					<ArrowRight data-icon="inline-end" />
-				</Link>
+				<InteractiveHoverButton to="/projects">View all projects</InteractiveHoverButton>
 			</div>
 		</section>
 	);

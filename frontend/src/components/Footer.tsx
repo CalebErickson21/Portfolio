@@ -1,6 +1,7 @@
-import { Link, NavLink } from "react-router";
-import { ArrowRight, ArrowUp } from "lucide-react";
+import { NavLink } from "react-router";
+import { ArrowUp } from "lucide-react";
 
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { navigation, socialLinks } from "@/utils/links";
@@ -25,16 +26,7 @@ export function Footer() {
 				</p>
 
 				<div className="mt-6 flex flex-wrap items-center justify-center gap-2">
-					<Link
-						to="/contact"
-						className={cn(
-							buttonVariants({ variant: "default", size: "lg" }),
-							"bg-brand-accent px-6 text-brand-accent-foreground hover:bg-brand-accent/80",
-						)}
-					>
-						Get in Touch
-						<ArrowRight className="size-4" />
-					</Link>
+					<InteractiveHoverButton to="/contact">Get in Touch</InteractiveHoverButton>
 
 					{socialLinks.map(({ label, href, icon: Icon }) => (
 						<a
@@ -57,9 +49,7 @@ export function Footer() {
 			{/* Bottom bar */}
 			<div className="bg-footer px-6 py-4 text-sm text-footer-muted sm:px-10">
 				<div className="relative flex items-center justify-center md:justify-between">
-					<p className="text-center">
-						© {year} Caleb Erickson. All rights reserved.
-					</p>
+					<p className="text-center">© {year} Caleb Erickson. All rights reserved.</p>
 
 					<div className="absolute right-0 flex items-center gap-1 md:static">
 						<nav className="hidden items-center gap-1 md:flex">
@@ -71,7 +61,9 @@ export function Footer() {
 									className={({ isActive }) =>
 										cn(
 											"rounded-md px-2.5 py-1 transition-colors hover:text-footer-foreground",
-											isActive ? "text-footer-foreground" : "text-footer-muted",
+											isActive
+												? "text-footer-foreground"
+												: "text-footer-muted",
 										)
 									}
 								>
