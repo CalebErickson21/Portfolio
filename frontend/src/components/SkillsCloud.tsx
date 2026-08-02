@@ -7,6 +7,8 @@ import {
 	AccordionTrigger,
 } from "@/components/ui/accordion";
 import { IconCloud } from "@/components/ui/icon-cloud";
+import { cn } from "@/lib/utils";
+import { surfacePanelClass } from "@/utils/classes";
 import type { Skill, SkillCategory } from "@/utils/Types";
 
 const skills: Skill[] = [
@@ -110,7 +112,9 @@ export function SkillsCloud() {
 						</p>
 					</div>
 
-					<Accordion className="border-text-secondary/15 bg-background/60">
+					<Accordion
+						className={cn("border-transparent", surfacePanelClass)}
+					>
 						{categories.map((c) => {
 							const categorySkills = skills.filter((s) => s.category === c.id);
 
@@ -118,7 +122,7 @@ export function SkillsCloud() {
 								<AccordionItem
 									key={c.id}
 									value={c.id}
-									className="data-open:bg-brand-accent/5"
+									className="border-text-secondary/10 data-open:bg-brand-accent/5"
 								>
 									<AccordionTrigger className="text-text-primary hover:no-underline">
 										<span className="flex items-center gap-2">
@@ -134,7 +138,7 @@ export function SkillsCloud() {
 											{categorySkills.map((skill) => (
 												<li
 													key={skill.id}
-													className="rounded-full border border-text-secondary/15 bg-surface/80 px-3 py-0.5 text-xs text-text-primary"
+													className="rounded-full border border-text-secondary/15 bg-background/70 px-3 py-0.5 text-xs text-text-primary"
 												>
 													{skill.label}
 												</li>

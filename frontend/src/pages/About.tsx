@@ -113,22 +113,24 @@ export function About() {
 							About Me
 						</h1>
 						<p className="mt-5 max-w-xl leading-relaxed text-text-secondary sm:text-lg">
-							I&apos;m a software engineer who enjoys building thoughtful products —
+							I&apos;m a software engineer who enjoys building thoughtful products,
 							from polished interfaces to reliable backend systems. I care about
 							clarity, craft, and shipping work that holds up in the real world.
 						</p>
 						<p className="mt-4 max-w-xl leading-relaxed text-text-secondary sm:text-lg">
-							Outside of code, I&apos;m usually learning something new, exploring
-							outdoors, or tinkering on side projects that scratch a curiosity itch.
+							Outside of code, I&apos;m usually training, playing intramural sports,
+							practicing guitar, or building side projects that satisfy my curiosity.
 						</p>
 
 						<div className="mt-10 grid gap-6 sm:grid-cols-3">
 							{pillars.map(({ icon: Icon, title, description }) => (
 								<div key={title} className="flex flex-col gap-2.5">
-									<div className="flex size-10 items-center justify-center rounded-xl border border-brand-accent/30 text-brand-accent">
-										<Icon className="size-5" aria-hidden />
+									<div className="flex items-center gap-2.5">
+										<div className="flex size-9 shrink-0 items-center justify-center text-brand-accent">
+											<Icon className="size-4" aria-hidden />
+										</div>
+										<h2 className="font-semibold text-text-primary">{title}</h2>
 									</div>
-									<h2 className="font-semibold text-text-primary">{title}</h2>
 									<p className="text-sm leading-relaxed text-text-secondary">
 										{description}
 									</p>
@@ -299,7 +301,7 @@ export function About() {
 						<ul className="mt-5 space-y-4">
 							{hobbies.map(({ icon: Icon, title, description }) => (
 								<li key={title} className="flex gap-3">
-									<div className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-lg border border-brand-accent/25 text-brand-accent">
+									<div className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-lg text-brand-accent">
 										<Icon className="size-4" aria-hidden />
 									</div>
 									<div>

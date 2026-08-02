@@ -24,5 +24,11 @@ export const outlineButtonClass = cn(
 export const iconButtonClass =
 	"text-text-secondary transition-colors hover:text-text-primary cursor-pointer";
 
-export const infoCardClass =
-	"rounded-2xl bg-surface/80 p-6 ring-1 ring-text-secondary/15 backdrop-blur-sm dark:ring-text-secondary/25 sm:p-7";
+/** Shared surface panel used by About cards, accordion, and homepage cards */
+export const surfacePanelClass =
+	"bg-surface/80 ring-1 ring-text-secondary/15 backdrop-blur-sm dark:ring-text-secondary/25";
+
+export const infoCardClass = cn(
+	"rounded-2xl p-6 sm:p-7",
+	surfacePanelClass,
+);

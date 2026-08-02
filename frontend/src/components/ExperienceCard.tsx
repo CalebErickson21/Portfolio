@@ -1,12 +1,18 @@
 import { Building2 } from "lucide-react";
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { surfacePanelClass } from "@/utils/classes";
+import { cn } from "@/lib/utils";
 import type { FeaturedExperience } from "@/utils/Types";
 
 export function ExperienceCard({ experience }: { experience: FeaturedExperience }) {
 	return (
-		<Card className="bg-surface/80 text-text-primary shadow-lg shadow-brand-accent/25 ring-text-secondary/15 backdrop-blur-sm dark:shadow-brand-accent/20 dark:ring-text-secondary/25">
-			<CardHeader className="gap-0">
+		<Card
+			className={cn(
+				"text-text-primary shadow-lg shadow-brand-accent/25 dark:shadow-brand-accent/20",
+				surfacePanelClass,
+			)}
+		>			<CardHeader className="gap-0">
 				<div className="flex items-start gap-3">
 					<div className="flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-brand-accent/10 text-brand-accent">
 						{experience.icon ? (
