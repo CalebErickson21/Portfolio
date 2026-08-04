@@ -1,39 +1,11 @@
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { SectionLabel } from "@/components/SectionLabel";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
-import type { FeaturedExperienceInterface } from "@/utils/Types";
-import cgiLogo from "@/assets/CgiLogo.jpg";
-import alabamaLogo from "@/assets/AlabamaLogo.png";
-
-const featuredExperiences: FeaturedExperienceInterface[] = [
-	{
-		id: "cgi-internship",
-		title: "Software Engineer Intern",
-		company: "CGI",
-		date: "June 2026 - July 2026",
-		icon: cgiLogo,
-		highlights: [
-			"Collaborated with a 10-person intern team to develop a new version of an internal promotion-tracking application used by approximately 2,000 CGI partners across the Southern United States.",
-			"Contributed as a developer during 2 of 3 two-week Agile sprints, supporting requirements gathering, implementation, QA testing, client feedback, and iteration.",
-			"Served as Scrum Master for 1 sprint, increasing backlog completion from approximately 56% to 90% while the sprint backlog grew by approximately 80%, compared to the previous sprint.",
-		],
-	},
-	{
-		id: "ai-research-internship",
-		title: "AI Researcher",
-		company: "Alabama AI Institute",
-		date: "August 2025 - Present",
-		note: "Paused June - July 2026 for CGI internship",
-		icon: alabamaLogo,
-		highlights: [
-			"Contributed across three applied AI research projects focused on public-data accessibility, education, and disaster preparedness within the SAIL Lab.",
-			"Built an autonomous pipeline integrating five federal datasets into a 50,000-node knowledge graph and developed a RAG framework using vector embeddings, NLP, LLMs, and reranking techniques that reduced hallucinations by 38%.",
-			"Engineered a full-stack storytelling platform used across six university courses by approximately 75 users, while also developing AI-driven flood-preparedness workflows and presenting the OKN project demo at its Year 3 kickoff event in Washington, D.C.",
-		],
-	},
-];
+import { getFeaturedExperiences } from "@/data/Experience";
 
 export const FeaturedExperience = () => {
+	const featuredExperiences = getFeaturedExperiences();
+
 	return (
 		<section
 			id="featured-experience"

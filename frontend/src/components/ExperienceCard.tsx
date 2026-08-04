@@ -3,14 +3,13 @@ import { Building2 } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { surfacePanelClass } from "@/utils/Classes";
 import { cn } from "@/lib/utils";
-import type { FeaturedExperienceInterface } from "@/utils/Types";
+import type { ExperienceInterface } from "@/utils/Types";
 
-export const ExperienceCard = ({ experience }: { experience: FeaturedExperienceInterface }) => {
+export const ExperienceCard = ({ experience }: { experience: ExperienceInterface }) => {
 	return (
 		<Card
 			className={cn("text-text-primary shadow-lg shadow-brand-accent/25", surfacePanelClass)}
 		>
-			{" "}
 			<CardHeader className="gap-0">
 				<div className="flex items-start gap-3">
 					<div className="flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-brand-accent/10 text-brand-accent">

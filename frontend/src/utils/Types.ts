@@ -31,14 +31,24 @@ export interface FeaturedProjectInterface {
 	links: FeaturedProjectLinksInterface;
 }
 
-export interface FeaturedExperienceInterface {
+export interface ExperienceTenureInterface {
+	label: string;
+	range: string;
+}
+
+export interface ExperienceInterface {
 	id: string;
 	title: string;
 	company: string;
 	date: string;
+	summary: string;
 	highlights: string[];
+	featured: boolean;
+	tech?: string[];
 	note?: string;
 	icon?: string;
+	description?: string;
+	tenure?: ExperienceTenureInterface[];
 }
 
 export interface EducationInterface {

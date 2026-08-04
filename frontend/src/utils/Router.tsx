@@ -4,6 +4,7 @@ import { Home } from "@/pages/Home";
 import { About } from "@/pages/About";
 import { Projects } from "@/pages/Projects";
 import { Experience } from "@/pages/Experience";
+import { ExperienceDetail } from "@/pages/ExperienceDetail";
 import { NotFound } from "@/pages/NotFound";
 
 export const Router = createBrowserRouter([
@@ -26,6 +27,12 @@ export const Router = createBrowserRouter([
 			{
 				path: "experience",
 				element: <Experience />,
+				children: [
+					{
+						path: ":id",
+						element: <ExperienceDetail />,
+					},
+				],
 			},
 			{
 				path: "*",
