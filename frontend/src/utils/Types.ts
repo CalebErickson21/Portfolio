@@ -9,7 +9,7 @@ export interface EnvironmentContextInterface {
 export type ScreenSizeType = "small" | "medium" | "large" | "extra-large";
 
 // Global lucide props
-export interface LucideProps {
+export interface LucidePropsInterface {
 	size?: number | string;
 	color?: string;
 	strokeWidth?: number;
@@ -17,21 +17,21 @@ export interface LucideProps {
 	[key: string]: any; // Any other SVG attributes
 }
 
-export interface FeaturedProjectLinks {
+export interface FeaturedProjectLinksInterface {
 	production: string;
 	github: string;
 	details: string;
 }
 
-export interface FeaturedProject {
+export interface FeaturedProjectInterface {
 	id: string;
 	title: string;
 	description: string;
 	image: string;
-	links: FeaturedProjectLinks;
+	links: FeaturedProjectLinksInterface;
 }
 
-export interface FeaturedExperience {
+export interface FeaturedExperienceInterface {
 	id: string;
 	title: string;
 	company: string;
@@ -41,7 +41,7 @@ export interface FeaturedExperience {
 	icon?: string;
 }
 
-export interface Education {
+export interface EducationInterface {
 	degree: string;
 	school: string;
 	dates: string;
@@ -49,23 +49,23 @@ export interface Education {
 	gpa?: string;
 }
 
-export interface Pillar {
+export interface PillarInterface {
 	icon: LucideIcon;
 	title: string;
 	description: string;
 }
 
-export interface Hobby {
+export interface HobbyInterface {
 	icon: LucideIcon;
 	title: string;
 	description: string;
 }
 
-export type SkillCategory = "languages" | "frameworks" | "databases" | "platforms";
+export type SkillCategoryType = "languages" | "frameworks" | "databases" | "platforms";
 
-export interface Skill {
+export interface SkillInterface {
 	id: string;
 	label: string;
-	category: SkillCategory;
+	category: SkillCategoryType;
 	icon?: string;
 }
