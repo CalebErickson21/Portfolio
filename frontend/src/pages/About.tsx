@@ -15,7 +15,7 @@ import { SkillsCloud } from "@/components/SkillsCloud";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { infoCardClass } from "@/utils/Classes";
 import type { EducationInterface, HobbyInterface, PillarInterface } from "@/utils/Types";
-import headshot from "@/assets/headshot.jpg";
+import headshot from "@/assets/Headshot.jpg";
 import dcPodium from "@/assets/DcPodium.jpg";
 import graduation from "@/assets/graduation.jpeg";
 import labUndergrads from "@/assets/LabUndergrads.jpg";

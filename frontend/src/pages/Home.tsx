@@ -6,7 +6,7 @@ import { TypingAnimation } from "@/components/ui/typing-animation";
 import { FeaturedExperience } from "@/components/FeaturedExperience";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
 
-import headshot from "@/assets/headshot.jpg";
+import headshot from "@/assets/Headshot.jpg";
 
 const roles = ["Software Engineer", "AI Researcher", "Full-Stack Developer", "Problem Solver"];
 
