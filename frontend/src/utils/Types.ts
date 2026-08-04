@@ -5,10 +5,8 @@ export interface EnvironmentContextInterface {
 	setScreenSize: React.Dispatch<React.SetStateAction<ScreenSizeType>>;
 }
 
-// Screen size type
 export type ScreenSizeType = "small" | "medium" | "large" | "extra-large";
 
-// Global lucide props
 export interface LucidePropsInterface {
 	size?: number | string;
 	color?: string;
@@ -36,6 +34,16 @@ export interface ExperienceTenureInterface {
 	range: string;
 }
 
+export interface ExperienceProductionLinkInterface {
+	label: string;
+	url: string;
+}
+
+export interface ExperienceTechInterface {
+	concepts?: string[];
+	stack?: string[];
+}
+
 export interface ExperienceInterface {
 	id: string;
 	title: string;
@@ -44,11 +52,12 @@ export interface ExperienceInterface {
 	summary: string;
 	highlights: string[];
 	featured: boolean;
-	tech?: string[];
+	tech?: ExperienceTechInterface;
 	note?: string;
 	icon?: string;
 	description?: string;
 	tenure?: ExperienceTenureInterface[];
+	productionLinks?: ExperienceProductionLinkInterface[];
 }
 
 export interface EducationInterface {

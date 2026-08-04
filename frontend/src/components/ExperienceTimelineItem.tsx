@@ -2,6 +2,7 @@ import { Building2 } from "lucide-react";
 import { Link } from "react-router";
 
 import { BlurFade } from "@/components/ui/blur-fade";
+import { getExperienceTechTags } from "@/data/Experience";
 import { surfacePanelClass } from "@/utils/Classes";
 import { cn } from "@/lib/utils";
 import type { ExperienceInterface } from "@/utils/Types";
@@ -17,6 +18,8 @@ export const ExperienceTimelineItem = ({
 	isLast = false,
 	delay = 0,
 }: ExperienceTimelineItemPropsType) => {
+	const techTags = getExperienceTechTags(experience.tech);
+
 	return (
 		<li className="relative flex gap-4 sm:gap-6">
 			{/* Timeline rail */}
@@ -25,17 +28,20 @@ export const ExperienceTimelineItem = ({
 					aria-hidden
 					className="z-10 mt-1.5 size-3 shrink-0 rounded-full bg-brand-accent ring-4 ring-background sm:mt-2 sm:size-3.5"
 				/>
-				{!isLast && (
-					<span
-						aria-hidden
-						className="absolute top-5 bottom-0 w-0.5 bg-brand-accent/40 sm:top-6"
-					/>
-				)}
+				<span
+					aria-hidden
+					className={cn(
+						"absolute top-5 w-0.5 sm:top-6",
+						isLast
+							? "bottom-0 bg-linear-to-b from-brand-accent/40 to-transparent"
+							: "bottom-0 bg-brand-accent/40",
+					)}
+				/>
 			</div>
 
 			{/* Date + card */}
 			<BlurFade
-				className="min-w-0 flex-1 pb-10 sm:pb-12"
+				className={cn("min-w-0 flex-1", isLast ? "pb-16 sm:pb-20" : "pb-10 sm:pb-12")}
 				inView
 				direction="up"
 				offset={16}
@@ -82,9 +88,9 @@ export const ExperienceTimelineItem = ({
 							</div>
 						</div>
 
-						{experience.tech && experience.tech.length > 0 && (
+						{techTags.length > 0 && (
 							<ul className="flex flex-wrap gap-2 sm:max-w-[45%] sm:justify-end">
-								{experience.tech.map((tag) => (
+								{techTags.map((tag) => (
 									<li
 										key={tag}
 										className="rounded-full bg-text-secondary/10 px-2.5 py-1 text-xs text-text-secondary"
@@ -96,9 +102,11 @@ export const ExperienceTimelineItem = ({
 						)}
 					</div>
 
-					<p className="mt-4 text-sm leading-relaxed text-text-secondary sm:text-base">
-						{experience.summary}
-					</p>
+					<ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-text-secondary marker:text-text-primary sm:text-base">
+						{experience.highlights.map((highlight) => (
+							<li key={highlight}>{highlight}</li>
+						))}
+					</ul>
 				</Link>
 			</BlurFade>
 		</li>

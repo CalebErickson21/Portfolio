@@ -8,7 +8,7 @@ export const NotFound = () => {
 				Page not found
 			</h1>
 			<p className="mt-3 max-w-md text-text-secondary">
-				That page doesn&apos;t exist or may have moved. Head back home to keep exploring.
+				That page doesn't exist or may have moved. Head back home to keep exploring.
 			</p>
 			<InteractiveHoverButton to="/" className="mt-8">
 				Back to home

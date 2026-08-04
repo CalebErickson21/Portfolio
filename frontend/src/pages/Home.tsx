@@ -26,10 +26,10 @@ export const Home = () => {
 				<div className="flex flex-1 flex-col items-center justify-center px-6 py-10 text-center sm:px-10 md:items-start md:text-left lg:px-16 xl:px-24">
 					<BlurFade delay={0.15} duration={0.75} direction="up" offset={18}>
 						<p className="text-xl font-medium tracking-wide text-brand-accent">
-							Hi! I&apos;m Caleb Erickson
+							Hi! I'm Caleb Erickson
 						</p>
 						<h1 className="mt-3 text-3xl font-semibold text-text-primary sm:text-4xl lg:text-5xl">
-							<span className="block text-text-secondary">I&apos;m {article}</span>
+							<span className="block text-text-secondary">I'm {article}</span>
 							<TypingAnimation
 								words={roles}
 								loop

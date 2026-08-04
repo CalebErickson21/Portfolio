@@ -11,7 +11,7 @@ export const Experience = () => {
 			aria-labelledby="experience-heading"
 		>
 			<BlurFade delay={0.1} duration={0.7} direction="up" offset={16}>
-				<div className="mx-auto max-w-3xl text-center">
+				<div className="mx-auto max-w-5xl text-center">
 					<h1
 						id="experience-heading"
 						className="text-3xl font-semibold text-text-primary sm:text-4xl lg:text-5xl"
@@ -19,12 +19,12 @@ export const Experience = () => {
 						Experience
 					</h1>
 					<p className="mt-3 text-text-secondary sm:text-lg">
-						My professional journey and the impact I&apos;ve made along the way.
+						My professional journey and the impact I've made along the way.
 					</p>
 				</div>
 			</BlurFade>
 
-			<ol className="mx-auto mt-12 w-full max-w-3xl list-none sm:mt-16">
+			<ol className="mx-auto mt-12 w-full max-w-5xl list-none sm:mt-16">
 				{experiences.map((experience, index) => (
 					<ExperienceTimelineItem
 						key={experience.id}

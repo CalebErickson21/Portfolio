@@ -18,11 +18,11 @@ export const Footer = () => {
 			{/* CTA section */}
 			<div className="border-t border-text-secondary/15 bg-surface/50 px-6 py-10 text-center backdrop-blur-sm sm:px-10 sm:py-12">
 				<h2 className="text-3xl font-semibold tracking-tight text-text-primary sm:text-4xl">
-					Let&apos;s build something great.
+					Let's build something great.
 				</h2>
 				<p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-text-secondary sm:text-lg">
-					Whether you have a project, opportunity, or just want to connect, I&apos;d love
-					to hear from you.
+					Whether you have a project, opportunity, or just want to connect, I'd love to
+					hear from you.
 				</p>
 
 				<div className="mt-6 flex flex-wrap items-center justify-center gap-2">
