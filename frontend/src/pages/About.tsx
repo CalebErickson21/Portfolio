@@ -17,7 +17,7 @@ import { infoCardClass } from "@/utils/Classes";
 import type { EducationInterface, HobbyInterface, PillarInterface } from "@/utils/Types";
 import headshot from "@/assets/Headshot.jpg";
 import dcPodium from "@/assets/DcPodium.jpg";
-import graduation from "@/assets/graduation.jpeg";
+import graduation from "@/assets/Graduation.jpeg";
 import labUndergrads from "@/assets/LabUndergrads.jpg";
 
 const pillars: PillarInterface[] = [
