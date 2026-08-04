@@ -1,11 +1,11 @@
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionLabel } from "@/components/SectionLabel";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
-import type { FeaturedProject } from "@/utils/Types";
+import type { FeaturedProjectInterface } from "@/utils/Types";
 import mockstreetImage from "@/assets/mockstreet.png";
 import neuralNetworkImage from "@/assets/NeuralNetwork.png";
 
-const featuredProjects: FeaturedProject[] = [
+const featuredProjects: FeaturedProjectInterface[] = [
 	{
 		id: "mockstreet-exchange",
 		title: "Mockstreet Exchange",

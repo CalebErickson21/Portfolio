@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
 
-type SectionLabelProps = {
+type SectionLabelPropsType = {
 	children: ReactNode;
 };
 
-export const SectionLabel = ({ children }: SectionLabelProps) => {
+export const SectionLabel = ({ children }: SectionLabelPropsType) => {
 	return (
 		<div className="flex items-center justify-center gap-3 sm:gap-4">
 			<span

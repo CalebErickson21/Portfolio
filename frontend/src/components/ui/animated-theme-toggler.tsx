@@ -4,7 +4,7 @@ import { flushSync } from "react-dom";
 
 import { cn } from "@/lib/utils";
 
-export type TransitionVariant =
+export type TransitionVariantType =
 	| "circle"
 	| "square"
 	| "triangle"
@@ -13,9 +13,9 @@ export type TransitionVariant =
 	| "rectangle"
 	| "star";
 
-interface AnimatedThemeTogglerProps extends React.ComponentPropsWithoutRef<"button"> {
+interface AnimatedThemeTogglerPropsInterface extends React.ComponentPropsWithoutRef<"button"> {
 	duration?: number;
-	variant?: TransitionVariant;
+	variant?: TransitionVariantType;
 	/** When true, the transition expands from the viewport center instead of the button center. */
 	fromCenter?: boolean;
 	/**
@@ -33,7 +33,7 @@ const polygonCollapsed = (cx: number, cy: number, vertexCount: number) : string 
 };
 
 const getThemeTransitionClipPaths = (
-	variant: TransitionVariant,
+	variant: TransitionVariantType,
 	cx: number,
 	cy: number,
 	maxRadius: number,
@@ -130,7 +130,7 @@ export const AnimatedThemeToggler = ({
 	theme,
 	onThemeChange,
 	...props
-}: AnimatedThemeTogglerProps) => {
+}: AnimatedThemeTogglerPropsInterface) => {
 	const shape = variant ?? "circle";
 	const isControlled = theme !== undefined;
 	const [internalIsDark, setInternalIsDark] = useState(false);

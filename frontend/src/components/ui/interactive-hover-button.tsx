@@ -3,32 +3,32 @@ import { ArrowRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-type SharedProps = {
+type SharedPropsType = {
 	children: React.ReactNode;
 	className?: string;
 };
 
-type InteractiveHoverButtonAsButton = SharedProps &
+type InteractiveHoverButtonAsButtonType = SharedPropsType &
 	Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "children" | "className"> & {
 		to?: undefined;
 	};
 
-type InteractiveHoverButtonAsLink = SharedProps &
+type InteractiveHoverButtonAsLinkType = SharedPropsType &
 	Omit<LinkProps, "children" | "className"> & {
 		to: LinkProps["to"];
 	};
 
-export type InteractiveHoverButtonProps =
-	| InteractiveHoverButtonAsButton
-	| InteractiveHoverButtonAsLink;
+export type InteractiveHoverButtonPropsType =
+	| InteractiveHoverButtonAsButtonType
+	| InteractiveHoverButtonAsLinkType;
 
 export const InteractiveHoverButton = ({
 	children,
 	className,
 	...props
-}: InteractiveHoverButtonProps) => {
+}: InteractiveHoverButtonPropsType) => {
 	const classes = cn(
-		"group relative inline-flex w-auto cursor-pointer overflow-hidden rounded-full border border-text-secondary/30 bg-background p-2 px-6 text-center text-sm font-semibold text-text-primary",
+		"group relative inline-flex w-auto cursor-pointer overflow-hidden rounded-full border border-text-secondary/30 bg-surface p-2 px-6 text-center text-sm font-semibold text-text-primary",
 		className,
 	);
 

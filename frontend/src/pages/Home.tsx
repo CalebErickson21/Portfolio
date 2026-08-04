@@ -64,7 +64,7 @@ export const Home = () => {
 						<div className="relative mx-auto w-56 sm:w-64 md:w-72 lg:w-80">
 							<div
 								aria-hidden
-								className="absolute top-[18%] left-1/2 size-[85%] -translate-x-1/2 rounded-full bg-brand-accent/30 blur-3xl dark:bg-brand-accent/40"
+								className="absolute top-[18%] left-1/2 size-[85%] -translate-x-1/2 rounded-full bg-brand-accent/30 blur-3xl"
 							/>
 							<img
 								src={headshot}

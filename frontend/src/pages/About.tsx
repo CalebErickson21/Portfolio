@@ -14,13 +14,13 @@ import {
 import { SkillsCloud } from "@/components/SkillsCloud";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { infoCardClass } from "@/utils/classes";
-import type { Education, Hobby, Pillar } from "@/utils/Types";
+import type { EducationInterface, HobbyInterface, PillarInterface } from "@/utils/Types";
 import headshot from "@/assets/headshot.jpg";
 import dcPodium from "@/assets/DcPodium.jpg";
 import graduation from "@/assets/graduation.jpeg";
 import labUndergrads from "@/assets/LabUndergrads.jpg";
 
-const pillars: Pillar[] = [
+const pillars: PillarInterface[] = [
 	{
 		icon: BrainCircuit,
 		title: "AI Researcher",
@@ -57,7 +57,7 @@ const courses: string[] = [
 	"Leadership and Ethics",
 ];
 
-const education: Education[] = [
+const education: EducationInterface[] = [
 	{
 		degree: "B.S. in Computer Science",
 		school: "The University of Alabama",
@@ -73,7 +73,7 @@ const education: Education[] = [
 	},
 ];
 
-const hobbies: Hobby[] = [
+const hobbies: HobbyInterface[] = [
 	{
 		icon: Dumbbell,
 		title: "Fitness & Endurance",
@@ -145,7 +145,7 @@ export const About = () => {
 					<div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
 						<div
 							aria-hidden
-							className="pointer-events-none absolute top-1/2 left-1/2 size-[75%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-accent/25 blur-3xl dark:bg-brand-accent/35"
+							className="pointer-events-none absolute top-1/2 left-1/2 size-[75%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-accent/25 blur-3xl"
 						/>
 
 						{/* Small screens: headshot only */}

@@ -10,7 +10,7 @@ import {
 
 type MarginType = UseInViewOptions["margin"];
 
-interface BlurFadeProps extends MotionProps {
+interface BlurFadePropsInterface extends MotionProps {
 	children: React.ReactNode;
 	className?: string;
 	variant?: {
@@ -40,7 +40,7 @@ export const BlurFade = ({
 	inViewMargin = "-50px",
 	blur = "6px",
 	...props
-}: BlurFadeProps) => {
+}: BlurFadePropsInterface) => {
 	const ref = useRef(null);
 	const inViewResult = useInView(ref, { once: true, margin: inViewMargin });
 	const isInView = !inView || inViewResult;

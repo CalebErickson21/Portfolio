@@ -2,11 +2,11 @@ import { motion, useScroll, type MotionProps } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
-interface ScrollProgressProps extends Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps> {
+interface ScrollProgressPropsInterface extends Omit<React.HTMLAttributes<HTMLElement>, keyof MotionProps> {
 	ref?: React.Ref<HTMLDivElement>;
 }
 
-export const ScrollProgress = ({ className, ref, ...props }: ScrollProgressProps) => {
+export const ScrollProgress = ({ className, ref, ...props }: ScrollProgressPropsInterface) => {
 	const { scrollYProgress } = useScroll();
 
 	return (

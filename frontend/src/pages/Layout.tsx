@@ -1,4 +1,5 @@
-import { Outlet } from "react-router";
+import { useEffect } from "react";
+import { Outlet, useLocation } from "react-router";
 
 import { Footer } from "@/components/Footer";
 import { LightRays } from "@/components/ui/light-rays";
@@ -6,6 +7,12 @@ import { Navbar } from "@/components/Navbar";
 
 // Layout component
 export const Layout = () => {
+	const { pathname } = useLocation();
+
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: "smooth" });
+	}, [pathname]);
+
 	return (
 		<div
 			id="layout-container"

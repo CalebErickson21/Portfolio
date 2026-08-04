@@ -16,7 +16,7 @@ export const Footer = () => {
 	return (
 		<footer className="relative z-10 w-full">
 			{/* CTA section */}
-			<div className="border-t border-text-secondary/15 bg-surface/80 px-6 py-10 text-center backdrop-blur-sm sm:px-10 sm:py-12">
+			<div className="border-t border-text-secondary/15 bg-surface/50 px-6 py-10 text-center backdrop-blur-sm sm:px-10 sm:py-12">
 				<h2 className="text-3xl font-semibold tracking-tight text-text-primary sm:text-4xl">
 					Let&apos;s build something great.
 				</h2>

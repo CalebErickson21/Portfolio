@@ -4,16 +4,13 @@ import { FaGithub } from "react-icons/fa";
 
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { detailsLinkClass, outlineLinkClass, surfacePanelClass } from "@/utils/classes";
-import type { FeaturedProject } from "@/utils/Types";
+import type { FeaturedProjectInterface } from "@/utils/Types";
 import { cn } from "@/lib/utils";
 
-export const ProjectCard = ({ project }: { project: FeaturedProject }) => {
+export const ProjectCard = ({ project }: { project: FeaturedProjectInterface }) => {
 	return (
 		<Card
-			className={cn(
-				"text-text-primary shadow-lg shadow-brand-accent/25 dark:shadow-brand-accent/20",
-				surfacePanelClass,
-			)}
+			className={cn("text-text-primary shadow-lg shadow-brand-accent/25", surfacePanelClass)}
 		>
 			<img
 				src={project.image}

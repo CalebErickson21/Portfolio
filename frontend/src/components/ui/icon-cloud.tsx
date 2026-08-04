@@ -5,7 +5,7 @@ import { renderToString } from "react-dom/server";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-interface Icon {
+interface IconInterface {
 	x: number;
 	y: number;
 	z: number;
@@ -14,7 +14,7 @@ interface Icon {
 	id: number;
 }
 
-interface IconCloudProps {
+interface IconCloudPropsInterface {
 	icons?: React.ReactNode[];
 	images?: string[];
 	showControl?: boolean;
@@ -36,9 +36,9 @@ export const IconCloud = ({
 	size = 400,
 	iconSize = 40,
 	className,
-}: IconCloudProps) => {
+}: IconCloudPropsInterface) => {
 	const canvasRef = useRef<HTMLCanvasElement>(null);
-	const [iconPositions, setIconPositions] = useState<Icon[]>([]);
+	const [iconPositions, setIconPositions] = useState<IconInterface[]>([]);
 	const [isDragging, setIsDragging] = useState(false);
 	const [isPaused, setIsPaused] = useState(false);
 	const [lastMousePos, setLastMousePos] = useState({ x: 0, y: 0 });
@@ -125,7 +125,7 @@ export const IconCloud = ({
 	// Generate initial icon positions on a sphere
 	useEffect(() => {
 		const items = icons ?? images ?? [];
-		const newIcons: Icon[] = [];
+		const newIcons: IconInterface[] = [];
 		const numIcons = items.length || 20;
 
 		const offset = 2 / numIcons;

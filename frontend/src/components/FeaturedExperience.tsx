@@ -1,11 +1,11 @@
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { SectionLabel } from "@/components/SectionLabel";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
-import type { FeaturedExperience } from "@/utils/Types";
+import type { FeaturedExperienceInterface } from "@/utils/Types";
 import cgiLogo from "@/assets/CgiLogo.jpg";
 import alabamaLogo from "@/assets/AlabamaLogo.png";
 
-const featuredExperiences: FeaturedExperience[] = [
+const featuredExperiences: FeaturedExperienceInterface[] = [
 	{
 		id: "cgi-internship",
 		title: "Software Engineer Intern",

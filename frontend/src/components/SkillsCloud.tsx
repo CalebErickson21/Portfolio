@@ -9,9 +9,9 @@ import {
 import { IconCloud } from "@/components/ui/icon-cloud";
 import { cn } from "@/lib/utils";
 import { surfacePanelClass } from "@/utils/classes";
-import type { Skill, SkillCategory } from "@/utils/Types";
+import type { SkillCategoryType, SkillInterface } from "@/utils/Types";
 
-const skills: Skill[] = [
+const skills: SkillInterface[] = [
 	// Languages & Web Fundamentals
 	{ id: "python", label: "Python", category: "languages", icon: "python" },
 	{ id: "cplusplus", label: "C++", category: "languages", icon: "cplusplus" },
@@ -70,7 +70,7 @@ const skills: Skill[] = [
 ];
 
 const categories: {
-	id: SkillCategory;
+	id: SkillCategoryType;
 	label: string;
 }[] = [
 	{ id: "languages", label: "Languages & Fundamentals" },
@@ -82,7 +82,7 @@ const categories: {
 const skillImages = [
 	...new Set(
 		skills
-			.filter((s): s is Skill & { icon: string } => Boolean(s.icon))
+			.filter((s): s is SkillInterface & { icon: string } => Boolean(s.icon))
 			.map((s) => `https://cdn.simpleicons.org/${s.icon}`),
 	),
 ];
@@ -155,7 +155,7 @@ export const SkillsCloud = () => {
 				<div className="relative flex items-center justify-center lg:col-span-3 lg:min-h-0">
 					<div
 						aria-hidden
-						className="pointer-events-none absolute inset-[8%] rounded-full bg-brand-accent/15 blur-3xl dark:bg-brand-accent/20"
+						className="pointer-events-none absolute inset-[8%] rounded-full bg-brand-accent/15 blur-3xl"
 					/>
 
 					<div className="relative w-full max-w-md lg:absolute lg:inset-0 lg:mx-auto lg:flex lg:max-w-none lg:items-center lg:justify-center">
