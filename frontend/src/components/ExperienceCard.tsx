@@ -1,26 +1,21 @@
 import { Building2 } from "lucide-react";
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { surfacePanelClass } from "@/utils/classes";
+import { surfacePanelClass } from "@/utils/Classes";
 import { cn } from "@/lib/utils";
 import type { FeaturedExperienceInterface } from "@/utils/Types";
 
 export const ExperienceCard = ({ experience }: { experience: FeaturedExperienceInterface }) => {
 	return (
 		<Card
-			className={cn(
-				"text-text-primary shadow-lg shadow-brand-accent/25",
-				surfacePanelClass,
-			)}
-		>			<CardHeader className="gap-0">
+			className={cn("text-text-primary shadow-lg shadow-brand-accent/25", surfacePanelClass)}
+		>
+			{" "}
+			<CardHeader className="gap-0">
 				<div className="flex items-start gap-3">
 					<div className="flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-brand-accent/10 text-brand-accent">
 						{experience.icon ? (
-							<img
-								src={experience.icon}
-								alt=""
-								className="size-full object-cover"
-							/>
+							<img src={experience.icon} alt="" className="size-full object-cover" />
 						) : (
 							<Building2 className="size-5" aria-hidden />
 						)}
@@ -30,7 +25,9 @@ export const ExperienceCard = ({ experience }: { experience: FeaturedExperienceI
 							<h3 className="text-lg font-semibold leading-snug text-text-primary">
 								{experience.title}
 							</h3>
-							<p className="shrink-0 text-sm text-text-secondary">{experience.date}</p>
+							<p className="shrink-0 text-sm text-text-secondary">
+								{experience.date}
+							</p>
 						</div>
 						<p className="mt-0.5 text-text-secondary">{experience.company}</p>
 						{experience.note && (

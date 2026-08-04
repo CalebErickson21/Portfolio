@@ -13,7 +13,7 @@ import {
 
 import { SkillsCloud } from "@/components/SkillsCloud";
 import { BlurFade } from "@/components/ui/blur-fade";
-import { infoCardClass } from "@/utils/classes";
+import { infoCardClass } from "@/utils/Classes";
 import type { EducationInterface, HobbyInterface, PillarInterface } from "@/utils/Types";
 import headshot from "@/assets/headshot.jpg";
 import dcPodium from "@/assets/DcPodium.jpg";

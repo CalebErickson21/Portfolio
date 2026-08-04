@@ -3,7 +3,7 @@ import { ExternalLink, ArrowRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { detailsLinkClass, outlineLinkClass, surfacePanelClass } from "@/utils/classes";
+import { detailsLinkClass, outlineLinkClass, surfacePanelClass } from "@/utils/Classes";
 import type { FeaturedProjectInterface } from "@/utils/Types";
 import { cn } from "@/lib/utils";
 

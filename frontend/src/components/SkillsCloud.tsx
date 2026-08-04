@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/accordion";
 import { IconCloud } from "@/components/ui/icon-cloud";
 import { cn } from "@/lib/utils";
-import { surfacePanelClass } from "@/utils/classes";
+import { surfacePanelClass } from "@/utils/Classes";
 import type { SkillCategoryType, SkillInterface } from "@/utils/Types";
 
 const skills: SkillInterface[] = [
@@ -112,9 +112,7 @@ export const SkillsCloud = () => {
 						</p>
 					</div>
 
-					<Accordion
-						className={cn("border-transparent", surfacePanelClass)}
-					>
+					<Accordion className={cn("border-transparent", surfacePanelClass)}>
 						{categories.map((c) => {
 							const categorySkills = skills.filter((s) => s.category === c.id);
 

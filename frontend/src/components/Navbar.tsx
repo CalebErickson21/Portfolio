@@ -16,8 +16,8 @@ import {
 	SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { iconButtonClass } from "@/utils/classes";
-import { navigation, socialLinks } from "@/utils/links";
+import { iconButtonClass } from "@/utils/Classes";
+import { navigation, socialLinks } from "@/utils/Links";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) => {
 	return cn(
