@@ -1,13 +1,11 @@
-import { Link } from "react-router";
-import { ArrowRight } from "lucide-react";
-
 import { ProjectCard } from "@/components/ProjectCard";
-import { detailsLinkClass } from "@/utils/classes";
-import type { FeaturedProject } from "@/utils/Types";
+import { SectionLabel } from "@/components/SectionLabel";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
+import type { FeaturedProjectInterface } from "@/utils/Types";
 import mockstreetImage from "@/assets/mockstreet.png";
 import neuralNetworkImage from "@/assets/NeuralNetwork.png";
 
-const featuredProjects: FeaturedProject[] = [
+const featuredProjects: FeaturedProjectInterface[] = [
 	{
 		id: "mockstreet-exchange",
 		title: "Mockstreet Exchange",
@@ -34,7 +32,7 @@ const featuredProjects: FeaturedProject[] = [
 	},
 ];
 
-export function FeaturedProjects() {
+export const FeaturedProjects = () => {
 	return (
 		<section
 			id="featured-projects"
@@ -42,7 +40,7 @@ export function FeaturedProjects() {
 			aria-labelledby="featured-projects-heading"
 		>
 			<div className="text-center">
-				<p className="text-xl font-medium tracking-wide text-brand-accent">Featured Work</p>
+				<SectionLabel>Featured Work</SectionLabel>
 				<h2
 					id="featured-projects-heading"
 					className="mt-2 text-3xl font-semibold text-text-primary sm:text-4xl"
@@ -62,11 +60,8 @@ export function FeaturedProjects() {
 			</div>
 
 			<div className="mt-10 flex justify-center">
-				<Link to="/projects" className={detailsLinkClass}>
-					View all projects
-					<ArrowRight data-icon="inline-end" />
-				</Link>
+				<InteractiveHoverButton to="/projects">View all projects</InteractiveHoverButton>
 			</div>
 		</section>
 	);
-}
+};

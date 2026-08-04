@@ -1,13 +1,11 @@
-import { Link } from "react-router";
-import { ArrowRight } from "lucide-react";
-
 import { ExperienceCard } from "@/components/ExperienceCard";
-import { detailsLinkClass } from "@/utils/classes";
-import type { FeaturedExperience } from "@/utils/Types";
+import { SectionLabel } from "@/components/SectionLabel";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
+import type { FeaturedExperienceInterface } from "@/utils/Types";
 import cgiLogo from "@/assets/CgiLogo.jpg";
 import alabamaLogo from "@/assets/AlabamaLogo.png";
 
-const featuredExperiences: FeaturedExperience[] = [
+const featuredExperiences: FeaturedExperienceInterface[] = [
 	{
 		id: "cgi-internship",
 		title: "Software Engineer Intern",
@@ -35,7 +33,7 @@ const featuredExperiences: FeaturedExperience[] = [
 	},
 ];
 
-export function FeaturedExperience() {
+export const FeaturedExperience = () => {
 	return (
 		<section
 			id="featured-experience"
@@ -43,9 +41,7 @@ export function FeaturedExperience() {
 			aria-labelledby="featured-experience-heading"
 		>
 			<div className="text-center">
-				<p className="text-xl font-medium tracking-wide text-brand-accent">
-					Featured Experience
-				</p>
+				<SectionLabel>Featured Experience</SectionLabel>
 				<h2
 					id="featured-experience-heading"
 					className="mt-2 text-3xl font-semibold text-text-primary sm:text-4xl"
@@ -64,11 +60,10 @@ export function FeaturedExperience() {
 			</div>
 
 			<div className="mt-10 flex justify-center">
-				<Link to="/experience" className={detailsLinkClass}>
+				<InteractiveHoverButton to="/experience">
 					View full experience
-					<ArrowRight data-icon="inline-end" />
-				</Link>
+				</InteractiveHoverButton>
 			</div>
 		</section>
 	);
-}
+};

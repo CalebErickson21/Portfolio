@@ -1,0 +1,24 @@
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+export const detailsLinkClass = cn(
+	buttonVariants({ variant: "default", size: "sm" }),
+	"bg-brand-accent text-white hover:bg-brand-accent/80",
+);
+
+export const outlineLinkClass = cn(
+	buttonVariants({ variant: "outline", size: "sm" }),
+	"border-text-secondary/30 bg-transparent text-text-primary hover:bg-surface hover:text-text-primary",
+);
+
+export const iconButtonClass =
+	"text-text-secondary transition-colors hover:text-text-primary cursor-pointer";
+
+/** Shared surface panel used by About cards, accordion, and homepage cards */
+export const surfacePanelClass =
+	"bg-surface/80 ring-1 ring-text-secondary/15 backdrop-blur-sm";
+
+export const infoCardClass = cn(
+	"rounded-2xl p-6 sm:p-7",
+	surfacePanelClass,
+);

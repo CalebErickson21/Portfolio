@@ -8,10 +8,10 @@
 :root {
 	--brand-accent: #2563eb;
 	--brand-accent-foreground: #ffffff;
-	--background: #f4f5f7;
+	--background: #cfd5de;
 	--surface: #ffffff;
-	--text-primary: #1f2937;
-	--text-secondary: #5b6472;
+	--text-primary: #111827;
+	--text-secondary: #374151;
 	--footer: #0f172a;
 	--footer-foreground: #f8fafc;
 	--footer-muted: #94a3b8;
@@ -24,7 +24,7 @@
 	--background: #111315;
 	--surface: #1b1e22;
 	--text-primary: #f3f4f6;
-	--text-secondary: #a9b0ba;
+	--text-secondary: #c4c9d1;
 	--footer: #0a0c0e;
 	--footer-foreground: #f8fafc;
 	--footer-muted: #94a3b8;
@@ -97,12 +97,12 @@
 	}
 
 	html {
-		@apply h-dvh font-sans;
+		@apply font-sans;
 	}
 
 	body,
 	#root {
-		@apply h-dvh overflow-hidden;
+		@apply min-h-dvh;
 	}
 
 	body {

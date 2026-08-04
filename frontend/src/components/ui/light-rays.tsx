@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
-interface LightRaysProps extends React.HTMLAttributes<HTMLDivElement> {
+interface LightRaysPropsInterface extends React.HTMLAttributes<HTMLDivElement> {
 	ref?: React.Ref<HTMLDivElement>;
 	count?: number;
 	color?: string;
@@ -12,7 +12,7 @@ interface LightRaysProps extends React.HTMLAttributes<HTMLDivElement> {
 	length?: string;
 }
 
-type LightRay = {
+type LightRayType = {
 	id: string;
 	left: number;
 	rotate: number;
@@ -23,7 +23,7 @@ type LightRay = {
 	intensity: number;
 };
 
-const createRays = (count: number, cycle: number): LightRay[] => {
+const createRays = (count: number, cycle: number): LightRayType[] => {
 	if (count <= 0) return [];
 
 	return Array.from({ length: count }, (_, index) => {
@@ -48,7 +48,7 @@ const createRays = (count: number, cycle: number): LightRay[] => {
 	});
 };
 
-const Ray = ({ left, rotate, width, swing, delay, duration, intensity }: LightRay) => {
+const Ray = ({ left, rotate, width, swing, delay, duration, intensity }: LightRayType) => {
 	return (
 		<motion.div
 			className="pointer-events-none absolute top-[-12%] left-(--ray-left) h-(--light-rays-length) w-(--ray-width) origin-top -translate-x-1/2 rounded-full bg-linear-to-b from-[color-mix(in_srgb,var(--light-rays-color)_70%,transparent)] to-transparent opacity-0 mix-blend-screen blur-(--light-rays-blur)"
@@ -74,7 +74,7 @@ const Ray = ({ left, rotate, width, swing, delay, duration, intensity }: LightRa
 	);
 };
 
-export function LightRays({
+export const LightRays = ({
 	className,
 	style,
 	count = 7,
@@ -84,8 +84,8 @@ export function LightRays({
 	length = "70vh",
 	ref,
 	...props
-}: LightRaysProps) {
-	const [rays, setRays] = useState<LightRay[]>([]);
+}: LightRaysPropsInterface) => {
+	const [rays, setRays] = useState<LightRayType[]>([]);
 	const cycleDuration = Math.max(speed, 0.1);
 
 	useEffect(() => {
@@ -136,4 +136,4 @@ export function LightRays({
 			</div>
 		</div>
 	);
-}
+};

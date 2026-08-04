@@ -33,11 +33,11 @@ const motionElements = {
 } as const;
 
 type MotionElementType = Extract<keyof DOMMotionComponents, keyof typeof motionElements>;
-type TypingAnimationMotionComponent = ComponentType<
+type TypingAnimationMotionComponentType = ComponentType<
 	Omit<HTMLMotionProps<"span">, "ref"> & RefAttributes<HTMLElement>
 >;
 
-interface TypingAnimationProps extends Omit<MotionProps, "children"> {
+interface TypingAnimationPropsInterface extends Omit<MotionProps, "children"> {
 	children?: string;
 	words?: string[];
 	className?: string;
@@ -56,7 +56,7 @@ interface TypingAnimationProps extends Omit<MotionProps, "children"> {
 	onWordIndexChange?: (index: number) => void;
 }
 
-export function TypingAnimation({
+export const TypingAnimation = ({
 	children,
 	words,
 	className,
@@ -74,8 +74,8 @@ export function TypingAnimation({
 	currentWordIndex: controlledWordIndex,
 	onWordIndexChange,
 	...props
-}: TypingAnimationProps) {
-	const MotionComponent = motionElements[Component] as TypingAnimationMotionComponent;
+}: TypingAnimationPropsInterface) => {
+	const MotionComponent = motionElements[Component] as TypingAnimationMotionComponentType;
 
 	const [displayedText, setDisplayedText] = useState<string>("");
 	const [internalWordIndex, setInternalWordIndex] = useState(0);
@@ -233,4 +233,4 @@ export function TypingAnimation({
 			)}
 		</MotionComponent>
 	);
-}
+};

@@ -3,12 +3,15 @@ import { ExternalLink, ArrowRight } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { detailsLinkClass, outlineLinkClass } from "@/utils/classes";
-import type { FeaturedProject } from "@/utils/Types";
+import { detailsLinkClass, outlineLinkClass, surfacePanelClass } from "@/utils/Classes";
+import type { FeaturedProjectInterface } from "@/utils/Types";
+import { cn } from "@/lib/utils";
 
-export function ProjectCard({ project }: { project: FeaturedProject }) {
+export const ProjectCard = ({ project }: { project: FeaturedProjectInterface }) => {
 	return (
-		<Card className="bg-surface/80 text-text-primary shadow-lg shadow-brand-accent/25 ring-text-secondary/15 backdrop-blur-sm dark:shadow-brand-accent/20 dark:ring-text-secondary/25">
+		<Card
+			className={cn("text-text-primary shadow-lg shadow-brand-accent/25", surfacePanelClass)}
+		>
 			<img
 				src={project.image}
 				alt={project.title}
@@ -46,4 +49,4 @@ export function ProjectCard({ project }: { project: FeaturedProject }) {
 			</CardFooter>
 		</Card>
 	);
-}
+};

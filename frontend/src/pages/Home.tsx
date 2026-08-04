@@ -1,20 +1,18 @@
 import { useState } from "react";
-import { Link } from "react-router";
 
-import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { BlurFade } from "@/components/ui/blur-fade";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { TypingAnimation } from "@/components/ui/typing-animation";
 import { FeaturedExperience } from "@/components/FeaturedExperience";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
-import { accentButtonClass, outlineButtonClass } from "@/utils/classes";
 
-import headshot from "@/assets/headshot.jpg";
+import headshot from "@/assets/Headshot.jpg";
 
 const roles = ["Software Engineer", "AI Researcher", "Full-Stack Developer", "Problem Solver"];
 
-function startsWithVowel(word: string) {
+const startsWithVowel = (word: string) => {
 	return /^[aeiou]/i.test(word);
-}
+};
 
 export const Home = () => {
 	const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -50,37 +48,30 @@ export const Home = () => {
 							impact.
 						</p>
 						<div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
-							<Link to="/experience" className={accentButtonClass}>
+							<InteractiveHoverButton to="/experience">
 								View my work
-							</Link>
-							<Link to="/contact" className={outlineButtonClass}>
+							</InteractiveHoverButton>
+							<InteractiveHoverButton to="/contact">
 								Contact me
-							</Link>
+							</InteractiveHoverButton>
 						</div>
 					</BlurFade>
 				</div>
 
 				{/* Right side */}
 				<div className="flex flex-1 items-center justify-center px-4 py-8">
-					<BlurFade
-						delay={0.35}
-						duration={0.85}
-						direction="up"
-						offset={18}
-						className="w-2/3 max-w-[18rem] sm:w-full sm:max-w-xs md:max-w-sm"
-					>
-						<BackgroundGradient
-							containerClassName="w-full"
-							className="rounded-2xl bg-background p-1"
-						>
-							<div className="relative aspect-4/5 overflow-hidden rounded-2xl">
-								<img
-									src={headshot}
-									alt="Caleb Erickson"
-									className="h-full w-full object-cover object-[center_20%]"
-								/>
-							</div>
-						</BackgroundGradient>
+					<BlurFade delay={0.35} duration={0.85} direction="up" offset={18}>
+						<div className="relative mx-auto w-56 sm:w-64 md:w-72 lg:w-80">
+							<div
+								aria-hidden
+								className="absolute top-[18%] left-1/2 size-[85%] -translate-x-1/2 rounded-full bg-brand-accent/30 blur-3xl"
+							/>
+							<img
+								src={headshot}
+								alt="Caleb Erickson"
+								className="relative z-10 w-full rounded-2xl object-cover object-[center_20%] shadow-xl shadow-brand-accent/20 ring-1 ring-text-secondary/10"
+							/>
+						</div>
 					</BlurFade>
 				</div>
 			</section>

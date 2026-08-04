@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router";
 import { MenuIcon } from "lucide-react";
+import { useMotionValueEvent, useScroll } from "motion/react";
 
 import { AnimatedThemeToggler } from "./ui/animated-theme-toggler";
+import { ScrollProgress } from "./ui/scroll-progress";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
 	Sheet,
@@ -13,10 +16,10 @@ import {
 	SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { iconButtonClass } from "@/utils/classes";
-import { navigation, socialLinks } from "@/utils/links";
+import { iconButtonClass } from "@/utils/Classes";
+import { navigation, socialLinks } from "@/utils/Links";
 
-function navLinkClass({ isActive }: { isActive: boolean }) {
+const navLinkClass = ({ isActive }: { isActive: boolean }) => {
 	return cn(
 		buttonVariants({ variant: "ghost", size: "sm" }),
 		"relative text-md transition-all",
@@ -24,9 +27,9 @@ function navLinkClass({ isActive }: { isActive: boolean }) {
 			? "font-semibold text-brand-accent hover:text-brand-accent after:absolute after:inset-x-2 after:bottom-0.5 after:h-0.5 after:rounded-full after:bg-brand-accent"
 			: "text-text-secondary hover:text-text-primary hover:font-semibold",
 	);
-}
+};
 
-function SocialLinks({ className }: { className?: string }) {
+const SocialLinks = ({ className }: { className?: string }) => {
 	return (
 		<div className={cn("flex items-center gap-1", className)}>
 			{socialLinks.map(({ label, href, icon: Icon }) => (
@@ -46,11 +49,23 @@ function SocialLinks({ className }: { className?: string }) {
 			))}
 		</div>
 	);
-}
+};
 
-export function Navbar() {
+export const Navbar = () => {
+	const [scrolled, setScrolled] = useState(false);
+	const { scrollY } = useScroll();
+
+	useMotionValueEvent(scrollY, "change", (latest) => {
+		setScrolled(latest > 0);
+	});
+
 	return (
-		<header className="sticky top-0 z-50 w-full bg-transparent p-2">
+		<header
+			className={cn(
+				"relative z-50 w-full p-2 transition-[background-color,backdrop-filter] duration-750 ease-out",
+				scrolled ? "bg-background/90 backdrop-blur-sm" : "bg-transparent",
+			)}
+		>
 			<div className="flex items-center justify-between px-4 py-2">
 				<Link
 					to="/"
@@ -145,6 +160,7 @@ export function Navbar() {
 					</Sheet>
 				</div>
 			</div>
+			<ScrollProgress className="absolute top-auto bottom-0" />
 		</header>
 	);
-}
+};
