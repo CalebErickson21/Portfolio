@@ -1,7 +1,7 @@
 import mockstreetImage from "@/assets/mockstreet.png";
 import neuralNetworkImage from "@/assets/NeuralNetwork.png";
 import headshotImage from "@/assets/Headshot.jpg";
-import { Rocket } from "lucide-react";
+import { Rocket, Server, TrendingUp } from "lucide-react";
 import type { ProjectInterface, ProjectTechInterface } from "@/utils/Types";
 
 export const projects: ProjectInterface[] = [
@@ -121,10 +121,86 @@ export const projects: ProjectInterface[] = [
 			"Shared styling tokens, surface-panel utilities, and reusable dialog/card primitives keep pages visually consistent while still allowing each section to have its own layout.",
 		],
 		lessonsLearned: [
-			"Reusable components early on — shared cards, dialogs, and surface styles — made new pages much faster to build.",
+			"Reusable components early on - shared cards, dialogs, and surface styles - made new pages much faster to build.",
 			"Component libraries work best as a foundation. Customizing shadcn/ui, Magic UI, and Aceternity UI kept development fast without looking generic.",
 			"Clean design decisions mattered as much as the code: clear section purpose, consistent hierarchy, and less visual clutter.",
 			"Typed data modules made content updates a data change instead of a UI rewrite.",
+		],
+	},
+
+	{
+		id: "homelab",
+		title: "Homelab",
+		icon: Server,
+		description:
+			"A personal Proxmox-based homelab built on a Dell OptiPlex Micro to practice networking, virtualization, and cybersecurity fundamentals in a controlled environment.",
+		date: "May 2026 - Present",
+		links: {
+			production: "private",
+			github: "private",
+			details: "/projects/homelab",
+		},
+		tech: {
+			concepts: [
+				"Virtualization",
+				"Networking Fundamentals",
+				"Cybersecurity Fundamentals",
+				"Bare-Metal Provisioning",
+				"Homelab",
+			],
+			stack: ["Proxmox VE", "Dell OptiPlex 7060 Micro", "Rufus", "Linux"],
+		},
+		infrastructure: [
+			"Hardware is a Dell OptiPlex 7060 Micro with an Intel Core i5-8500T (2.1 GHz), 16 GB RAM, and a 256 GB SSD, compact enough for a desk-side lab while still capable of running multiple VMs and containers.",
+			"The original Windows 11 Pro installation was wiped to reclaim the machine as dedicated lab infrastructure rather than a general-purpose desktop.",
+			"Proxmox VE was installed from a USB drive created with Rufus after downloading the official Proxmox ISO, turning the OptiPlex into a Type-1 hypervisor host for VMs and LXC containers.",
+			"The lab is intended as a safe space to experiment with networking concepts, segmented environments, and cybersecurity tooling without risking personal or production systems.",
+		],
+		lessonsLearned: [
+			"Starting from bare metal, wiping the drive and installing the hypervisor yourself, makes boot media, ISO verification, and disk partitioning much less abstract.",
+			"Even modest refurbished hardware can host a useful learning lab when the goal is fundamentals rather than high-throughput workloads.",
+			"Proxmox provides a practical bridge between consumer hardware and production-style virtualization: VMs, containers, networking bridges, and resource limits in one management UI.",
+			"A dedicated lab machine encourages deliberate experimentation with networking and security setups that would be too risky on a daily-driver laptop.",
+		],
+		relatedProjectIds: ["stock-screener"],
+	},
+	{
+		id: "stock-screener",
+		title: "Merger Filing Screener",
+		icon: TrendingUp,
+		description:
+			"A nightly stock screener that scrapes targeted websites for potential merger filings, applies proprietary filtering criteria, and emails only the matching candidates for manual analysis of profitable purchase opportunities.",
+		date: "May 2026 - Present",
+		links: {
+			production: "private",
+			github: "private",
+			details: "/projects/stock-screener",
+		},
+		relatedProjectIds: ["homelab"],
+		tech: {
+			concepts: [
+				"Web Scraping",
+				"Scheduled Automation",
+				"Signal Filtering",
+				"Merger Arbitrage Research",
+				"Email Alerts",
+			],
+			stack: ["Python", "Selenium", "Beautiful Soup", "cron", "Proxmox VE", "Homelab"],
+		},
+		infrastructure: [
+			"The screener runs on the Proxmox homelab rather than a cloud host, keeping the strategy private and avoiding recurring cloud compute costs for a lightweight nightly job.",
+			"A cron timer triggers the pipeline each night. Selenium drives a browser to scrape targeted websites, and Beautiful Soup parses the page content for filings and signals related to potential mergers.",
+			"Scraped results are evaluated against proprietary filtering criteria so only filings that meet the strategy's thresholds are included in the digest, reducing noise before anyone opens their inbox.",
+			"Filtered candidates are automatically emailed to me and a small group of colleagues so the overnight scrape becomes a morning review queue instead of requiring someone to watch dashboards live.",
+			"The repository is kept private to protect the screening heuristics, filtering criteria, and target sources from being copied wholesale.",
+		],
+		lessonsLearned: [
+			"Filtering before alerting matters as much as scraping - proprietary criteria keep the email digest actionable instead of flooding reviewers with every raw filing.",
+			"Selenium handles dynamic pages that need a real browser, while Beautiful Soup keeps HTML parsing lightweight once the content is retrieved.",
+			"Automation is most valuable when it surfaces candidates for human judgment - the emails create a shortlist, while profitable purchases still depend on manual analysis.",
+			"Running research tooling on a homelab keeps sensitive strategy code and scrape targets off public cloud infrastructure and shared remotes.",
+			"Cron jobs are enough for a reliable nightly research loop when the workload is batch-oriented and does not need real-time streaming.",
+			"Keeping the GitHub repository private is part of the product design when the edge comes from proprietary screening logic rather than open-source collaboration.",
 		],
 	},
 	{
@@ -133,9 +209,11 @@ export const projects: ProjectInterface[] = [
 		icon: Rocket,
 		description:
 			"A career-networking and application-tracking platform for managing recruiters, companies, job opportunities, applications, deadlines, and professional connections in one place.",
-		date: "August 2026",
+		date: "August 2026 - Present",
 		status: "in-progress",
 		links: {
+			production: "private",
+			github: "private",
 			details: "/projects/launchpad",
 		},
 		tech: {

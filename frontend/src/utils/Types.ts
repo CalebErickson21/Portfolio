@@ -20,10 +20,13 @@ export interface ProjectTechInterface {
 	stack?: string[];
 }
 
+/** URL string, or `"private"` to render a locked Private chip instead of a link. */
+export type ProjectLinkValue = string;
+
 export interface ProjectLinksInterface {
-	production?: string;
-	github?: string;
-	details: string;
+	production: ProjectLinkValue;
+	github: ProjectLinkValue;
+	details: ProjectLinkValue;
 }
 
 export type ProjectStatusType = "in-progress";
@@ -43,7 +46,7 @@ export interface ProjectInterface {
 	lessonsLearned: string[];
 	featured?: boolean;
 	relatedProjectIds?: string[];
-	/** When set, surfaces an in-progress badge; Live is replaced with a status chip if production is omitted. */
+	/** When set, surfaces an In Progress badge only - does not affect link rendering. */
 	status?: ProjectStatusType;
 }
 

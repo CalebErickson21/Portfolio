@@ -3,11 +3,15 @@ import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router";
 
 import { detailsLinkClass, mutedChipClass, outlineLinkClass } from "@/utils/Classes";
-import type { ProjectInterface } from "@/utils/Types";
+import type { ProjectInterface, ProjectLinkValue } from "@/utils/Types";
+
+const PRIVATE_LINK = "private";
+
+const isPrivateLink = (value: ProjectLinkValue) => value === PRIVATE_LINK;
 
 type ProjectLinkActionsPropsType = {
 	project: ProjectInterface;
-	/** When true, includes the Details route link (cards). Dialogs omit it. */
+	/** When true, includes the Details action (cards). Dialogs omit it. */
 	showDetails?: boolean;
 };
 
@@ -15,15 +19,18 @@ export const ProjectLinkActions = ({
 	project,
 	showDetails = false,
 }: ProjectLinkActionsPropsType) => {
-	const isInProgress = project.status === "in-progress";
-	const showLiveChip = isInProgress && !project.links.production;
-	const showPrivateGithub = !project.links.github;
+	const { production, github, details } = project.links;
 
 	return (
 		<>
-			{project.links.production && (
+			{isPrivateLink(production) ? (
+				<span className={mutedChipClass}>
+					<Lock data-icon="inline-start" />
+					Private
+				</span>
+			) : (
 				<a
-					href={project.links.production}
+					href={production}
 					target="_blank"
 					rel="noopener noreferrer"
 					className={outlineLinkClass}
@@ -32,15 +39,14 @@ export const ProjectLinkActions = ({
 					Live
 				</a>
 			)}
-			{showLiveChip && (
+			{isPrivateLink(github) ? (
 				<span className={mutedChipClass}>
-					<ExternalLink data-icon="inline-start" />
-					In Progress
+					<Lock data-icon="inline-start" />
+					Private
 				</span>
-			)}
-			{project.links.github && (
+			) : (
 				<a
-					href={project.links.github}
+					href={github}
 					target="_blank"
 					rel="noopener noreferrer"
 					className={outlineLinkClass}
@@ -49,18 +55,18 @@ export const ProjectLinkActions = ({
 					GitHub
 				</a>
 			)}
-			{showPrivateGithub && (
-				<span className={mutedChipClass}>
-					<Lock data-icon="inline-start" />
-					Private
-				</span>
-			)}
-			{showDetails && (
-				<Link to={project.links.details} className={detailsLinkClass}>
-					Details
-					<ArrowRight data-icon="inline-end" />
-				</Link>
-			)}
+			{showDetails &&
+				(isPrivateLink(details) ? (
+					<span className={mutedChipClass}>
+						<Lock data-icon="inline-start" />
+						Private
+					</span>
+				) : (
+					<Link to={details} className={detailsLinkClass}>
+						Details
+						<ArrowRight data-icon="inline-end" />
+					</Link>
+				))}
 		</>
 	);
 };

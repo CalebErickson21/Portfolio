@@ -90,7 +90,7 @@ export const getExperienceById = (id: string): ExperienceInterface | undefined =
 export const getFeaturedExperiences = (): ExperienceInterface[] =>
 	experiences.filter((experience) => experience.featured);
 
-/** Flat pill list for timeline cards — concepts first, then stack */
+/** Flat pill list for timeline cards - concepts first, then stack */
 export const getExperienceTechTags = (tech?: ExperienceTechInterface): string[] => [
 	...(tech?.concepts ?? []),
 	...(tech?.stack ?? []),
