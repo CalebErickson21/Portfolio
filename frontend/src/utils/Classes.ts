@@ -11,6 +11,12 @@ export const outlineLinkClass = cn(
 	"border-text-secondary/30 bg-transparent text-text-primary hover:bg-surface hover:text-text-primary",
 );
 
+/** Non-interactive chip matching outline link sizing (e.g. Private, In Progress). */
+export const mutedChipClass = cn(
+	buttonVariants({ variant: "outline", size: "sm" }),
+	"pointer-events-none border-text-secondary/20 bg-transparent text-text-secondary/70",
+);
+
 export const iconButtonClass =
 	"text-text-secondary transition-colors hover:text-text-primary cursor-pointer";
 

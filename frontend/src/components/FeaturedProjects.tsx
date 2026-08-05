@@ -1,38 +1,11 @@
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionLabel } from "@/components/SectionLabel";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
-import type { FeaturedProjectInterface } from "@/utils/Types";
-import mockstreetImage from "@/assets/mockstreet.png";
-import neuralNetworkImage from "@/assets/NeuralNetwork.png";
-
-const featuredProjects: FeaturedProjectInterface[] = [
-	{
-		id: "mockstreet-exchange",
-		title: "Mockstreet Exchange",
-		description:
-			"A simulated trading platform that helps everyday users gain hands-on experience building and managing a stock portfolio without risking real money.",
-		image: mockstreetImage,
-		links: {
-			production: "https://www.mockstreetexchange.com/",
-			github: "https://github.com/CalebErickson21/Mockstreeet",
-			details: "/projects",
-		},
-	},
-	{
-		id: "neural-network",
-		title: "Number Prediction Neural Network",
-		description:
-			"A convolutional neural network built from scratch to recognize MNIST handwritten digits, using only NumPy and no plug-and-play machine-learning libraries to better understand backpropagation, gradient descent, and neural network mathematics.",
-		image: neuralNetworkImage,
-		links: {
-			production: "https://numbers-beige.vercel.app/",
-			github: "https://github.com/CalebErickson21/Numbers-CNN",
-			details: "/projects",
-		},
-	},
-];
+import { getFeaturedProjects } from "@/data/Project";
 
 export const FeaturedProjects = () => {
+	const featuredProjects = getFeaturedProjects();
+
 	return (
 		<section
 			id="featured-projects"

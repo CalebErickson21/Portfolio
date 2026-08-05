@@ -58,7 +58,7 @@ export const experiences: ExperienceInterface[] = [
 		],
 		productionLinks: [
 			{
-				label: "CAST (Computer Assisted Storytelling)",
+				label: "CAST Story Studio",
 				url: "https://cast-storystudio.com/",
 			},
 		],
@@ -69,7 +69,6 @@ export const experiences: ExperienceInterface[] = [
 		company: "QuantHub",
 		date: "August 2025 - December 2025",
 		note: "Concurrent with AI Research @ Alabama AI Institute",
-		featured: false,
 		icon: quantHubLogo,
 		description:
 			"Built an automated web-scraping pipeline for University of Alabama course enrollment data using Python and Selenium. Processed course sections across multiple semesters, normalized the results into a searchable relational database, and conducted market research to identify high-impact opportunities for incorporating QuantHub's AI lessons into university programs.",
@@ -91,7 +90,7 @@ export const getExperienceById = (id: string): ExperienceInterface | undefined =
 export const getFeaturedExperiences = (): ExperienceInterface[] =>
 	experiences.filter((experience) => experience.featured);
 
-/** Flat pill list for timeline cards — concepts first, then stack */
+/** Flat pill list for timeline cards - concepts first, then stack */
 export const getExperienceTechTags = (tech?: ExperienceTechInterface): string[] => [
 	...(tech?.concepts ?? []),
 	...(tech?.stack ?? []),

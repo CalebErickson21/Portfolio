@@ -15,18 +15,39 @@ export interface LucidePropsInterface {
 	[key: string]: any; // Any other SVG attributes
 }
 
-export interface FeaturedProjectLinksInterface {
-	production: string;
-	github: string;
-	details: string;
+export interface ProjectTechInterface {
+	concepts?: string[];
+	stack?: string[];
 }
 
-export interface FeaturedProjectInterface {
+/** URL string, or `"private"` to render a locked Private chip instead of a link. */
+export type ProjectLinkValue = string;
+
+export interface ProjectLinksInterface {
+	production: ProjectLinkValue;
+	github: ProjectLinkValue;
+	details: ProjectLinkValue;
+}
+
+export type ProjectStatusType = "in-progress";
+
+export interface ProjectInterface {
 	id: string;
 	title: string;
+	/** Screenshot or cover image. Prefer this when available. */
+	image?: string;
+	/** Lucide icon used when no image is available (e.g. in-progress projects). */
+	icon?: LucideIcon;
 	description: string;
-	image: string;
-	links: FeaturedProjectLinksInterface;
+	date: string;
+	links: ProjectLinksInterface;
+	tech: ProjectTechInterface;
+	infrastructure: string[];
+	lessonsLearned: string[];
+	featured?: boolean;
+	relatedProjectIds?: string[];
+	/** When set, surfaces an In Progress badge only - does not affect link rendering. */
+	status?: ProjectStatusType;
 }
 
 export interface ExperienceTenureInterface {
@@ -53,7 +74,7 @@ export interface ExperienceInterface {
 	description: string;
 	tech: ExperienceTechInterface;
 	highlights: string[];
-	featured: boolean;
+	featured?: boolean;
 	note?: string;
 	tenure?: ExperienceTenureInterface[];
 	productionLinks?: ExperienceProductionLinkInterface[];
