@@ -58,7 +58,7 @@ export const experiences: ExperienceInterface[] = [
 		],
 		productionLinks: [
 			{
-				label: "CAST (Computer Assisted Storytelling)",
+				label: "CAST Story Studio",
 				url: "https://cast-storystudio.com/",
 			},
 		],

@@ -1,9 +1,7 @@
 import mockstreetImage from "@/assets/mockstreet.png";
 import neuralNetworkImage from "@/assets/NeuralNetwork.png";
-import labUndergradsImage from "@/assets/LabUndergrads.jpg";
-import dcPodiumImage from "@/assets/DcPodium.jpg";
 import headshotImage from "@/assets/Headshot.jpg";
-import quantHubLogo from "@/assets/QuantHubLogo.jpg";
+import { Rocket } from "lucide-react";
 import type { ProjectInterface, ProjectTechInterface } from "@/utils/Types";
 
 export const projects: ProjectInterface[] = [
@@ -12,8 +10,8 @@ export const projects: ProjectInterface[] = [
 		title: "Mockstreet Exchange",
 		image: mockstreetImage,
 		description:
-			"A simulated trading platform that helps everyday users gain hands-on experience building and managing a stock portfolio without risking real money.",
-		date: "2024 - 2025",
+			"A simulated trading platform that helps everyday people gain hands-on experience building and managing a stock portfolio without risking real money.",
+		date: "March 2025",
 		links: {
 			production: "https://www.mockstreetexchange.com/",
 			github: "https://github.com/CalebErickson21/Mockstreeet",
@@ -54,129 +52,116 @@ export const projects: ProjectInterface[] = [
 		image: neuralNetworkImage,
 		description:
 			"A convolutional neural network built from scratch to recognize MNIST handwritten digits, using only NumPy and no plug-and-play machine-learning libraries to better understand backpropagation, gradient descent, and neural network mathematics.",
-		date: "2024",
+		date: "April 2025",
 		links: {
 			production: "https://numbers-beige.vercel.app/",
 			github: "https://github.com/CalebErickson21/Numbers-CNN",
 			details: "/projects/neural-network",
 		},
 		tech: {
-			concepts: ["CNNs", "Backpropagation", "Gradient Descent"],
-			stack: ["Python", "NumPy", "TypeScript", "React"],
+			concepts: [
+				"Machine Learning",
+				"Convolutional Neural Networks",
+				"Backpropagation",
+				"Gradient Descent",
+			],
+			stack: ["Python", "NumPy", "Flask", "TypeScript", "React", "Vite", "Vercel", "Render"],
 		},
 		infrastructure: [
-			"Training runs locally in Python/NumPy; trained weights are exported for the web demo.",
-			"Interactive digit prediction demo is served on Vercel.",
+			"The model is trained locally using Python and NumPy. After training, the learned weights and biases are serialized to a .pkl file so the production application can perform inference without retraining the network.",
+			"The React frontend is deployed on Vercel and communicates with a Flask API hosted on Render. These platforms were selected for their free tiers, GitHub-based continuous deployment, and low operational overhead for a lightweight demonstration application.",
 		],
 		lessonsLearned: [
-			"Implementing backprop by hand makes optimizer and activation choices much clearer.",
-			"Visualizing training loss early catches learning-rate mistakes.",
-			"A thin demo UI helps communicate research work to non-ML audiences.",
+			"Implementing the forward pass and backpropagation manually gave me a much clearer understanding of how gradients move through each layer of a neural network. Concepts such as the chain rule, activation derivatives, weight updates, and tensor dimensions became far more concrete than they were when using high-level frameworks.",
+			"The project showed me how strongly training performance depends on seemingly small design decisions. Learning rate, weight initialization, activation functions, batch size, and numerical stability all had a noticeable effect on whether the model converged, trained slowly, or failed entirely.",
+			"Tracking and visualizing loss during training made debugging significantly easier. Unexpected loss curves helped reveal issues such as incorrect gradient calculations, overly aggressive learning rates, and shape mismatches before they produced less obvious accuracy problems.",
+			"Separating model training from production inference simplified deployment. Exporting the trained parameters allowed the Flask API to remain lightweight while avoiding the computational cost and inconsistency of retraining the network in production.",
+			"Building a web interface reinforced the value of presenting technical work in an accessible format. The interactive demo makes the model easier to understand for users who may not be familiar with neural-network implementation details.",
 		],
 		featured: true,
-		relatedProjectIds: ["mockstreet-exchange"],
 	},
 	{
-		id: "portfolio-site",
+		id: "portfolio",
 		title: "Personal Portfolio",
 		image: headshotImage,
 		description:
-			"Placeholder — this portfolio site showcasing experience, projects, and skills with a dark/light theme and route-based detail dialogs.",
-		date: "2025 - Present",
+			"A personal portfolio showcasing my experience, projects, and skills with dark/light themes, shared UI patterns, and route-based detail dialogs.",
+		date: "August 2026",
 		links: {
-			github: "https://github.com/CalebErickson21",
-			details: "/projects/portfolio-site",
+			production: "https://caleberickson21.github.io",
+			github: "https://github.com/CalebErickson21/portfolio",
+			details: "/projects/portfolio",
 		},
 		tech: {
-			concepts: ["Design Systems", "Accessibility", "Responsive Layout"],
-			stack: ["TypeScript", "React", "Tailwind", "Vite"],
+			concepts: [
+				"Design Systems",
+				"Component Libraries",
+				"Responsive Layout",
+				"Accessibility",
+				"Theming",
+			],
+			stack: [
+				"TypeScript",
+				"React",
+				"Tailwind CSS",
+				"Vite",
+				"shadcn/ui",
+				"Magic UI",
+				"Aceternity UI",
+				"Base UI",
+				"Motion",
+				"Vercel",
+				"GitHub Pages",
+			],
 		},
 		infrastructure: [
-			"Placeholder — static SPA built with Vite and deployed to a CDN.",
-			"Placeholder — content lives in typed data modules for easy updates without CMS overhead.",
+			"The site is a multipage React frontend built with Vite. There is no backend or database. Experience, projects, and skills data live in typed TypeScript data modules that are easy to update without redeploying content infrastructure.",
+			"The application itself is hosted on Vercel, with continuous deployment from GitHub keeping releases simple as the site evolves.",
+			"GitHub Pages provides a clean, GitHub-associated public URL that redirects visitors to the Vercel deployment. That keeps the shareable link tied to my GitHub identity while Vercel handles the actual hosting.",
+			"Shared styling tokens, surface-panel utilities, and reusable dialog/card primitives keep pages visually consistent while still allowing each section to have its own layout.",
 		],
 		lessonsLearned: [
-			"Placeholder — shared surface styles keep cards and dialogs visually consistent.",
-			"Route-driven dialogs give shareable deep links without leaving the list page.",
-			"Typed content modules beat scattered hardcoded copy.",
+			"Reusable components early on — shared cards, dialogs, and surface styles — made new pages much faster to build.",
+			"Component libraries work best as a foundation. Customizing shadcn/ui, Magic UI, and Aceternity UI kept development fast without looking generic.",
+			"Clean design decisions mattered as much as the code: clear section purpose, consistent hierarchy, and less visual clutter.",
+			"Typed data modules made content updates a data change instead of a UI rewrite.",
 		],
-		relatedProjectIds: ["mockstreet-exchange"],
 	},
 	{
-		id: "cast-storytelling",
-		title: "CAST Storytelling Platform",
-		image: labUndergradsImage,
+		id: "launchpad",
+		title: "Launchpad",
+		icon: Rocket,
 		description:
-			"Placeholder — full-stack data storytelling platform with automated clickstream analysis used across university courses.",
-		date: "2025 - 2026",
+			"A career-networking and application-tracking platform for managing recruiters, companies, job opportunities, applications, deadlines, and professional connections in one place.",
+		date: "August 2026",
+		status: "in-progress",
 		links: {
-			production: "https://cast-storystudio.com/",
-			details: "/projects/cast-storytelling",
+			details: "/projects/launchpad",
 		},
 		tech: {
-			concepts: ["Data Storytelling", "Clickstream Analysis", "EdTech"],
-			stack: ["Python", "Django", "TypeScript", "React", "Tailwind"],
+			concepts: [
+				"Application Tracking",
+				"Career Networking",
+				"Graph-Based Recommendations",
+				"University Career Services",
+			],
+			stack: ["TypeScript", "React", "Tailwind CSS", "Python", "FastAPI", "Graph Database"],
 		},
 		infrastructure: [
-			"Placeholder — Django backend with React frontend, deployed for classroom use.",
-			"Placeholder — clickstream events are collected and summarized for instructors.",
+			"React frontend with Tailwind CSS providing dashboards for managing applications, job opportunities, companies, recruiters, deadlines, and professional connections.",
+			"FastAPI backend exposing REST endpoints for career data, user relationships, application activity, and related metadata.",
+			"Graph database modeling relationships among students, recruiters, companies, job postings, and applications to support network analysis and personalized recommendations.",
+			"Graph algorithms designed to help students discover peers applying to similar positions, view opportunities within their network, and identify potential professional connections.",
+			"Planned integration with The University of Alabama Career Center to connect students with university career resources, events, employers, and job opportunities.",
+			"Production hosting, authentication, privacy controls, and database infrastructure are still being evaluated as the core tracking and networking workflows stabilize.",
 		],
 		lessonsLearned: [
-			"Placeholder — designing for classroom workflows requires clear instructor vs student roles.",
-			"Automated analysis only helps when the UI surfaces insights quickly.",
-			"Reliability matters more than feature depth when real courses depend on the tool.",
+			"Representing students, recruiters, companies, jobs, and applications as connected entities makes relationship-based discovery more natural than relying exclusively on relational tables.",
+			"Defining application statuses as an explicit state machine simplifies filtering, reminders, analytics, and visual pipeline management.",
+			"Keeping FastAPI schemas aligned with frontend TypeScript types reduces data-contract drift while rapidly iterating on interconnected features.",
+			"University integrations require careful planning around data ownership, authentication, privacy, and compatibility with existing career-service systems.",
+			"Networking recommendations must prioritize relevance, consent, and user control rather than exposing all available application activity.",
 		],
-		relatedProjectIds: ["knowledge-graph-rag"],
-	},
-	{
-		id: "knowledge-graph-rag",
-		title: "Knowledge Graph RAG Pipeline",
-		image: dcPodiumImage,
-		description:
-			"Placeholder — autonomous pipeline integrating federal datasets into a large knowledge graph with a RAG framework to reduce hallucinations.",
-		date: "2025 - 2026",
-		links: {
-			details: "/projects/knowledge-graph-rag",
-		},
-		tech: {
-			concepts: ["RAG", "Knowledge Graphs", "Vector Embeddings", "LLMs"],
-			stack: ["Python", "FastAPI", "Azure", "Docker"],
-		},
-		infrastructure: [
-			"Placeholder — containerized Python services on Azure with vector stores for retrieval.",
-			"Placeholder — FastAPI layer exposing query endpoints to clients.",
-		],
-		lessonsLearned: [
-			"Placeholder — graph quality upstream has a bigger impact than prompt tweaks alone.",
-			"Reranking and evaluation loops are required to measure hallucination reduction.",
-			"Documenting data lineage keeps multi-dataset pipelines maintainable.",
-		],
-		relatedProjectIds: ["cast-storytelling"],
-	},
-	{
-		id: "course-enrollment-scraper",
-		title: "Course Enrollment Scraper",
-		image: quantHubLogo,
-		description:
-			"Placeholder — Dockerized web scraper that extracted University of Alabama course enrollment data across multiple semesters into a searchable SQL database.",
-		date: "Aug 2025 - Dec 2025",
-		links: {
-			details: "/projects/course-enrollment-scraper",
-		},
-		tech: {
-			concepts: ["Web Scraping", "ETL", "Market Research"],
-			stack: ["Python", "Selenium", "Docker", "SQL"],
-		},
-		infrastructure: [
-			"Placeholder — Selenium scrapers run in Docker.",
-			"Placeholder — records are normalized and loaded into a relational database for searchable enrollment analysis.",
-		],
-		lessonsLearned: [
-			"Placeholder — defensive parsing and retries are mandatory against fragile HTML.",
-			"Normalizing subjects and sections early simplifies downstream queries.",
-			"Dockerizing scrapers makes reruns reproducible across machines.",
-		],
-		relatedProjectIds: ["portfolio-site"],
 	},
 ];
 

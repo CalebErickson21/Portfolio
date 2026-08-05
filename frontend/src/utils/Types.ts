@@ -26,10 +26,15 @@ export interface ProjectLinksInterface {
 	details: string;
 }
 
+export type ProjectStatusType = "in-progress";
+
 export interface ProjectInterface {
 	id: string;
 	title: string;
-	image: string;
+	/** Screenshot or cover image. Prefer this when available. */
+	image?: string;
+	/** Lucide icon used when no image is available (e.g. in-progress projects). */
+	icon?: LucideIcon;
 	description: string;
 	date: string;
 	links: ProjectLinksInterface;
@@ -38,6 +43,8 @@ export interface ProjectInterface {
 	lessonsLearned: string[];
 	featured?: boolean;
 	relatedProjectIds?: string[];
+	/** When set, surfaces an in-progress badge; Live is replaced with a status chip if production is omitted. */
+	status?: ProjectStatusType;
 }
 
 export interface ExperienceTenureInterface {

@@ -1,5 +1,4 @@
-import { ArrowRight, ExternalLink } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router";
 
 import {
@@ -9,8 +8,11 @@ import {
 	DialogHeader,
 	DialogTitle,
 } from "@/components/ui/dialog";
+import { ProjectLinkActions } from "@/components/ProjectLinkActions";
+import { ProjectMedia } from "@/components/ProjectMedia";
+import { ProjectStatusBadge } from "@/components/ProjectStatusBadge";
 import { getRelatedProjects } from "@/data/Project";
-import { detailsLinkClass, outlineLinkClass } from "@/utils/Classes";
+import { detailsLinkClass } from "@/utils/Classes";
 import type { ProjectInterface } from "@/utils/Types";
 
 type ProjectDialogPropsType = {
@@ -29,22 +31,25 @@ export const ProjectDialog = ({ project, open, onOpenChange }: ProjectDialogProp
 					<DialogHeader>
 						<div className="flex items-start gap-3">
 							<div className="flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-brand-accent/10">
-								<img
-									src={project.image}
-									alt=""
-									className="size-full object-cover"
-								/>
+								<ProjectMedia project={project} variant="thumb" />
 							</div>
 							<div className="min-w-0">
-								<DialogTitle className="text-lg font-semibold text-text-primary sm:text-xl">
-									{project.title}
-								</DialogTitle>
+								<div className="flex flex-wrap items-center gap-2">
+									<DialogTitle className="text-lg font-semibold text-text-primary sm:text-xl">
+										{project.title}
+									</DialogTitle>
+									<ProjectStatusBadge status={project.status} />
+								</div>
 								<p className="mt-1 text-sm font-medium text-text-secondary">
 									{project.date}
 								</p>
 							</div>
 						</div>
 					</DialogHeader>
+
+					<div className="flex flex-wrap gap-2">
+						<ProjectLinkActions project={project} />
+					</div>
 
 					{project.description && (
 						<DialogDescription className="text-sm leading-relaxed text-text-secondary sm:text-base">
@@ -113,40 +118,6 @@ export const ProjectDialog = ({ project, open, onOpenChange }: ProjectDialogProp
 								{project.lessonsLearned.map((lesson) => (
 									<li key={lesson}>{lesson}</li>
 								))}
-							</ul>
-						</div>
-					)}
-
-					{(project.links.production || project.links.github) && (
-						<div>
-							<h3 className="text-sm font-semibold text-text-primary">Links</h3>
-							<ul className="mt-3 flex flex-wrap gap-2">
-								{project.links.production && (
-									<li>
-										<a
-											href={project.links.production}
-											target="_blank"
-											rel="noopener noreferrer"
-											className={outlineLinkClass}
-										>
-											<ExternalLink data-icon="inline-start" />
-											Live
-										</a>
-									</li>
-								)}
-								{project.links.github && (
-									<li>
-										<a
-											href={project.links.github}
-											target="_blank"
-											rel="noopener noreferrer"
-											className={outlineLinkClass}
-										>
-											<FaGithub data-icon="inline-start" />
-											GitHub
-										</a>
-									</li>
-								)}
 							</ul>
 						</div>
 					)}

@@ -1,9 +1,8 @@
-import { Link } from "react-router";
-import { ExternalLink, ArrowRight } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
-
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { detailsLinkClass, outlineLinkClass, surfacePanelClass } from "@/utils/Classes";
+import { ProjectLinkActions } from "@/components/ProjectLinkActions";
+import { ProjectMedia } from "@/components/ProjectMedia";
+import { ProjectStatusBadge } from "@/components/ProjectStatusBadge";
+import { surfacePanelClass } from "@/utils/Classes";
 import type { ProjectInterface } from "@/utils/Types";
 import { cn } from "@/lib/utils";
 
@@ -15,14 +14,13 @@ export const ProjectCard = ({ project }: { project: ProjectInterface }) => {
 				surfacePanelClass,
 			)}
 		>
-			<img
-				src={project.image}
-				alt={project.title}
-				className="aspect-video w-full object-cover"
-			/>
+			<ProjectMedia project={project} />
 			<CardHeader>
 				<div className="flex items-start justify-between gap-3">
-					<CardTitle className="text-lg text-text-primary">{project.title}</CardTitle>
+					<div className="min-w-0 space-y-1.5">
+						<CardTitle className="text-lg text-text-primary">{project.title}</CardTitle>
+						<ProjectStatusBadge status={project.status} />
+					</div>
 					<p className="shrink-0 text-sm text-text-secondary">{project.date}</p>
 				</div>
 				<CardDescription className="text-text-secondary">
@@ -30,32 +28,7 @@ export const ProjectCard = ({ project }: { project: ProjectInterface }) => {
 				</CardDescription>
 			</CardHeader>
 			<CardFooter className="mt-auto flex flex-wrap gap-2">
-				{project.links.production && (
-					<a
-						href={project.links.production}
-						target="_blank"
-						rel="noopener noreferrer"
-						className={outlineLinkClass}
-					>
-						<ExternalLink data-icon="inline-start" />
-						Live
-					</a>
-				)}
-				{project.links.github && (
-					<a
-						href={project.links.github}
-						target="_blank"
-						rel="noopener noreferrer"
-						className={outlineLinkClass}
-					>
-						<FaGithub data-icon="inline-start" />
-						GitHub
-					</a>
-				)}
-				<Link to={project.links.details} className={detailsLinkClass}>
-					Details
-					<ArrowRight data-icon="inline-end" />
-				</Link>
+				<ProjectLinkActions project={project} showDetails />
 			</CardFooter>
 		</Card>
 	);

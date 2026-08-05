@@ -51,6 +51,26 @@ export const ExperienceDialog = ({ experience, open, onOpenChange }: ExperienceD
 						</div>
 					</DialogHeader>
 
+					{experience.productionLinks && experience.productionLinks.length > 0 && (
+						<div>
+							<ul className="flex flex-wrap gap-2">
+								{experience.productionLinks.map((link) => (
+									<li key={link.url}>
+										<a
+											href={link.url}
+											target="_blank"
+											rel="noopener noreferrer"
+											className={outlineLinkClass}
+										>
+											<ExternalLink data-icon="inline-start" />
+											{link.label}
+										</a>
+									</li>
+								))}
+							</ul>
+						</div>
+					)}
+
 					{experience.description && (
 						<DialogDescription className="text-sm leading-relaxed text-text-secondary sm:text-base">
 							{experience.description}
@@ -123,29 +143,6 @@ export const ExperienceDialog = ({ experience, open, onOpenChange }: ExperienceD
 							<ul className="mt-2 list-disc space-y-2 pl-5 text-sm leading-relaxed text-text-secondary marker:text-brand-accent sm:text-base">
 								{experience.highlights.map((highlight) => (
 									<li key={highlight}>{highlight}</li>
-								))}
-							</ul>
-						</div>
-					)}
-
-					{experience.productionLinks && experience.productionLinks.length > 0 && (
-						<div>
-							<h3 className="text-sm font-semibold text-text-primary">
-								Applications
-							</h3>
-							<ul className="mt-3 flex flex-wrap gap-2">
-								{experience.productionLinks.map((link) => (
-									<li key={link.url}>
-										<a
-											href={link.url}
-											target="_blank"
-											rel="noopener noreferrer"
-											className={outlineLinkClass}
-										>
-											<ExternalLink data-icon="inline-start" />
-											{link.label}
-										</a>
-									</li>
 								))}
 							</ul>
 						</div>
