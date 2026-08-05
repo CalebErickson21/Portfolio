@@ -1,16 +1,16 @@
-import { Building2 } from "lucide-react";
+import { Building2, ArrowRight } from "lucide-react";
+import { Link } from "react-router";
 
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { surfacePanelClass } from "@/utils/Classes";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { detailsLinkClass, surfacePanelClass } from "@/utils/Classes";
 import { cn } from "@/lib/utils";
-import type { FeaturedExperienceInterface } from "@/utils/Types";
+import type { ExperienceInterface } from "@/utils/Types";
 
-export const ExperienceCard = ({ experience }: { experience: FeaturedExperienceInterface }) => {
+export const ExperienceCard = ({ experience }: { experience: ExperienceInterface }) => {
 	return (
 		<Card
 			className={cn("text-text-primary shadow-lg shadow-brand-accent/25", surfacePanelClass)}
 		>
-			{" "}
 			<CardHeader className="gap-0">
 				<div className="flex items-start gap-3">
 					<div className="flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-brand-accent/10 text-brand-accent">
@@ -43,6 +43,12 @@ export const ExperienceCard = ({ experience }: { experience: FeaturedExperienceI
 					))}
 				</ul>
 			</CardContent>
+			<CardFooter className="mt-auto">
+				<Link to={`/experience/${experience.id}`} className={detailsLinkClass}>
+					Details
+					<ArrowRight data-icon="inline-end" />
+				</Link>
+			</CardFooter>
 		</Card>
 	);
 };

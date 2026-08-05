@@ -17,7 +17,7 @@ import { infoCardClass } from "@/utils/Classes";
 import type { EducationInterface, HobbyInterface, PillarInterface } from "@/utils/Types";
 import headshot from "@/assets/Headshot.jpg";
 import dcPodium from "@/assets/DcPodium.jpg";
-import graduation from "@/assets/graduation.jpeg";
+import graduation from "@/assets/Graduation.jpeg";
 import labUndergrads from "@/assets/LabUndergrads.jpg";
 
 const pillars: PillarInterface[] = [
@@ -113,12 +113,12 @@ export const About = () => {
 							About Me
 						</h1>
 						<p className="mt-5 max-w-xl leading-relaxed text-text-secondary sm:text-lg">
-							I&apos;m a software engineer who enjoys building thoughtful products,
-							from polished interfaces to reliable backend systems. I care about
-							clarity, craft, and shipping work that holds up in the real world.
+							I'm a software engineer who enjoys building thoughtful products, from
+							polished interfaces to reliable backend systems. I care about clarity,
+							craft, and shipping work that holds up in the real world.
 						</p>
 						<p className="mt-4 max-w-xl leading-relaxed text-text-secondary sm:text-lg">
-							Outside of code, I&apos;m usually training, playing intramural sports,
+							Outside of code, I'm usually training, playing intramural sports,
 							practicing guitar, or building side projects that satisfy my curiosity.
 						</p>
 

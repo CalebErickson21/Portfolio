@@ -45,11 +45,11 @@ export const FeaturedProjects = () => {
 					id="featured-projects-heading"
 					className="mt-2 text-3xl font-semibold text-text-primary sm:text-4xl"
 				>
-					Projects I&apos;m proud of
+					Projects I'm proud of
 				</h2>
 				<p className="mt-2 text-md text-text-secondary">
-					A couple of recent builds I&apos;m proud of! Explore the live apps, source, or
-					full write-ups.
+					A couple of recent builds I'm proud of! Explore the live apps, source, or full
+					write-ups.
 				</p>
 			</div>
 

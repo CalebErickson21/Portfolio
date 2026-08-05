@@ -28,6 +28,7 @@ const skills: SkillInterface[] = [
 	{ id: "dotnet", label: ".NET", category: "frameworks", icon: "dotnet" },
 	{ id: "tailwind", label: "Tailwind CSS", category: "frameworks", icon: "tailwindcss" },
 	{ id: "pandas", label: "Pandas", category: "frameworks", icon: "pandas" },
+	{ id: "polars", label: "Polars", category: "frameworks", icon: "polars" },
 	{ id: "numpy", label: "NumPy", category: "frameworks", icon: "numpy" },
 	{ id: "scikit-learn", label: "Scikit-learn", category: "frameworks", icon: "scikitlearn" },
 
