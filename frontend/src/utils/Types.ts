@@ -48,14 +48,13 @@ export interface ExperienceInterface {
 	id: string;
 	title: string;
 	company: string;
+	icon: string;
 	date: string;
-	summary: string;
+	description: string;
+	tech: ExperienceTechInterface;
 	highlights: string[];
 	featured: boolean;
-	tech?: ExperienceTechInterface;
 	note?: string;
-	icon?: string;
-	description?: string;
 	tenure?: ExperienceTenureInterface[];
 	productionLinks?: ExperienceProductionLinkInterface[];
 }

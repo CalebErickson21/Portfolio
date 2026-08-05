@@ -1,7 +1,8 @@
-import { Building2 } from "lucide-react";
+import { Building2, ArrowRight } from "lucide-react";
+import { Link } from "react-router";
 
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { surfacePanelClass } from "@/utils/Classes";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { detailsLinkClass, surfacePanelClass } from "@/utils/Classes";
 import { cn } from "@/lib/utils";
 import type { ExperienceInterface } from "@/utils/Types";
 
@@ -42,6 +43,12 @@ export const ExperienceCard = ({ experience }: { experience: ExperienceInterface
 					))}
 				</ul>
 			</CardContent>
+			<CardFooter className="mt-auto">
+				<Link to={`/experience/${experience.id}`} className={detailsLinkClass}>
+					Details
+					<ArrowRight data-icon="inline-end" />
+				</Link>
+			</CardFooter>
 		</Card>
 	);
 };

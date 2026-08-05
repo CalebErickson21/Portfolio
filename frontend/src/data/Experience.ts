@@ -11,8 +11,6 @@ export const experiences: ExperienceInterface[] = [
 		date: "June 2026 - July 2026",
 		featured: true,
 		icon: cgiLogo,
-		summary:
-			"Built and shipped features for an internal promotion-tracking app used by ~2,000 partners across the Southern U.S., contributing as both developer and Scrum Master.",
 		description:
 			"Collaborate with a 10-person intern team delivering a new version of CGI's internal promotion-tracking application. Worked across 3 2-week Agile sprints including requirements gathering, implementation, QA, and client feedback, while also leading one sprint as Scrum Master.",
 		tech: {
@@ -33,8 +31,6 @@ export const experiences: ExperienceInterface[] = [
 		featured: true,
 		note: "Paused June - July 2026 for CGI internship",
 		icon: alabamaLogo,
-		summary:
-			"Applied AI research across public health data accessibility, data storytelling education, and disaster preparedness, including a 50k-node knowledge graph, RAG pipeline that cut hallucinations by 38%, and data storytelling application in use in 8 college courses.",
 		description:
 			"Contribute across three applied AI research projects in the SAIL (Sensor Automated Intelligent Learning) Lab. Built data pipelines, RAG systems, and full-stack tools used in university courses, and presented project work at a national kickoff in Washington, D.C.",
 		tech: {
@@ -75,8 +71,6 @@ export const experiences: ExperienceInterface[] = [
 		note: "Concurrent with AI Research @ Alabama AI Institute",
 		featured: false,
 		icon: quanthubLogo,
-		summary:
-			"Developed a Dockerized data pipeline that scraped, normalized, and stored university enrollment data while supporting market research on opportunities for integrating AI education into university curricula.",
 		description:
 			"Built an automated web-scraping pipeline for University of Alabama course enrollment data using Python and Selenium. Processed course sections across multiple semesters, normalized the results into a searchable relational database, and conducted market research to identify high-impact opportunities for incorporating QuantHub's AI lessons into university programs.",
 		tech: {
