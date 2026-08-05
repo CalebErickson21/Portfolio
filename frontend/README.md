@@ -1,150 +1,146 @@
-# Frontend Information
-This `README.md` file provides all the information necessary about setup and running the frontend for this portfolio.
+# Frontend
 
-## Setup
-This frontend is created using `Vite`, `React`, and `Tailwind CSS`. I chose to avoid using `Next.js` because it's not as lightweight as `React.js` and for the current state of the portfolio, we do not have a backend and only need basic routing, so `Next.js` provides a lot of unnecessary overhead.
+Vite + React + TypeScript SPA for the portfolio. Root-level purpose, startup, and deployment live in the [repository README](../README.md). This doc covers source layout, conventions, and day-to-day frontend work.
 
-In your project's root directory, run:
+## Why this stack
+
+Vite + React is enough for a static multipage portfolio: client routing, theming, and typed content modules — without Next.js/SSR overhead or a backend.
+
+## Scripts
+
 ```sh
-npm create vite@latest frontend -- --template react-ts
-cd frontend/
 npm install
-npm run dev
+npm run dev       # http://localhost:5173 (default)
+npm run build     # tsc -b && vite build → dist/
+npm run preview   # preview production build
+npm run lint      # eslint .
 ```
-You will see the boilerplate code spin up in your web broswer's **localhost**.
 
-After this, we need to remove any boilerplate code so we can start from scratch. Go ahead and delete the code in the following files
+## Source layout
 
-- `Index.css`
-- `App.css`
-- Any unwanted `.html` code in `App.tsx`
-- Any images in the `./public` directory
+```
+src/
+├── assets/           # Images, downloadables (e.g. resume PDF)
+├── components/       # Feature/UI composition (PascalCase files)
+│   └── ui/           # shadcn / Magic UI / Aceternity primitives (kebab-case)
+├── contexts/         # App-wide providers
+├── data/             # Typed site content — prefer editing here for copy/links
+├── lib/              # Low-level helpers (cn, etc.)
+├── pages/            # Route screens + Layout shell
+├── utils/
+│   ├── Router.tsx    # createBrowserRouter route tree
+│   ├── Types.ts      # Shared interfaces / unions
+│   └── Classes.ts    # Reusable Tailwind class tokens
+├── index.css         # Tailwind, theme tokens, global styles
+└── main.tsx          # Bootstrap, theme init, RouterProvider
+```
 
-### Tailwind Setup
-2. Install Tailwind CSS (v3)
-Navigate into the project folder and run:
+### Path alias
+
+`@/` maps to `src/` (Vite + `tsconfig`). Prefer alias imports:
+
+```ts
+import { projects } from "@/data/Project";
+import { cn } from "@/lib/utils";
+```
+
+## Routing
+
+Routes are declared in `src/utils/Router.tsx` with React Router’s data router. `Layout` wraps pages (navbar, background, footer, scroll-to-top). Nested routes:
+
+| Path              | Page              |
+| ----------------- | ----------------- |
+| `/`               | Home              |
+| `/about`          | About             |
+| `/experience`     | Experience list   |
+| `/experience/:id` | Experience detail |
+| `/projects`       | Projects list     |
+| `/projects/:id`   | Project detail    |
+| `/contact`        | Contact           |
+| `*`               | NotFound          |
+
+Detail routes are typically dialog/outlet patterns over the list views — keep IDs in sync with `data/` (`id` fields).
+
+## Content model
+
+Site copy and structured content live in `src/data/`, not hard-coded in page JSX when avoidable:
+
+| Module          | Role                                      |
+| --------------- | ----------------------------------------- |
+| `About.ts`      | Intro, pillars, education, hobbies, media |
+| `Contact.ts`    | Contact copy and methods                  |
+| `Experience.ts` | Jobs / roles                              |
+| `Project.ts`    | Projects (featured, links, infra notes)   |
+| `Skill.ts`      | Skills cloud                              |
+| `Links.ts`      | Nav + social links                        |
+
+Shapes live in `src/utils/Types.ts`. When adding a project or experience:
+
+1. Extend the relevant array in `data/` with a stable `id`.
+2. Drop media in `assets/` and import it in the data module.
+3. Ensure routes/`featured`/link fields match how cards and dialogs render.
+
+## Conventions
+
+### Naming
+
+- **Components & pages:** PascalCase files and named exports (`export const ProjectCard = …`).
+- **UI primitives** under `components/ui/:\*\* kebab-case (shadcn/registry style).
+- **Data modules:** PascalCase matching the domain (`Project.ts`, `Experience.ts`).
+- **Types:** `SomethingInterface`, `SomethingType` in `Types.ts`.
+- **Shared class strings:** `somethingClass` in `Classes.ts`.
+- Tabs for indentation; match neighboring files.
+
+### Components
+
+- Keep pages thin: compose feature components + data imports.
+- Put reusable visual patterns in `components/`; put registry primitives in `components/ui/`.
+- Shared surfaces/buttons/links: prefer tokens from `@/utils/Classes` over one-off class soup.
+- Merge classes with `cn()` from `@/lib/utils`.
+
+### Styling & theme
+
+- Tailwind v4 via `@tailwindcss/vite`; entry is `src/index.css`.
+- Brand/semantic colors are CSS variables (`--brand-accent`, `--background`, `--surface`, `--text-primary`, …) exposed as Tailwind colors (`bg-brand-accent`, `text-text-primary`, …).
+- Light/dark: `document.documentElement` `.dark` class, initialized in `main.tsx` from `localStorage` / `prefers-color-scheme`.
+- Prefer design tokens over raw hex in components.
+
+### UI libraries
+
+Configured in `components.json` (style: base-luma, Lucide icons):
+
+- **shadcn/ui** — base primitives in `components/ui/`
+- **Magic UI** / **Aceternity** — additional registry components
+
+Add new primitives with the shadcn CLI against this project’s aliases; avoid hand-rolling duplicates of existing `ui/` pieces.
+
+### Icons
+
+- **lucide-react** for general UI icons
+- **react-icons** where brand icons are needed (GitHub, LinkedIn, etc.)
+
+### TypeScript
+
+- Strict mode; use `import type` for type-only imports (`verbatimModuleSyntax`).
+- Prefer explicit interfaces in `Types.ts` over inline object types for domain data.
+
+## Theming & motion
+
+Dark/light toggle lives in the navbar UI. Motion comes from `motion` and Magic UI wrappers (`BlurFade`, `TypingAnimation`, etc.). Prefer existing animation primitives for consistency.
+
+## Assets
+
+- Raster/media: `src/assets/`
+- Downloadables (resume): `src/assets/downloadables/`
+- Import assets in data or components so Vite hashes them in production builds.
+
+## Quality checks
+
+Before opening a PR:
 
 ```sh
-npm install -D tailwindcss@3.4.1 postcss autoprefixer
-npx tailwindcss init -p
-```
-This will:
-- Install Tailwind CSS and its PostCSS dependencies
-- Generate tailwind.config.js
-- Generate postcss.config.js
-
-3. Configure Tailwind
-Edit tailwind.config.js
-Update the content array to include your source files:
-```js
-/** @type {import('tailwindcss').Config} */
-export default = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
+npm run lint
+npm run build
 ```
 
-Edit src/index.css
-Replace the contents of src/index.css with the Tailwind directives:
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-Ensure postcss.config.js looks like this
-```js
-export default = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-};
-```
-
-## Development Environment
-To start the development environment, run:
-```sh
-npm run dev
-```
-This will start the app in your web browser's **localhost preview**.
-
-## Production Environment
-Currently, the production environment uses **Github Pages** as it's free for frontend only applications. If I ever decide to incorporate a backend (not sure why one would be necessary for a portfolio), production will likely switch to **Azure** or **Amazon Web Services (AWS)**.
-
----
-
-# React + TypeScript + Vite Template README
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Fix type and lint errors locally; `build` runs `tsc -b` then Vite.
