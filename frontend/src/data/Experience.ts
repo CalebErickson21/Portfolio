@@ -1,6 +1,6 @@
 import cgiLogo from "@/assets/CgiLogo.jpg";
 import alabamaLogo from "@/assets/AlabamaLogo.png";
-import quanthubLogo from "@/assets/quantHubLogo.jpg";
+import quantHubLogo from "@/assets/QuantHubLogo.jpg";
 import type { ExperienceInterface, ExperienceTechInterface } from "@/utils/Types";
 
 export const experiences: ExperienceInterface[] = [
@@ -70,7 +70,7 @@ export const experiences: ExperienceInterface[] = [
 		date: "August 2025 - December 2025",
 		note: "Concurrent with AI Research @ Alabama AI Institute",
 		featured: false,
-		icon: quanthubLogo,
+		icon: quantHubLogo,
 		description:
 			"Built an automated web-scraping pipeline for University of Alabama course enrollment data using Python and Selenium. Processed course sections across multiple semesters, normalized the results into a searchable relational database, and conducted market research to identify high-impact opportunities for incorporating QuantHub's AI lessons into university programs.",
 		tech: {
