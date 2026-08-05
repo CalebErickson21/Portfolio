@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { iconButtonClass } from "@/utils/Classes";
-import { navigation, socialLinks } from "@/utils/Links";
+import { navigation, socialLinks } from "@/data/Links";
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) => {
 	return cn(
