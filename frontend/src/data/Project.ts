@@ -1,7 +1,9 @@
 import mockstreetImage from "@/assets/mockstreet.png";
 import neuralNetworkImage from "@/assets/NeuralNetwork.png";
 import headshotImage from "@/assets/Headshot.jpg";
-import { Rocket, Server, TrendingUp } from "lucide-react";
+import homelabImage from "@/assets/Homelab.png";
+import mergerFilingsImage from "@/assets/MergerFilings.png";
+import { Rocket } from "lucide-react";
 import type { ProjectInterface, ProjectTechInterface } from "@/utils/Types";
 
 export const projects: ProjectInterface[] = [
@@ -131,7 +133,7 @@ export const projects: ProjectInterface[] = [
 	{
 		id: "homelab",
 		title: "Homelab",
-		icon: Server,
+		image: homelabImage,
 		description:
 			"A personal Proxmox-based homelab built on a Dell OptiPlex Micro to practice networking, virtualization, and cybersecurity fundamentals in a controlled environment.",
 		date: "May 2026 - Present",
@@ -167,7 +169,7 @@ export const projects: ProjectInterface[] = [
 	{
 		id: "stock-screener",
 		title: "Merger Filing Screener",
-		icon: TrendingUp,
+		image: mergerFilingsImage,
 		description:
 			"A nightly stock screener that scrapes targeted websites for potential merger filings, applies proprietary filtering criteria, and emails only the matching candidates for manual analysis of profitable purchase opportunities.",
 		date: "May 2026 - Present",

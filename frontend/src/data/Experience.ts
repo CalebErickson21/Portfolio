@@ -27,7 +27,7 @@ export const experiences: ExperienceInterface[] = [
 		id: "ai-research-internship",
 		title: "AI Research Intern",
 		company: "Alabama AI Institute",
-		date: "August 2025 - Present",
+		date: "April 2025 - Present",
 		featured: true,
 		note: "Paused June - July 2026 for CGI internship",
 		icon: alabamaLogo,
@@ -68,7 +68,7 @@ export const experiences: ExperienceInterface[] = [
 		title: "Software Industry Project",
 		company: "QuantHub",
 		date: "August 2025 - December 2025",
-		note: "Concurrent with AI Research @ Alabama AI Institute",
+		note: "Concurrent with AI Research Internship at the Alabama AI Institute",
 		icon: quantHubLogo,
 		description:
 			"Built an automated web-scraping pipeline for University of Alabama course enrollment data using Python and Selenium. Processed course sections across multiple semesters, normalized the results into a searchable relational database, and conducted market research to identify high-impact opportunities for incorporating QuantHub's AI lessons into university programs.",
