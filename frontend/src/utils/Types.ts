@@ -15,18 +15,29 @@ export interface LucidePropsInterface {
 	[key: string]: any; // Any other SVG attributes
 }
 
-export interface FeaturedProjectLinksInterface {
-	production: string;
-	github: string;
+export interface ProjectTechInterface {
+	concepts?: string[];
+	stack?: string[];
+}
+
+export interface ProjectLinksInterface {
+	production?: string;
+	github?: string;
 	details: string;
 }
 
-export interface FeaturedProjectInterface {
+export interface ProjectInterface {
 	id: string;
 	title: string;
-	description: string;
 	image: string;
-	links: FeaturedProjectLinksInterface;
+	description: string;
+	date: string;
+	links: ProjectLinksInterface;
+	tech: ProjectTechInterface;
+	infrastructure: string[];
+	lessonsLearned: string[];
+	featured?: boolean;
+	relatedProjectIds?: string[];
 }
 
 export interface ExperienceTenureInterface {
@@ -53,7 +64,7 @@ export interface ExperienceInterface {
 	description: string;
 	tech: ExperienceTechInterface;
 	highlights: string[];
-	featured: boolean;
+	featured?: boolean;
 	note?: string;
 	tenure?: ExperienceTenureInterface[];
 	productionLinks?: ExperienceProductionLinkInterface[];
