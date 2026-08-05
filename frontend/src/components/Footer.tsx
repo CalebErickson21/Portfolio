@@ -4,7 +4,7 @@ import { ArrowUp } from "lucide-react";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { navigation, socialLinks } from "@/utils/Links";
+import { navigation, socialLinks } from "@/data/Links";
 
 const scrollToTop = () => {
 	window.scrollTo({ top: 0, behavior: "smooth" });

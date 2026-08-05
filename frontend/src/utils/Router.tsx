@@ -6,6 +6,7 @@ import { Projects } from "@/pages/Projects";
 import { ProjectDetail } from "@/pages/ProjectDetail";
 import { Experience } from "@/pages/Experience";
 import { ExperienceDetail } from "@/pages/ExperienceDetail";
+import { Contact } from "@/pages/Contact";
 import { NotFound } from "@/pages/NotFound";
 
 export const Router = createBrowserRouter([
@@ -40,6 +41,10 @@ export const Router = createBrowserRouter([
 						element: <ExperienceDetail />,
 					},
 				],
+			},
+			{
+				path: "contact",
+				element: <Contact />,
 			},
 			{
 				path: "*",
