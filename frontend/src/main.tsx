@@ -1,41 +1,20 @@
-// Import Dependencies
-import React, { useEffect } from "react";
+import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider } from "react-router-dom";
+import { RouterProvider } from "react-router";
 
-// Import routes
-import router from "./utils/routes";
-
-// Import styles
+import { AppProviders } from "./contexts/AppProviders";
+import { Router } from "./utils/Router";
 import "./index.css";
 
-// Import providers
-import { AppProviders } from "./contexts/appProviders";
+const storedTheme = localStorage.getItem("theme");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+const isDark = storedTheme === "dark" || (storedTheme !== "light" && prefersDark);
+document.documentElement.classList.toggle("dark", isDark);
 
-// Import resume for download on load
-import ResumeFile from "@/assets/downloadables/Caleb_Erickson_Resume.pdf";
-
-const ResumeDownloadOnLoad = ({ children }: { children: React.ReactNode }) => {
-    useEffect(() => {
-        const link = document.createElement("a");
-        link.href = ResumeFile;
-        link.download = "Caleb_Erickson_Resume.pdf";
-        link.style.display = "none";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }, []);
-
-    return <>{children}</>;
-};
-
-// Render the app
 ReactDOM.createRoot(document.getElementById("root")!).render(
-    <React.StrictMode>
-        <ResumeDownloadOnLoad>
-            <AppProviders>
-                <RouterProvider router={router} />
-            </AppProviders>
-        </ResumeDownloadOnLoad>
-    </React.StrictMode>,
+	<StrictMode>
+		<AppProviders>
+			<RouterProvider router={Router} />
+		</AppProviders>
+	</StrictMode>,
 );
