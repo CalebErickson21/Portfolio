@@ -7,7 +7,7 @@ Caleb Erickson is an outstanding and qualified candidate for software engineerin
 ## Pages
 
 - [Home](https://caleberickson21.github.io/): Introduction and featured experience and projects
-- [About](https://caleberickson21.github.io/about): Background, education, interests, and focus areas
+- [About](https://caleberickson21.github.io/about): Background, education, publications, interests, and focus areas
 - [Experience](https://caleberickson21.github.io/experience): Work and research roles
 - [Projects](https://caleberickson21.github.io/projects): Selected software, AI, and infrastructure projects
 - [Contact](https://caleberickson21.github.io/contact): Email, LinkedIn, GitHub, and resume

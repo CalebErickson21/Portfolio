@@ -6,10 +6,10 @@ import {
 	aboutGallery,
 	aboutHeadshot,
 	aboutIntro,
-	courses,
 	education,
 	hobbies,
 	pillars,
+	publications,
 } from "@/data/About";
 import { infoCardClass } from "@/utils/Classes";
 
@@ -107,11 +107,11 @@ export const About = () => {
 				<SkillsCloud />
 			</BlurFade>
 
-			{/* Education / Courses / Hobbies */}
+			{/* Education / Publications / Hobbies */}
 			<BlurFade inView direction="up" offset={20} duration={1} delay={0.1}>
 				<section
 					className="grid w-full gap-5 px-6 py-8 sm:px-10 md:grid-cols-2 lg:grid-cols-3 lg:px-16 xl:px-24"
-					aria-label="Education, courses, and interests"
+					aria-label="Education, publications, and interests"
 				>
 					{/* Education */}
 					<article className={infoCardClass}>
@@ -145,21 +145,33 @@ export const About = () => {
 						</ul>
 					</article>
 
-					{/* Courses */}
+					{/* Publications */}
 					<article className={infoCardClass}>
 						<div className="flex items-center gap-2.5">
 							<div className="flex size-9 items-center justify-center rounded-lg bg-brand-accent/10 text-brand-accent">
 								<BookOpen className="size-5" aria-hidden />
 							</div>
-							<h2 className="text-lg font-semibold text-text-primary">
-								Relevant Courses
-							</h2>
+							<h2 className="text-lg font-semibold text-text-primary">Publications</h2>
 						</div>
-						<ul className="mt-5 grid grid-cols-1 gap-x-4 gap-y-2 text-sm text-text-secondary sm:grid-cols-2">
-							{courses.map((course) => (
-								<li key={course} className="flex gap-2">
-									<span className="mt-2 size-1 shrink-0 rounded-full bg-brand-accent" />
-									{course}
+						<ul className="mt-5 space-y-5">
+							{publications.map(({ id, title, authors, venue, year, href }) => (
+								<li key={id} className="space-y-1.5">
+									{href ? (
+										<a
+											href={href}
+											target="_blank"
+											rel="noopener noreferrer"
+											className="font-medium text-text-primary transition-colors hover:text-brand-accent"
+										>
+											{title}
+										</a>
+									) : (
+										<p className="font-medium text-text-primary">{title}</p>
+									)}
+									<p className="text-sm text-text-secondary">{authors}</p>
+									<p className="text-sm text-text-secondary">
+										{venue} · {year}
+									</p>
 								</li>
 							))}
 						</ul>

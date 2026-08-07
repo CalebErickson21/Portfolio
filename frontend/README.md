@@ -67,7 +67,7 @@ Site copy and structured content live in `src/data/`, not hard-coded in page JSX
 
 | Module          | Role                                      |
 | --------------- | ----------------------------------------- |
-| `About.ts`      | Intro, pillars, education, hobbies, media |
+| `About.ts`      | Intro, pillars, education, publications, hobbies, media |
 | `Contact.ts`    | Contact copy and methods                  |
 | `Experience.ts` | Jobs / roles                              |
 | `Project.ts`    | Projects (featured, links, infra notes)   |

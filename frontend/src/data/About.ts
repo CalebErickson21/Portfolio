@@ -12,7 +12,12 @@ import headshot from "@/assets/Headshot.jpg";
 import dcPodium from "@/assets/DcPodium.jpg";
 import graduation from "@/assets/Graduation.jpeg";
 import labUndergrads from "@/assets/LabUndergrads.jpg";
-import type { EducationInterface, HobbyInterface, PillarInterface } from "@/utils/Types";
+import type {
+	EducationInterface,
+	HobbyInterface,
+	PillarInterface,
+	PublicationInterface,
+} from "@/utils/Types";
 
 export const aboutIntro = [
 	"I'm a software engineer who enjoys building thoughtful products, from polished interfaces to reliable backend systems. I care about clarity, craft, and shipping work that holds up in the real world.",
@@ -56,20 +61,42 @@ export const education: EducationInterface[] = [
 	},
 ];
 
-export const courses: string[] = [
-	"Capstone Computing",
-	"Reinforcement Learning",
-	"Foundations of Machine Learning",
-	"Advanced Data Analytics",
-	"Algorithm Design and Analysis",
-	"Operating Systems",
-	"Data Structures and Algorithms",
-	"Advanced Statistical Design",
-	"Linear Algebra",
-	"Global Business",
-	"Managerial Economics",
-	"Concepts of Financial and Managerial Accounting",
-	"Leadership and Ethics",
+export const publications: PublicationInterface[] = [
+	{
+		id: "geoai-flood-risk",
+		title:
+			"Operationalizing Generative Spatial Intelligence: A Conversational GeoAI Framework for Flood Risk Communication",
+		authors: "S Li, M Baizhakyp, S Hanegan, A Schraivogel, C Erickson, FG Juarez, et al.",
+		venue: "Preprint",
+		year: 2026,
+		href: "https://www.researchsquare.com/article/rs-10216628/v1",
+	},
+	{
+		id: "flood-ontology",
+		title:
+			"A Semi-Automated Framework for Flood Ontology Construction with an Application in Risk Communication",
+		authors: "S Li, C Erickson, M Zajac, X Guo, Q Duan, J Gong",
+		venue: "Water 17 (19), 2801",
+		year: 2025,
+		href: "https://www.mdpi.com/2073-4441/17/19/2801",
+	},
+	{
+		id: "flood-risk-storytelling",
+		title:
+			"Unifying Flood-Risk Communication: Empowering Community Leaders Through AI-Enhanced, Contextualized Storytelling",
+		authors: "M Zajac, C Kulawiak, S Li, C Erickson, N Hubbell, J Gong",
+		venue: "Hydrology 12 (8), 204",
+		year: 2025,
+		href: "https://www.mdpi.com/2306-5338/12/8/204",
+	},
+	{
+		id: "flai-agu",
+		title: "FLAI: An AI-Powered Platform for Flood-Risk Communication",
+		authors: "S Li, M Zajac, AA Ramirez Molina, J Gong, F Juarez, C Barbaccia, et al.",
+		venue: "AGU Fall Meeting Abstracts 2025, H23H-04",
+		year: 2025,
+		href: "https://ui.adsabs.harvard.edu/abs/2025AGUFMH23H...04L/abstract",
+	},
 ];
 
 export const hobbies: HobbyInterface[] = [

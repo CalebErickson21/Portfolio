@@ -88,6 +88,16 @@ export interface EducationInterface {
 	gpa?: string;
 }
 
+export interface PublicationInterface {
+	id: string;
+	title: string;
+	authors: string;
+	venue: string;
+	year: number;
+	/** Paper URL (DOI, PDF, etc.). Leave empty until filled in. */
+	href: string;
+}
+
 export interface PillarInterface {
 	icon: LucideIcon;
 	title: string;
