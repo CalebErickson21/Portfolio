@@ -63,9 +63,16 @@ export const education: EducationInterface[] = [
 
 export const publications: PublicationInterface[] = [
 	{
+		id: "",
+		title: "Understanding Student Engagement and Achievement for AI-Mediated Data Storytelling Workflows",
+		authors: "N Hubbel, T Hassan, C Erickson, S Hanegan, K Chen, J Gong",
+		venue: "Association for Computing Machinery (ACM)",
+		year: 2026,
+		href: "https://dl.acm.org/doi/10.1145/3765965.3816667",
+	},
+	{
 		id: "geoai-flood-risk",
-		title:
-			"Operationalizing Generative Spatial Intelligence: A Conversational GeoAI Framework for Flood Risk Communication",
+		title: "Operationalizing Generative Spatial Intelligence: A Conversational GeoAI Framework for Flood Risk Communication",
 		authors: "S Li, M Baizhakyp, S Hanegan, A Schraivogel, C Erickson, FG Juarez, et al.",
 		venue: "Preprint",
 		year: 2026,
@@ -73,8 +80,7 @@ export const publications: PublicationInterface[] = [
 	},
 	{
 		id: "flood-ontology",
-		title:
-			"A Semi-Automated Framework for Flood Ontology Construction with an Application in Risk Communication",
+		title: "A Semi-Automated Framework for Flood Ontology Construction with an Application in Risk Communication",
 		authors: "S Li, C Erickson, M Zajac, X Guo, Q Duan, J Gong",
 		venue: "Water 17 (19), 2801",
 		year: 2025,
@@ -82,8 +88,7 @@ export const publications: PublicationInterface[] = [
 	},
 	{
 		id: "flood-risk-storytelling",
-		title:
-			"Unifying Flood-Risk Communication: Empowering Community Leaders Through AI-Enhanced, Contextualized Storytelling",
+		title: "Unifying Flood-Risk Communication: Empowering Community Leaders Through AI-Enhanced, Contextualized Storytelling",
 		authors: "M Zajac, C Kulawiak, S Li, C Erickson, N Hubbell, J Gong",
 		venue: "Hydrology 12 (8), 204",
 		year: 2025,
