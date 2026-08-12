@@ -63,7 +63,7 @@ export const education: EducationInterface[] = [
 
 export const publications: PublicationInterface[] = [
 	{
-		id: "",
+		id: "story-studio",
 		title: "Understanding Student Engagement and Achievement for AI-Mediated Data Storytelling Workflows",
 		authors: "N Hubbel, T Hassan, C Erickson, S Hanegan, K Chen, J Gong",
 		venue: "Association for Computing Machinery (ACM)",
